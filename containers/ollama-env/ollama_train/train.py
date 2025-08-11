@@ -10,6 +10,9 @@ import evaluate
 from openai import OpenAI
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_ollama import OllamaLLM
+import sys
+
+key = sys.argv[1]
 
 #0 = lamner #1 = lamner_only_codebert #2 = lamner_codebert
 #3 = lam    #4 = ner                  #5 = static
@@ -242,7 +245,7 @@ def create_batch(task = "summary", model_1 = 0, model_2 = 1, start=0, end=None j
 
 
 rng = np.random.default_rng(42)
-client = OpenAI(api_key = "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")
+client = OpenAI(api_key = key)
 
 with open("competition/input.code", "r", encoding = "utf-8-sig" ) as f:
   codes = f.readlines()
