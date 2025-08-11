@@ -467,10 +467,10 @@ predictions = list(df["prediction"])
 cs = get_preds("48rHYAsQbky39RMBQhh15t", client)
 java = get_preds("6K5KcSZfwLcU6c5kXCYDEo", client)
 
-batch_input_file = create_batch(task = "unit_test_diff", java=java, cs=cs, llm="mistral:latest", start=0, end=100)
+batch_input_file = create_batch(task = "unit_test_diff", java=java, cs=cs, llm="qwen2.5-coder:1.5b", start=0, end=100)
 
 
-results_filename = "unit-tests-1-0.txt"
+results_filename = "unit-tests-2-0.txt"
 count = 0
 with open(results_filename, "w", encoding = "utf-8", errors = "ignore") as f:
     for line in batch_input_file:
