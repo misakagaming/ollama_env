@@ -19,7 +19,7 @@ key = sys.argv[1]
 #6 = tlcodesum #7 = codebert
 #8 = rencos #9 = rencos_lamner
 
-def get_preds(file_name, client)
+def get_preds(file_name, client):
     file_response = client.files.content('file-' + file_name)
     #print(file_response.text)
     results_filename = "gpt4-o-mini-results-with-ties-translate-9-9.jsonl"
