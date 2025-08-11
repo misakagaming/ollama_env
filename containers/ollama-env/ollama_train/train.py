@@ -36,7 +36,7 @@ def get_preds(file_name, client):
     
 
 
-def create_batch(task = "summary", model_1 = 0, model_2 = 1, start=0, end=None java=None, cs=None, error=None, lang=None, code=None, llm="gpt-4.1-nano-2025-04-14"):
+def create_batch(task = "summary", model_1 = 0, model_2 = 1, start=0, end=None, java=None, cs=None, error=None, lang=None, code=None, llm="gpt-4.1-nano-2025-04-14"):
     task_lines = []
     count = 1
     content_format = bigcodebench_format
