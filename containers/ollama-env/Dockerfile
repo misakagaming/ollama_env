@@ -35,8 +35,8 @@ RUN /opt/python3/venv/base/bin/python3 -m pip install -U langchain-ollama
 
 RUN curl https://ollama.ai/install.sh | sh
 
-RUN ollama serve &
-RUN ollama run deepseek-r1:1.5b
+#RUN ollama serve &
+#RUN ollama run deepseek-r1:1.5b
 
 #ENV CONDA_DIR /opt/conda
 #RUN wget --quiet https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda.sh && \
