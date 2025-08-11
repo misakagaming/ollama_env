@@ -8,6 +8,5 @@ pandas
 datasets
 evaluate
 huggingface_hub
-json
 numpy
 regex
