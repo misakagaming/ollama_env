@@ -49,6 +49,8 @@ RUN curl https://ollama.ai/install.sh | sh
 #RUN conda env update -f environment.yml &&\
 #    conda clean -tipy
 
+COPY ollama_train .
+
 
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
