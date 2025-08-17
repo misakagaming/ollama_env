@@ -14,6 +14,9 @@ import sys
 
 key = sys.argv[1]
 
+model_name = sys.argv[2]
+model_num = int(sys.argv[3])
+
 #0 = lamner #1 = lamner_only_codebert #2 = lamner_codebert
 #3 = lam    #4 = ner                  #5 = static
 #6 = tlcodesum #7 = codebert
@@ -467,10 +470,10 @@ predictions = list(df["prediction"])
 cs = get_preds("48rHYAsQbky39RMBQhh15t", client)
 java = get_preds("6K5KcSZfwLcU6c5kXCYDEo", client)
 
-batch_input_file = create_batch(task = "unit_test_diff", java=java, cs=cs, llm="llama3.2:3b", start=0, end=100)
+batch_input_file = create_batch(task = "unit_test_diff", java=java, cs=cs, llm=model_name, start=0, end=100)
 
 
-results_filename = "unit-tests-3-0.txt"
+results_filename = f"unit-tests-{model_num}-0.txt"
 count = 0
 with open(results_filename, "w", encoding = "utf-8", errors = "ignore") as f:
     for line in batch_input_file:
