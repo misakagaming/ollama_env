@@ -467,8 +467,8 @@ df.head()
 df["prediction"] = df["response"].apply(lambda x: x["body"]["choices"][0]["message"]["content"])
 predictions = list(df["prediction"])
 
-cs = get_preds("48rHYAsQbky39RMBQhh15t", client)
-java = get_preds("6K5KcSZfwLcU6c5kXCYDEo", client)
+cs = get_preds("MTJW27khRdTpG5ZWvC87qS", client)
+java = get_preds("Re6TkGwKaXCmsrjCrRZHiT", client)
 
 batch_input_file = create_batch(task = "unit_test_diff", java=java, cs=cs, llm=model_name, start=0, end=100)
 
