@@ -455,7 +455,7 @@ Summary: {output}"""
 #9 batch_id: "" output_file file-
 
 
-file_response = client.files.content('file-6K5KcSZfwLcU6c5kXCYDEo')
+file_response = client.files.content('file-MTJW27khRdTpG5ZWvC87qS')
 #print(file_response.text)
 results_filename = "gpt4-o-mini-results-with-ties-translate-9-9.jsonl"
 with open(results_filename, "w", encoding = "utf-8", errors = "ignore") as f:
