@@ -5,7 +5,7 @@ on:
     paths:
       - containers/ollama-env/Dockerfile
       - containers/ollama-env/requirements.txt
-      containers/ollama-env/ollama_train/train.py
+      - containers/ollama-env/ollama_train/train.py
       - .github/workflows/ollama-env-cbuild.yml # Self-trigger
 
 env:
