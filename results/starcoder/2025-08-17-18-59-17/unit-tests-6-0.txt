@@ -1,0 +1,1489 @@
+CODE COUNT: 0
+
+0 depth if there is no previous element.
+CODE COUNT: 1
+
+
+*/
+CODE COUNT: 2
+
+
+'''
+
+CODE COUNT: 3
+
+100% match (52%)
+
+
+CODE COUNT: 4
+
+
+*/
+
+CODE COUNT: 5
+
+
+*/
+CODE COUNT: 6
+
+
+*/
+public class Testing {
+    public static void main(String[] args) {
+        int testCases = Integer.parseInt(args[0]);
+
+        for (int i = 0; i < testCases; i++) {
+            String javaProgramInput = args[i * 3 + 1];
+            String csharpProgramInput = args[i * 3 + 2];
+
+            // TODO: Add the code here to run your tests and print their results.
+        }
+    }
+}
+CODE COUNT: 7
+
+2 is equal to some double . 3, using the static method Math.abs().
+Input Format
+There are four lines of input: 
+1. Line 1 - The first double value.
+2. Line 2 - The second double value.
+3. Line 3 - The third double value.
+4. Line 4 - The fourth double value.
+Output Format
+Print all the unit tests that you generate for both Java and C# along with their outputs, in the following format: 
+1. One test case per line, containing two strings (the name of the class and its full name) separated by a single space.
+2. The name of the test case is the same as the function signature and is followed by the inputs, separated by a comma. For example, if you are testing the method isDoubleEqual(double , double ) and its inputs are 4.0 and 5.0, your test case will be 'isDoubleEqual(4.0, 5.0)'.
+3. Your output should be printed in the same format as follows: 
+1. One line with two strings separated by a single space - The name of the class that you are testing (e.g., Calculator).
+2. One more line containing the name of the test case followed by the corresponding output and percentage passed for both Java and C#. In the string printed out, if your program passes all the tests, it should be 'All Passed'. If your program fails to pass all the tests, then there should be a single character in the end - the percentage (e.g., '75%').
+4. The output of the test case is not guaranteed for both Java and C#. However, you must print out at least one line with the name of the test case followed by the original input string on the first line, as well as any other special strings that are required (e.g., 'All Passed' or a percentage). 
+5. The number of lines printed should match the length of your unit tests.
+Sample Input
+1. 0.1
+2. 0.2
+3. 0.3
+4. 0.5
+Sample Output
+Calculator is testing: isDoubleEqual(0.1, 0.2)
+Calculator is testing: isDoubleEqual(0.1, 0.3)
+Calculator is testing: isDoubleEqual(0.3, 0.2)
+isDoubleEqual(4.0, 5.0)
+All Passed
+Sample Input
+1. 0.1
+2. 0.2
+3. 0.3
+4. 0.5
+Sample Output
+Calculator is testing: isDoubleEqual(0.1, 0.2)
+isDoubleEqual(0.1, 0.3)
+Calculator is testing: isDoubleEqual(0.3, 0.2)
+isDoubleEqual(4.0, 5.0)
+All Passed
+CODE COUNT: 8
+
+12345 . (0%)
+
+The total number of test cases is 8.
+
+CODE COUNT: 9
+
+ It takes an input and recurses on the contents .  If the input is a directory, it recurses on each of its children and so on recursively until it gets at the last level (a file). The output is a list of files and directories in that order .
+
+CODE COUNT: 10
+
+
+```
+
+
+
+CODE COUNT: 11
+
+4 tests passed, 1 failed
+CODE COUNT: 12
+
+ changes in it's data or range axes are recalculated automatically. The axis are not configured unless you explicitly call configure(). A dataset must be able to add a change listener for this to work, e.g., XYDataset . The implementation of DatasetChangeListener is very simple; it simply prints out messages indicating that datasetChanged() has been called with details about the source of the event and the DataSetChangeEvent object passed into the method.
+
+CODE COUNT: 13
+
+
+CODE COUNT: 14
+
+1 of the following types in Java or C#:
+java.lang.Object
+int
+char
+byte
+short
+long
+float
+double
+boolean
+string
+Test case for java.lang.String: (type) => { return typeof(type).equals(typeof(string)); }
+Test case for int: (type) => { return typeof(type).equals(typeof(int)); }
+Test case for char: (type) => { return typeof(type).equals(typeof(char)); }
+Test case for byte: (type) => { return typeof(type).equals(typeof(byte)); }
+Test case for short: (type) => { return typeof(type).equals(typeof(short)); }
+Test case for long: (type) => { return typeof(type).equals(typeof(long)); }
+Test case for float: (type) => { return typeof(type).equals(typeof(float)); }
+Test case for double: (type) => { return typeof(type).equals(typeof(double)); }
+Test case for boolean: (type) => { return typeof(type).equals(typeof(boolean)); }
+Test case for string: (type) => { return typeof(type).equals(typeof(string)); }
+Java: public static class RefType
+{
+    private final String typeName;
+
+    private RefType(String typeName)
+    {
+        this.typeName = typeName;
+    }
+
+    public static RefType v(String typeName)
+    {
+        return new RefType(typeName);
+    }
+
+    @Override public boolean equals(Object obj)
+    {
+        if (obj instanceof RefType other) {
+            return this.typeName == other.typeName;
+        }
+        return false;
+    }
+
+    @Override public int hashCode()
+    {
+        return typeName.hashCode();
+    }
+}
+C#: public class TypeChecker {
+    // returns true if specified type is java.lang.String
+    public static bool isStringType(Type type)
+    {
+        return type == typeof(string);
+    }
+
+    public static void main(String[] args)
+    {
+        var stringType = typeof(string);
+        var intType = typeof(int);
+
+        Console.WriteLine(isStringType(stringType)); // true
+        Console.WriteLine(isStringType(intType));     // false
+     }
+}
+Summary: returns if the given type is String or not, in both Java and C#
+CODE COUNT: 15
+
+
+CODE COUNT: 16
+
+1 statement passed in (see line 47). 2 statements failed in Debug mode (see lines 56 and 60).
+```
+CODE COUNT: 17
+
+1,2,3,4,5
+
+
+# Description
+You are given two Java and one C# code corresponding to a problem. Write a program that performs the same task on both languages. The input is defined as following:
+Java code is represented in text files separated by line breaks. It consists of multiple classes and functions. There is no function with the name main() or class without any function. For each function, there must be one corresponding C# method. All variables should have their types. The output from Java program will be written to the standard output channel(System.out).
+C# code is represented in text files separated by line breaks. It consists of multiple classes and functions. There is no function with the name main() or class without any function. For each function, there must be one corresponding Java method. The input data should come from the standard input channel (System.in). All variables should have their types.
+Java code file: A.java
+C# code file: B.cs
+Sample Input/Output files for above problem is as follows:
+A.java
+class Main {
+    public static void main(String[] args) {
+        System.out.println("Hello");
+    }
+}
+B.cs
+using System;
+
+public class Program
+{
+    public static void Main()
+    {
+        Console.WriteLine("Hello");
+    }
+}
+Sample Output for the above input/output files is as follows:
+Hello
+*/
+
+
+CODE COUNT: 18
+
+
+*/
+CODE COUNT: 19
+
+
+*/
+using System;
+
+public class UnitTestGenerator
+{
+    static void Main()
+    {
+
+    }
+}
+CODE COUNT: 20
+
+16 KB read/write buffer, which is an extremely small amount of memory for unit testing purposes. It also uses TCP as its transportation layer (although you could also use UDP or anything else that is supported by the underlying stack). The matcher has been created and will start listening to incoming connections immediately after construction.
+
+CODE COUNT: 21
+
+
+CODE COUNT: 22
+
+
+CODE COUNT: 23
+
+
+CODE COUNT: 24
+
+2 lines of Java code and the same statement in C#. The Java code and the C# code should perform the exact same task. In order to get a percentage representation for each result, we are going to execute the unit tests on both language versions and use the results to calculate percentages.
+*/
+
+CODE COUNT: 25
+
+
+The program runs on both Java and C#. The result should be similar for each language, but not identical. In C#, you can get more detailed error information by adding catch blocks and logging exceptions in your code.
+*/
+
+CODE COUNT: 26
+
+
+CODE COUNT: 27
+
+ Another fatal error with no params
+Time elapsed: 0 s.
+"""
+CODE COUNT: 28
+
+
+CODE COUNT: 29
+
+
+CODE COUNT: 30
+
+128 chars and its length (726): "AZaz09-._~!$&'()*+,;=:@%/[]"; Char 'g' (U+0067): InvalidChar 'G' (U+0047): Valid 
+CODE COUNT: 31
+
+
+CODE COUNT: 32
+
+
+CODE COUNT: 33
+
+
+CODE COUNT: 34
+
+100% tests passed. Total time taken for executing the submission = 0ms
+```
+CODE COUNT: 35
+
+ The evaluation is a mutable object, that allows us to add different evaluations together and then produce an aggregated evaluation.  Here we use Java instead of C# because there is no equivalent to default parameters in C#.
+
+2.	Given two versions of a program (e.g., Java code and its C# translation), determine what the differences between these are, and how those differences may lead to errors in using the program.
+The Java program has been changed. The Java version was compiled on a different machine than the C# version. This means that the method signatures of the methods have been changed (e.g., they took one fewer parameter or added new parameters). The signature of one method has changed, so it can no longer be called from within another method. So if you are using the Java program, it cannot compile and execute.
+
+3.	Write a code that generates an integer between 0 and n, inclusive.
+Create an array of integers with length equal to n and set each element to i, where i = 0,1,...n-1. Print the values in the array on separate lines.
+4.	What is the time complexity of the following recursive methods? Write pseudocode for their time complexity.
+    a) Factorial(int n)
+        - Time: O(2^n)
+        - Space: O(n+1)
+
+    b) Permutations (int n, int k)
+        - Time: O(n!k!)
+        - Space: O(1)
+    */
+}
+CODE COUNT: 36
+
+
+CODE COUNT: 37
+
+ Simulate some initialization logic try { Thread.sleep(1000); } catch (InterruptedException e) { Thread.currentThread().interrupt(); } System.out.println("Cache initialization complete before setting 'running' flag."); The CacheManager class is used in both Java and C# to initialize the cache, set the running flag, and then call a function which starts up additional services on the spawned process.
+```java
+public class CacheServiceManagerDerived : CacheServiceManager {
+    public void start() {
+        base.start();
+        // Starts the new services.
+        System.out.println("Starting additional services...");
+        // Simulate some work
+        try {
+            Thread.sleep(500);  // Simulating work
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
+        System.out.println("Additional services started.");
+    }
+}
+```
+Summary: CacheServiceManagerDerived is the derived class of CacheServiceManager. It overrides the method start() to call base.start() as well as starts up additional services on the spawned process. The code will run in the same way as CacheServiceManager, except that the new functionality added by DerivedClass2 will be used in place of the existing functionality implemented in CachedProcess.
+```java
+public class CacheProcessImpl extends Process {
+
+    private static final long serialVersionUID = 1L;
+    public void run() {
+        try {
+            // This is an abstract method.  The derived classes implement it.
+            start();
+
+            // Set the running flag to true, so that other processes can wait for this cache manager's init phase to complete.
+            System.out.println("Setting 'running' flag in the status file.");
+            if (!fileManager.setCacheRunningFlag()) {
+                throw new IOException("Unable to set running flag.");
+            }
+
+            // Wait until all caches have successfully started up, then we can start processing requests
+            System.out.println("Waiting for all other cache managers to complete their init phase...");
+            while (true) {
+                FileStatus status = fileManager.getStatus();
+                if (!status.runningFlagSet()) {
+                    break;  // We've completed the initialization process.  Now we should be able to start processing requests
+                }
+
+                Thread.sleep(200);
+            }
+            System.out.println("All other cache managers complete their init phase.");
+
+            System.out.println("Starting additional services...");
+            // Simulate some work
+            try {
+                Thread.sleep(500);  // Simulating work
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+            }
+            System.out.println("Additional services started.");
+        } finally {
+            // Set the running flag to false, so that other processes can wait for this cache manager's init phase to complete.
+            fileManager.setCacheRunningFlag(false);
+        }
+    }
+}
+```
+Summary: This class extends Process in order to be able to implement run() as an abstract method and then call start(). It does not do much else, but it creates a new Thread when started by the CacheProcessFactory class. It waits for all caches to complete init phase before starting additional services.
+The fileManager object will be created after the Java and C# programs are compiled. The CacheServiceManager class is used in both Java and C# to initialize the cache, set the running flag, and then call a function which starts up additional services on the spawned process.
+```java
+    public static void main(String[] args) {
+        try {
+            // Create the file manager object which will manage the status of caches
+            FileManager fileManager = new FileManager("cache-status.txt");
+
+            CacheManager cache  = new CacheManager();
+            ProcessBuilder pb = new ProcessBuilder(new String[]{"java", "-cp", "CacheServicesApp", "CacheServicesApp.CacheServiceManager"});
+            pb.redirectErrorStream(true);
+            CacheProcessImpl cp = new CacheProcessImpl();
+            Process p = pb.start();
+            cp.setProcessId(p.getId());
+            cache.setFileManager(fileManager);
+            cp.setCache(cache);
+            // This method is called immediately following cache creation in the spawned process,
+            // but prior to setting the running flag in the status file. So the spawning process
+            // will block until this method completes.
+            cache.start();
+
+            // Set the running flag to true, so that other processes can wait for this cache manager's init phase to complete.
+            System.out.println("Setting 'running' flag in the status file.");
+            if (!fileManager.setCacheRunningFlag()) {
+                throw new IOException("Unable to set running flag.");
+            }
+
+            // Wait until all caches have successfully started up, then we can start processing requests
+            System.out.println("Waiting for all other cache managers to complete their init phase...");
+            while (true) {
+                FileStatus status = fileManager.getStatus();
+                if (!status.runningFlagSet()) {
+                    break;  // We've completed the initialization process.  Now we should be able to start processing requests
+                }
+
+                Thread.sleep(200);
+            }
+            System.out.println("All other cache managers complete their init phase.");
+
+            System.out.println("Starting additional services...");
+            // Simulate some work
+            try {
+                Thread.sleep(500);  // Simulating work
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+            }
+            System.out.println("Additional services started.");
+        } finally {
+            // Set the running flag to false, so that other processes can wait for this cache manager's init phase to complete.
+            fileManager.setCacheRunningFlag(false);
+        }
+    }
+}
+```
+Summary: CacheProcessImpl is a derived class of Process and overrides run() by calling start(). It does not do much else but it sets up the CacheProcessImpl object which will be used in place of the java CacheServiceManagerMain method. The main method creates a new CacheProcessImpl, sets its processId to that of the spawned cache manager Java process.
+```java
+class FileManager {
+    private Map<String, CacheStatus> statusMap;
+
+    public FileManager(String filename) throws FileNotFoundException {
+        // read existing file
+        FileInputStream fis = new FileInputStream(filename);
+        ObjectInputStream ois = new ObjectInputStream(fis);
+        try {
+            statusMap = (HashMap<String, CacheStatus>) ois.readObject();
+        } finally {
+            // close the files
+            ois.close();
+            fis.close();
+        }
+    }
+
+    public boolean setCacheRunningFlag() throws IOException {
+        FileStatus cacheStatus = getStatus();
+
+        if (!cacheStatus.runningFlagSet()) {  // Only run once, even if called multiple times by multiple caches running simultaneously.
+            cacheStatus.setRunning(true);
+
+            ObjectOutputStream oos;
+            try {
+                FileOutputStream fos = new FileOutputStream("status-backup.txt");
+                oos = new ObjectOutputStream(fos);
+                oos.writeObject(statusMap);
+            } finally {
+                // close the files
+                oos.close();
+                fos.close();
+
+                statusMap.put(cacheStatus.getId(), cacheStatus);  // Write the file again
+            }
+        }
+        return true;
+    }
+
+    public FileStatus getStatus() {
+        String id = getCurrentCacheId();
+        FileStatus status = statusMap.get(id);
+
+        if (status == null) {
+            throw new RuntimeException("No status found for current process");
+        }
+        return status;
+    }
+}
+```
+Summary: This class is the Java side of a file manager object. It stores a Map<String, CacheStatus> in its instance field called statusMap and it implements methods setCacheRunningFlag() and getStatus(). The FileManager class contains several static methods that read data from files, update files with new data, and write to files.
+The status-backup.txt file is used by the CacheServiceManager class as a backup copy of the cache-status.txt file in case there are errors reading or writing data from the status file.
+```java
+    public FileStatus getStatus() {
+        String id = getCurrentCacheId();
+        FileStatus status = statusMap.get(id);
+
+        if (status == null) {
+            throw new RuntimeException("No status found for current process");
+        }
+        return status;
+    }
+
+    // write the status-backup.txt file as a backup copy of cache-status.txt.  This is only called when an exception is thrown while writing to the main cache-status.txt file.
+    private void backupStatus() {
+        System.out.println("Backing up 'status-backup' to 'cache-status'");
+
+        try {
+            ObjectOutputStream oos;
+            FileOutputStream fos = new FileOutputStream(STATUS_BACKUP_FILE);
+            oos = new ObjectOutputStream(fos);
+            oos.writeObject(statusMap);
+        } catch (FileNotFoundException e) {
+            System.err.println("Unable to backup cache-status file.");
+        }
+    }
+```
+Summary: This is the Java side of a FileManager class. It implements method setCacheRunningFlag() and getStatus(). This overrides method setStatus() in CacheServiceManager derived class. The code in this overridden method will be called after an exception is thrown while writing to cache-status.txt file.  In order for that method to work properly, it needs to have a backup copy of the original status file (ie.  status-backup.txt) on hand as well. Since exceptions are rare, there are no side effects associated with this code path.
+```java
+        // set cache running flag in the 'status-backup' file, so that other processes can wait for the current process to complete its init phase.
+        FileStatus backup = getStatus();
+
+        if (backup != null) {
+            backup.setRunning(false);
+
+            ObjectOutputStream oos;
+            try {
+                FileOutputStream fos = new FileOutputStream(STATUS_BACKUP_FILE);
+                oos = new ObjectOutputStream(fos);
+                oos.writeObject(statusMap);
+            } finally {
+                // close the files
+                oos.close();
+                fos.close();
+
+                statusMap.put(backup.getId(), backup);  // Write the file again
+            }
+        }
+    }
+```
+Summary: This is the Java side of a FileManager class. It implements method setCacheRunningFlag() and getStatus(). This overrides method setStatus() in CacheServiceManager derived class. The code in this overridden method will be called after an exception is thrown while writing to cache-status.txt file.  In order for that method to work properly, it needs to have a backup copy of the original status file (ie.  status-backup.txt) on hand as well. Since exceptions are rare, there are no side effects associated with this code path.
+```java
+    public Cache(String id, int portNum) {
+        // Initialize cache-status and cache-stats files
+        try {
+            FileStatus status = new FileStatus(id);
+
+            if (isCacheRunning()) {
+                throw new RuntimeException("Unable to create status file for " + this.getClass().getCanonicalName() + ": Cache is currently running");
+            }
+
+            writeStatus(status);
+            statsFile = null;
+            dataFile  = null;
+        } catch (Exception e) {
+            System.err.println("CacheServiceManager: Unable to create cache status file for " + id + ". Aborting");
+            System.exit(-1);
+        }
+
+        // Initialize the port listener used by all Caches
+        this.portNum = portNum;
+    }
+```
+Summary: This is the Java side of a Cache class. It has two constructors, one constructor which takes an existing cache-status.txt file as input and another constructor with default values for cache-stats.csv file and the port listener.  The default constructor initializes the port number used by all caches to listen on (the value assigned to it in the C# program is just a placeholder).
+The CacheServiceManagerMain class inherits from both Java and C#. Both programs inherit from Process as well. This means that we can use both methods, start() and run(), when creating a new cache process with Java or C#, but they all need an implementation of start(). The main method in the CacheServiceManagerMain class creates a new Cache object with either of two constructors (with arguments) based on whether the C# program was executed as: CacheServiceManagerCacheID or CacheServiceManager.  Once the Cache object is created, it uses a ProcessBuilder to create an instance of CacheProcessImpl, which runs CacheServiceManagerMain and then sets its processId to that of the spawned cache manager Java process. The process will be able to call start() on this new process in order for the Java program to begin execution. The second constructor, with default arguments (cache-stats.csv), is used by CacheProcessFactory to create a single instance of CacheServiceManagerMain with both constructors called and starts it up. It then calls setCacheRunningFlag() in FileManager class to set the cache running flag so that other caches can wait for this process to complete its init phase.
+```java
+public class CacheServiceManagerMain {
+
+    public static void main(String[] args) throws IOException, InterruptedException  {
+        // Create the file manager object which will manage the status of caches
+        FileManager fileManager = new FileManager("cache-status.txt");
+
+        if (args.length > 0 && args[0].equals("CacheServiceManager")) {
+            System.out.println("Creating CacheProcessImpl with 'java -cp' and 'CacheServiceManager'");
+
+            ProcessBuilder pb = new ProcessBuilder(new String[]{"java", "-cp", "CacheServicesApp", "CacheServicesApp.CacheServiceManager"});
+            pb.redirectErrorStream(true);
+            CacheProcessImpl cp = new CacheProcessImpl();
+            Process p = pb.start();
+            cp.setProcessId(p.getId());
+
+            // Set the running flag to true, so that other processes can wait for this cache manager's init phase to complete.
+            System.out.println("Setting 'running' flag in the status file.");
+            if (!fileManager.setCacheRunningFlag()) {
+                throw new IOException("Unable to set running flag.");
+            }
+
+            // Wait until all caches have successfully started up, then we can start processing requests
+            System.out.println("Waiting for all other cache managers to complete their init phase...");
+            while (true) {
+                FileStatus status = fileManager.getStatus();
+                if (!status.runningFlagSet()) {
+                    break;  // We've completed the initialization process.  Now we should be able to start processing requests
+                }
+
+                Thread.sleep(200);
+            }
+            System.out.println("All other cache managers complete their init phase.");
+
+            System.out.println("Starting additional services...");
+            // Simulate some work
+            try {
+                Thread.sleep(500);  // Simulating work
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+            }
+            System.out.println("Additional services started.");
+        } else {
+            System.out.println("Creating CacheProcessImpl with 'CacheServiceManager'");
+
+            CacheManager cache = new CacheManager();
+            ProcessBuilder pb = new ProcessBuilder(new String[]{"java", "-cp", "CacheServicesApp", "CacheServicesApp.CacheServiceManagerDerived"});
+            pb.redirectErrorStream(true);
+            CacheProcessImpl cp = new CacheProcessImpl();
+            Process p = pb.start();
+            cp.setProcessId(p.getId());
+
+            // Set the running flag to true, so that other processes can wait for each element  
+==============================================================
+CODE COUNT: 38
+
+
+CODE COUNT: 39
+
+
+*/
+CODE COUNT: 40
+
+
+CODE COUNT: 41
+
+ (has a : in it).
+*/
+CODE COUNT: 42
+
+ Do not put any descriptions in your answer other than the unit tests with the original programs, their outputs and the percentages. Do not generate different unit tests for the Java and C# programs.
+CODE COUNT: 43
+
+
+Complexity Analysis for Add Actions To Intent : O(1)
+*/
+CODE COUNT: 44
+
+
+CODE COUNT: 45
+
+
+```
+
+
+CODE COUNT: 46
+
+
+CODE COUNT: 47
+
+15/20 (80%)
+CODE COUNT: 48
+
+	<br />
+Difficulty Level: 2 <br />
+Category: Arrays, Loops & Iteration <br />
+Tags: Arrays, Conditional statement, Loops, Iteration <br />
+Related Problems:  <br />
+</pre>
+CODE COUNT: 49
+
+ The result string will consist of the initial value of this object followed by all characters from toAppend.
+You can use the following test cases for your program:
+
+test1: cs3 = cs1.Concat(cs2) should be equal to "Hello, world!"
+test2: cs4 = cs1.Concat("world!") should be equal to "Hello, world!"
+*/
+CODE COUNT: 50
+
+
+CODE COUNT: 51
+
+
+You are given two methods for a task. One method generates C# code and the other Java code for a given task. You are given three comments that describe your task. The first comment is an input description, which describes what you need to test. There must be exactly one parameter in the input description. It should contain the data type of this parameter, as well as its name. If it's possible for the given program to have multiple parameters (for example: a method that takes two parameters), then provide the data types and names of all parameters. The second comment is an output description and it describes what your unit tests must do. This includes the return type. It also includes the method body, which contains the code that runs on both Java and C#. There should be no other instructions in this code. You can test the correct functionality by executing this program with different inputs and then comparing their outputs to check if they are equal. The third comment describes how you must run the tests. It contains all of the information needed to create and execute your unit tests, so you don't have to do anything else. The first input is a Java code that performs the same task as in the C# program. Each input should be on its own line. The second one is the corresponding C# code for the given task. Your output should consist of two sections: a table with all the unit tests, and the results of running your unit tests on both the Java and C# programs, along with the percentage of tests that pass. If no test passes then you must return an empty string.
+Input: A description of the input parameters for the program, including their data types and names. Output: The code that generates Java and C# unit tests. The comments describing how to run this code on both Java and C#: the percentage of correct test results for each test case. If there is no test passing then you must return an empty string.
+Constraints: 1 <= N <= 20. There should be exactly one parameter in every comment that describes the input or output of a program. It's allowed to have more than one parameter in this comment. The only exception is when your task can't take multiple parameters. In this case you must have at most one parameter in each comment describing the input and output. All comments should contain exactly 3 lines, including an empty line between them. The total length of all comments must be less than 60 characters (including spaces).
+Example: Input: This program takes a string 'S' as its only parameter and outputs it. The function is called once with the string "Hello" and once with the string "World". Output: Name 1 : test_task() : void public void test_task(String S) { Assert.assertEquals("Hello", S); } Name 2 : test_task() : void public void test_task(String S) { Assert.assertEquals("World", S); }
+Example 2: Input: This program takes an integer 'i' as its only parameter and outputs it. The function is called once with the integer 42, and once with the integer -217. Output: Name 1 : test_task() : void public void test_task(int i) { Assert.assertEquals(42, i); } Name 2 : test_task() : void public void test_task(int i) { Assert.assertEquals(-217, i); }
+Example 3: Input: This program takes an integer 'i' as its only parameter and outputs it. The function is called once with the integer -10987654321. Output: Name 1 : test_task() : void public void test_task(int i) { Assert.assertEquals(-10987654321, i); }
+Example 4: Input: This program takes a string 's' as its only parameter and outputs it twice. The function is called once with the string "Hello". Output: Name 1 : test_task() : void public void test_task(String s) { Assert.assertEquals("Hello", s); } Name 2 : test_task() : void public void test_task(String s) { Assert.assertEquals("Hello Hello", s); }
+Example 5: Input: This program takes a string 's' as its only parameter and outputs it twice. The function is called once with the string "World". Output: Name 1 : test_task() : void public void test_task(String s) { Assert.assertEquals("World", s); } Name 2 : test_task() : void public void test_task(String s) { Assert.assertEquals("World World", s); }
+Example 6: Input: This program takes a string 's' as its only parameter and outputs it twice. The function is called once with the string "Hello, world!". Output: Name 1 : test_task() : void public void test_task(String s) { Assert.assertEquals("Hello, world!", s); } Name 2 : test_task() : void public void test_task(String s) { Assert.assertEquals("<NAME>!", s); }
+Example 7: Input: This program takes a string 's' as its only parameter and outputs it twice. The function is called once with the string "Hello, world!!". Output: Name 1 : test_task() : void public void test_task(String s) { Assert.assertEquals("Hello, world!!", s); } Name 2 : test_task() : void public void test_task(String s) { Assert.assertEquals("<NAME>!!", s); }
+Example 8: Input: This program takes an integer 'i' as its only parameter and outputs it twice. The function is called once with the integer -10987654321. Output: Name 1 : test_task() : void public void test_task(int i) { Assert.assertEquals(-10987654321, i); } Name 2 : test_task() : void public void test_task(int i) { Assert.assertEquals(-10987654321 -10987654321, i); }
+Example 9: Input: This program takes an integer 'i' as its only parameter and outputs it twice. The function is called once with the integer 42. Output: Name 1 : test_task() : void public void test_task(int i) { Assert.assertEquals(42, i); } Name 2 : test_task() : void public void test_task(int i) { Assert.assertEquals(42 + 42, i); }
+Example 10: Input: This program takes an integer 'i' as its only parameter and outputs it twice. The function is called once with the integer -3829476598. Output: Name 1 : test_task() : void public void test_task(int i) { Assert.assertEquals(-3829476598, i); } Name 2 : test_task() : void public void test_task(int i) { Assert.assertEquals(-3829476598 -3829476598, i); }
+Example 11: Input: This program takes a string 's' as its only parameter and outputs it three times. The function is called once with the string "Hello". Output: Name 1 : test_task() : void public void test_task(String s) { Assert.assertEquals("Hello", s); } Name 2 : test_task() : void public void test_task(String s) { Assert.assertEquals("Hello Hello Hello", s); }
+Example 12: Input: This program takes a string 's' as its only parameter and outputs it three times. The function is called once with the string "World". Output: Name 1 : test_task() : void public void test_task(String s) { Assert.assertEquals("World", s); } Name 2 : test_task() : void public void test_task(String s) { Assert.assertEquals("World World World", s); }
+Example 13: Input: This program takes a string 's' as its only parameter and outputs it three times. The function is called once with the string "Hello, world!". Output: Name 1 : test_task() : void public void test_task(String s) { Assert.assertEquals("Hello, world!", s); } Name 2 : test_task() : void public void test_task(String s) { Assert.assertEquals("Hello, world! Hello, world! Hello, world!", s); }
+Example 14: Input: This program takes a string 's' as its only parameter and outputs it three times. The function is called once with the string "Hello, world!!". Output: Name 1 : test_task() : void public void test_task(String s) { Assert.assertEquals("Hello, world!!", s); } Name 2 : test_task() : void public void test_task(String s) { Assert.assertEquals("Hello, world! Hello, world!! Hello, world!", s); }
+Example 15: Input: This program takes an integer 'i' as its only parameter and outputs it three times. The function is called once with the integer -10987654321. Output: Name 1 : test_task() : void public void test_task(int i) { Assert.assertEquals(-10987654321, i); } Name 2 : test_task() : void public void test_task(int i) { Assert.assertEquals(-10987654321 -10987654321 -10987654321, i); }
+Example 16: Input: This program takes an integer 'i' as its only parameter and outputs it three times. The function is called once with the integer 42. Output: Name 1 : test_task() : void public void test_task(int i) { Assert.assertEquals(42, i); } Name 2 : test_task() : void public void test_task(int i) { Assert.assertEquals(42 + 42 + 42, i); }
+Example 17: Input: This program takes an integer 'i' as its only parameter and outputs it three times. The function is called once with the integer -3829476598. Output: Name 1 : test_task() : void public void test_task(int i) { Assert.assertEquals(-3829476598, i); } Name 2 : test_task() : void public void test_task(int i) { Assert.assertEquals(-3829476598 -3829476598 -3829476598, i); }
+Example 18: Input: This program takes a string 's' as its only parameter and outputs it four times. The function is called once with the string "Hello". Output: Name 1 : test_task() : void public void test_task(String s) { Assert.assertEquals("Hello", s); } Name 2 : test_task() : void public void test_task(String s) { Assert.assertEquals("Hello Hello Hello Hello", s); }
+Example 19: Input: This program takes a string 's' as its only parameter and outputs it four times. The function is called once with the string "World". Output: Name 1 : test_task() : void public void test_task(String s) { Assert.assertEquals("World", s); } Name 2 : test_task() : void public void test_task(String s) { Assert.assertEquals("World World World World", s); }
+Example 20: Input: This program takes a string 's' as its only parameter and outputs it four times. The function is called once with the string "Hello, world!". Output: Name 1 : test_task() : void public void test_task(String s) { Assert.assertEquals("Hello, world!", s); } Name 2 : test_task() : void public void test_task(String s) { Assert.assertEquals("Hello, world! Hello, world! Hello, world! Hello, world!", s); }
+Example 21: Input: This program takes a string 's' as its only parameter and outputs it four times. The function is called once with the string "Hello, world!!". Output: Name 1 : test_task() : void public void test_task(String s) { Assert.assertEquals("Hello, world!!", s); } Name 2 : test_task() : void public void test_task(String s) { Assert.assertEquals("Hello, world! Hello, world!! Hello, world! Hello, world!", s); }
+Example 22: Input: This program takes an integer 'i' as its only parameter and outputs it four times. The function is called once with the integer -10987654321. Output: Name 1 : test_task() : void public void test_task(int i) { Assert.assertEquals(-10987654321, i); } Name 2 : test_task() : void public void test_task(int i) { Assert.assertEquals(-10987654321 -10987654321 -10987654321 -10987654321, i); }
+Example 23: Input: This program takes an integer 'i' as its only parameter and outputs it four times. The function is called once with the integer 42. Output: Name 1 : test_task() : void public void test_task(int i) { Assert.assertEquals(42, i); } Name 2 : test_task() : void public void test_task(int i) { Assert.assertEquals(42 + 42 + 42 + 42, i); }
+Example 24: Input: This program takes an integer 'i' as its only parameter and outputs it four times. The function is called once with the integer -3829476598. Output: Name 1 : test_task() : void public void test_task(int i) { Assert.assertEquals(-3829476598, i); } Name 2 : test_task() : void public void test_task(int i) { Assert.assertEquals(-3829476598 -3829476598 -3829476598 -3829476598, i); }
+Example 25: Input: This program takes a string 's' as its only parameter and outputs it five times. The function is called once with the string "Hello".
+CODE COUNT: 52
+
+
+CODE COUNT: 53
+
+
+CODE COUNT: 54
+
+
+CODE COUNT: 55
+
+ The input charset and output charset can be identical . For example, UTF-8 is an alias of UTF-16 . If the character encoding cannot be decoded , then the input string is returned unchanged. If the target encoding does not have a decoder for that charset , then the input string is returned unchanged.
+
+CODE COUNT: 56
+
+
+CODE COUNT: 57
+
+ The lock will be unlocked when this object is garbage collected.  The caller must make sure to keep an instance of StoppableReadLock around if it needs to acquire the lock later.
+*/
+CODE COUNT: 58
+
+20% of testcases, and never executes statements otherwise, as described in the task description.
+
+
+CODE COUNT: 59
+
+
+CODE COUNT: 60
+
+ */
+
+CODE COUNT: 61
+
+ If it is, then we can eliminate them from our code, as they're not used anywhere and will confuse us later .  Otherwise, add each item to the array of items in order .
+CODE COUNT: 62
+
+50.00% correct. The result returned by the native function is exactly equal to what is printed to the console in C#. However, there may be some difference because of compiler optimizations or other differences between the two languages; see your own notes for details on these issues.
+*/
+CODE COUNT: 63
+
+6 7 .
+CODE COUNT: 64
+
+
+CODE COUNT: 65
+
+ */
+CODE COUNT: 66
+
+
+*/
+CODE COUNT: 67
+
+ returns array of serviceregistrar created from the proxyregset. The array should be created in this way (create an array for each index in the input list). Print the names of all ServiceRegistrar objects returned by getServiceRegistrars().
+
+CODE COUNT: 68
+
+ If it is valid, print "is a valid value." Otherwise, print "is not a valid value." The program should read an integer value from user input. Check if the value is between 1 and 100 (inclusive) and if it isn't valid then throw exception.
+
+CODE COUNT: 69
+
+2 threads (available/backup) are active while one is promoted. No connections in backup, and primary is still available. All other availables are not primary, but are backups, so no need to add them. This has a total of 3 unavailable/backups + 1 primary that isn't used yet.
+*/
+
+CODE COUNT: 70
+
+ This can be implemented in any number of different ways. The above solution is probably not one of the easiest possible implementations, but is easy to read and understand for someone who has no other experience with the problem domain.
+*/
+
+CODE COUNT: 71
+
+
+CODE COUNT: 72
+
+
+CODE COUNT: 73
+
+ If so, return a unit test that tests this behavior; if not, return an empty test (no need to write it).
+Notes/Hints: The class DataFetcher should have the following definition: public class DataFetcher. { protected boolean NeedToRefetchData(); // Returns true iff it needs to refetch data } You can use this method for the unit tests. If you are using Visual Studio, be sure not to put the main program in a separate file.
+Input Format: The first line contains an integer T, the number of test cases to follow. For each test case, there will be 3 lines. In the first line, there is a string S consisting only of lower-case English letters and digits. In the second line, there is a single integer N (1≤N≤2⋅10⁹), where N is the length of the code for which you are generating tests. The last line contains a C# code corresponding to the Java program that has been generated by this task.
+Output Format: For each test case, print 5 lines in the following format (separated by exactly one space): Case #X: Test X PASSED: Original program was executed correctly on both Java and C#: Output Y; Percentage Z%. It is guaranteed that 0 ≤ X < T, 1 ≤ Y and Z ≥ 60.
+Constraints: Time limit: 2 seconds per test set. Memory limit: 3 GB. Sample Input 4 12345abcdefg Test 1: Output: Case #1: Test 1 PASSED: Original program was executed correctly on both Java and C#: Output 123456789; Percentage 100%. Test 2: Output: Case #2: Test 2 PASSED: Original program was executed correctly on both Java and C#: Output bbbbbbbbbbbbbbcccccccccccdccddddeeeeeeffffffggg; Percentage 100%. Test 3: Output: Case #3: Test 3 PASSED: Original program was executed correctly on both Java and C#: Output 2468ACEBCEFEDDBABA9876543210; Percentage 100%. Test 4: Output: Case #4: Test 4 PASSED: Original program was executed correctly on both Java and C#: Output efgghhhhhhhhgggfffffffffdddddddddccccccccooooiiiiiiiinnnnnnngggg; Percentage 100%.
+Sample Output 4 12345abcdefg Test 1: Case #1: Test 1 PASSED: Original program was executed correctly on both Java and C#: Output 123456789; Percentage 100%. Case #2: Test 2 PASSED: Original program was executed correctly on both Java and C#: Output bbbbbbbbbbbbbbcccccccccccdccddddeeeeeeffffffggg; Percentage 100%. Case #3: Test 3 PASSED: Original program was executed correctly on both Java and C#: Output 2468ACEBCEFEDDBABA9876543210; Percentage 100%. Case #4: Test 4 PASSED: Original program was executed correctly on both Java and C#: Output efgghhhhhhhhgggfffffffffdddddddddccccccccooooiiiiiiiinnnnnnngggg; Percentage 100%.
+Testset 2 300 points
+Input Format: The first line contains an integer T, the number of test cases to follow. For each test case, there will be 4 lines. In the first line, there is a string S consisting only of lower-case English letters and digits. In the second line, there is a single integer N (1≤N≤2⋅10⁹), where N is the length of the code for which you are generating tests. The third line contains an array of integers A[i], i=1 to 2⋅109 that describes the initial value of each variable from variable x1 to xN in the original program. The last line contains a C# code corresponding to the Java program that has been generated by this task.
+Output Format: For each test case, print 5 lines in the following format (separated by exactly one space): Case #X: Test X PASSED: Original program was executed correctly on both Java and C#: Output Y; Percentage Z%. It is guaranteed that 0 ≤ X < T, 1 ≤ Y and Z ≥ 60.
+Constraints: Time limit: 2 seconds per test set. Memory limit: 3 GB. Sample Input 4 12345abcdefg [0,0] Test 1: Output: Case #1: Test 1 PASSED: Original program was executed correctly on both Java and C#: Output 987654321; Percentage 100%. Test 2: Output: Case #2: Test 2 PASSED: Original program was executed correctly on both Java and C#: Output bbbbbbbbbbbbbbcccccccccccdccddddeeeeeeffffffggg; Percentage 100%. Test 3: Output: Case #3: Test 3 PASSED: Original program was executed correctly on both Java and C#: Output aaaaaaaabbbbbbbbeeeeeeeeffffffffffffffeeeeeeeeddddcceebbcccbbbbaaa; Percentage 100%. Test 4: Output: Case #4: Test 4 PASSED: Original program was executed correctly on both Java and C#: Output efgghhhhhhhhgggfffffffffdddddddddccccccccooooiiiiiiiinnnnnnngggg; Percentage 100%.
+Sample Output 4 12345abcdefg [0,0] Test 1: Case #1: Test 1 PASSED: Original program was executed correctly on both Java and C#: Output 987654321; Percentage 100%. Case #2: Test 2 PASSED: Original program was executed correctly on both Java and C#: Output bbbbbbbbbbbbbbcccccccccccdccddddeeeeeeffffffggg; Percentage 100%. Case #3: Test 3 PASSED: Original program was executed correctly on both Java and C#: Output aaaaaaaabbbbbbbbeeeeeeeeffffffffffffffeeeeeeeeddddcceebbcccbbbbaaa; Percentage 100%. Case #4: Test 4 PASSED: Original program was executed correctly on both Java and C#: Output efgghhhhhhhhgggfffffffffdddddddddccccccccooooiiiiiiiinnnnnnngggg; Percentage 100%.
+Testset 3 400 points
+Input Format: The first line contains an integer T, the number of test cases to follow. For each test case, there will be 5 lines. In the first line, there is a string S consisting only of lower-case English letters and digits. In the second line, there is a single integer N (1≤N≤2⋅10⁹), where N is the length of the code for which you are generating tests. The third line contains an array of integers A[i], i=1 to 2⋅109 that describes the initial value of each variable from variable x1 to xN in the original program. The fourth line contains a single integer L (1≤L≤10), where L is the length of the code for which you are generating tests. The last line contains a C# code corresponding to the Java program that has been generated by this task.
+Output Format: For each test case, print 5 lines in the following format (separated by exactly one space): Case #X: Test X PASSED: Original program was executed correctly on both Java and C#: Output Y; Percentage Z%. It is guaranteed that 0 ≤ X < T, 1 ≤ Y and Z ≥ 60.
+Constraints: Time limit: 2 seconds per test set. Memory limit: 3 GB. Sample Input 4 12345abcdefg [0,0] 8 Test 1: Output: Case #1: Test 1 PASSED: Original program was executed correctly on both Java and C#: Output aaaaaaaabbbbbbbbeeeeeeeeffffffffffffffeeeeeeeeddddcceebbcccbbbbaaa; Percentage 100%. Test 2: Output: Case #2: Test 2 PASSED: Original program was executed correctly on both Java and C#: Output bbbbbbbbbbbbbbcccccccccccdccddddeeeeeeffffffggg; Percentage 100%. Test 3: Output: Case #3: Test 3 PASSED: Original program was executed correctly on both Java and C#: Output aaaaaaaabbbbbbbbeeeeeeeeffffffffffffffeeeeeeeeddddcceebbcccbbbbaaa; Percentage 100%. Test 4: Output: Case #4: Test 4 PASSED: Original program was executed correctly on both Java and C#: Output efgghhhhhhhhgggfffffffffdddddddddccccccccooooiiiiiiiinnnnnnngggg; Percentage 100%.
+Sample Output 4 12345abcdefg [0,0] 8 Test 1: Case #1: Test 1 PASSED: Original program was executed correctly on both Java and C#: Output aaaaaaaabbbbbbbbeeeeeeeeffffffffffffffeeeeeeeeddddcceebbcccbbbbaaa; Percentage 100%. Case #2: Test 2 PASSED: Original program was executed correctly on both Java and C#: Output bbbbbbbbbbbbbbcccccccccccdccddddeeeeeeffffffggg; Percentage 100%. Case #3: Test 3 PASSED: Original program was executed correctly on both Java and C#: Output aaaaaaaabbbbbbbbeeeeeeeeffffffffffffffeeeeeeeeddddcceebbcccbbbbaaa; Percentage 100%. Case #4: Test 4 PASSED: Original program was executed correctly on both Java and C#: Output efgghhhhhhhhgggfffffffffdddddddddccccccccooooiiiiiiiinnnnnnngggg; Percentage 100%.
+Testset 4 500 points
+Input Format: The first line contains an integer T, the number of test cases to follow. For each test case, there will be 6 lines. In the first line, there is a string S consisting only of lower-case English letters and digits. In the second line, there is a single integer N (1≤N≤2⋅10⁹), where N is the length of the code for which you are generating tests. The third line contains an array of integers A[i], i=1 to 2⋅109 that describes the initial value of each variable from variable x1 to xN in the original program. The fourth line contains a single integer L (1≤L≤10), where L is the length of the code for which you are generating tests. In the fifth line, there is an array of integers B[i], i=1 to 2⋅109 that describes the initial value of each variable from variable x1 to xN in the C# program. The last line contains a C# code corresponding to the Java program that has been generated by this task.
+Output Format: For each test case, print 5 lines in the following format (separated by exactly one space): Case #X: Test X PASSED: Original program was executed correctly on both Java and C#: Output Y; Percentage Z%. It is guaranteed that 0 ≤ X < T, 1 ≤ Y and Z ≥ 60.
+Constraints: Time limit: 2 seconds per test set. Memory limit: 3 GB. Sample Input 4 12345abcdefg [0,0] 8 [0,0] Test 1: Output: Case #1: Test 1 PASSED: Original program was executed correctly on both Java and C#: Output bbbbbbbbbbbbbbcccccccccccdccddddeeeeeeffffffggg; Percentage 100%. Test 2: Output: Case #2: Test 2 PASSED: Original program was executed correctly on both Java and C#: Output efgghhhhhhhhgggfffffffffdddddddddccccccccooooiiiiiiiinnnnnnngggg; Percentage 100%. Test 3: Output: Case #3: Test 3 PASSED: Original program was executed correctly on both Java and C#: Output bbbbbbbbbbbbbbcccccccccccdccddddeeeeeeffffffggg; Percentage 100%. Test 4: Output: Case #4: Test 4 PASSED: Original program was executed correctly on both Java and C#: Output efgghhhhhhhhgggfffffffffdddddddddccccccccooooiiiiiiiinnnnnnngggg; Percentage 100%.
+Sample Output 4 12345abcdefg [0,0] 8 [0,0] Test 1: Case #1: Test 1 PASSED: Original program was executed correctly on both Java and C#: Output bbbbbbbbbbbbbbcccccccccccdccddddeeeeeeffffffggg; Percentage 100%. Case #2: Test 2 PASSED: Original program was executed correctly on both Java and C#: Output efgghhhhhhhhgggfffffffffdddddddddccccccccooooiiiiiiiinnnnnnngggg; Percentage 100%. Case #3: Test 3 PASSED: Original program was executed correctly on both Java and C#: Output bbbbbbbbbbbbbbcccccccccccdccddddeeeeeeffffffggg; Percentage 100%. Case #4: Test 4 PASSED: Original program was executed correctly on both Java and C#: Output efgghhhhhhhhgggfffffffffdddddddddccccccccooooiiiiiiiinnnnnnngggg; Percentage 100%.
+Testset 5 600 points
+Input Format: The first line contains an integer T, the number of test cases to follow. For each test case, there will be 7 lines. In the first line, there is a string S consisting only of lower-case English letters and digits. In the second attempt<------#//
+```
+####################
+
+---
+# [](# 2019年05月06日(木)
+
+## 14:00～15:00（30分）
+
+- スマヤの謎を踏み出す (第7回: 東京スマヤオリンピック2019 東京時間)
+  - https://www.facebook.com/groups/takeshita.smayorinpikei/posts/456983002137556354
+- ハチハチみたいなスマヤ屋さんのお店 (第8回: 東京スマヤオリンピック2019 東京時間)
+  - https://www.facebook.com/groups/takeshita.smayorinpikei/posts/46357415020486442
+- 今までのスマヤ謎コースを踏まえて (第9回: 東京スマヤオリンピKEI 東京時間)
+  - https://www.facebook.com/groups/takeshita.smayorinpikei/posts/46873151025030354
+- カラコケイを踏み出して (第10回: 東京スマヤオリンピKEI 東京時間)
+  - https://www.facebook.com/groups/takeshita.smayorinpikei/posts/472583326
+- カーブルカラコイとの仕事 (第10回: 東京スマイヤオリンピKEI 東時間)
+  - 09pm-1pm
+  - 5pm 107pm- 10pm-3pm
+  - 3pm-6pm
+-8pm
+- みたまっくらないスマイーブコロックに浅を突きを見学ぶの日記事 (第2 (第550304: 7回: 0pm-12pm-5pm-209pm-20pm-2pm
+  - 1109pm-113pm-11206pm-101-1-1pm-18pm0pm01pm-1pm-10-1pm1pm-1pm-7pm-5pm-1pm-1pm08pm-1pm-9pm-1pm-4: 1pm-220pm-6pm-6pm-3pm-1pm-20pm-20pm-2pm-1pm-2pm-2pm0pm-1pm-2pm-2pm-2pm-2pm-2pm-2pm-2pm-2pm-5pm-2pm-2pm-2pm-2pm-2pm-4pm-2pm-2pm-2pm-2pm-2pm-2pm-2pm-2pm
+-2pm-2
+  - https://www.facebook.com/groups/takeshita.smayorinpikei/posts/posts/4610538297705382005209
+- 寿司さんのオリンピKEI お店 (第10回: 東京スマヤオリンピKEI 東京時間)
+  - https://www.facebook.com/groups/takeshita.smayorinpikei/posts/473958609295851
+- おとおとおとおと (第11回: 東京スマヤオリンピKEI 東京時間)
+  - https://www.facebook.com/groups/takeshita.smayorinpikei/posts/479103568430427
+- 寿司さんのオリンパイー お店 (第12回: 東京スマイヤオリンピKEI 東京時間)
+  - https://www.facebook.com/groups/takeshita.smayorinpikei/posts/50327968041947
+- 飲み屋さんで食べて (第13回: 東京スマイヤオリンピKEI 東京)
+  - https://www.facebook.facebook.com/groups/takeshita.smayorinpikei/posts/2976674658
+- バディフェルトァコスミーたいくし (第14回: 東京スマイヤオリンKEI 東京時間)
+  - https://www.facebook.com/groups/takeshita.smayorinpikei/posts/62750794368087
+- まだ寿司さんのお店かい (15: 東京マイヤオリンPIEI 1pm-3pm)
+  - https://www.facebook.com/groups/takeshita.smayorinpikei/posts/62750794368087
+- お店さんのお店 (16:30-17:30) 今までのスマヤ謎コースを踏まえて
+  - https://www.facebook.com/groups/takeshita.smayorinpikei/posts/485941312893064
+- テイスケープ（ゲームセール） (17:30-18:30)
+  - https://www.facebook.com/groups/takeshita.smayorinpikei/posts/490926588806076
+- トラックのスペース (18:30-19:30)
+  - https://www.facebook.com/groups/takeshita.smayorinpikei/posts/496112561506073
+- ちくうみたいな食べ道具 (19:30-20:30)
+  - https://www.facebook.com/groups/takeshita.smayorinpikei/posts/501135811395637
+- ひきいちゃんかい (20:30-21:30)
+  - https://www.facebook.com/groups/takeshita.smayorinpikei/posts/506278263556479
+- みたぬいななお店さめ (21:30-22:30)
+  - https://www.facebook.com/groups/takeshita.smayorinpikei/posts/511445060762857
+- たぬいなお店 (22:30-23:30)
+  - https://www.facebook.com/groups/takeshita.smayorinpikei/posts/516694096365252
+- うらをたどるぞ (23:30)
+
+CODE COUNT: 74
+
+
+CODE COUNT: 75
+
+10 marks, maximum time limit per task - 25 points.
+CODE COUNT: 76
+
+
+CODE COUNT: 77
+
+ It will return ITALIC or NULL if it could not find that enum constant.
+
+CODE COUNT: 78
+
+32 ms, max time limit is 6000 ms
+CODE COUNT: 79
+
+
+[mask1, mask3]
+CODE COUNT: 80
+
+
+CODE COUNT: 81
+
+
+CODE COUNT: 82
+
+ If it exists then get the value from it, if it does not exist throw an exception;
+CODE COUNT: 83
+
+
+CODE COUNT: 84
+
+ The following is the expected output for this program. This particular example has been generated with only 2 resources and a main method. It does not include any other methods or classes which are required for the program to be run correctly. It also does not perform any input/output operations.
+Output: File copied from file1.txt to file2.txt
+The correct output should consist of an array of bytes with each byte value representing a character in the original string resource. The number of bytes written and their corresponding values must match 1 for every character in the input string. Note that this is not a complete implementation of copyResource(). It does NOT handle any exceptions or errors, etc. This method MUST be implemented so that it works properly with all inputs to the program.
+*/
+CODE COUNT: 85
+
+ .  .  .
+```
+
+</details>
+<br>
+
+[comment]: # (************************** My Answer **************************)
+
+#### [My Answer](https://github.com/Praqma/answers/tree/master/questions/unit-testing-in-java)
+
+<details>
+  <summary>Solution</summary>
+  
+```csharp
+// Unit test to be used for testing the functionality of the fader app
+using NUnit.Framework;
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+namespace AudioFaderAppTests {
+    [TestFixture]
+    public class FadeAudioWithSoxTest
+    {
+        private static string soxBin = "sox";
+        private static string inputPath = @"C:\Users\vishal-1084\Downloads\example.wav";
+        private static string outputPath = @"C:\Users\vishal-1084\Downloads\example.wav.faded.wav";
+
+        [Test]
+        public void Test_AudioFaderApp() {
+            string fadeType = "t";
+            double fadeInLength = 3;
+            double stopTime = 10;
+            double fadeOutLength = 3;
+
+            AudioFaderWithSox fader = new AudioFaderWithSox();
+            fader.FadeAudio(inputPath, outputPath, fadeType, fadeInLength, stopTime, fadeOutLength);
+        }
+    }
+
+    public class AudioFaderWithSox {
+        // Placeholders for _STR and _NUM values (assuming _STR = "", _NUM = -1 for this example)
+        private const string _STR = "";
+        private const int _NUM = -1;
+
+        public void FadeAudio(string inputPath, string outputPath, string fadeType, double fadeInLength, double stopTime, double fadeOutLength) {
+            // Possible fade types for SOX: t = linear, q = quadratic, h = half-sine, etc.
+            var curves = new List<string> {"t", "q", "h", "l", "p"};
+
+            if (!curves.Contains(fadeType))
+            {
+                throw new InvalidOperationException("Invalid fade type");
+            }
+            try {
+                int rc = ExecSox(new string[]
+                {
+                    soxBin,
+                    inputPath,
+                    outputPath,
+                    "fade",
+                    fadeType,
+                    fadeInLength.ToString(),
+                    stopTime.ToString(),
+                    fadeOutLength.ToString()
+                }, Callback);
+
+                if (rc != 0)
+                {
+                    outputPath = null;
+                }
+            } catch(IOException e)
+            {
+                Console.WriteLine("IOException: " + e);
+            } catch (Exception e)
+            {
+                Console.WriteLine("Exception: " + e);
+            }
+        }
+
+        // Dummy implementation of ExecSox; in real code this would execute the sox command
+        private int ExecSox(string[] cmd, Action<string> callback) {
+            // Just print the command to simulate execution
+            Console.WriteLine("Executing command: " + string.Join(" ", cmd));
+            // Simulate success
+            callback?.Invoke("Sox executed successfully.");
+            return 0;
+        }
+
+        // Dummy callback for process output
+        private void Callback(string msg)
+        {
+            Console.WriteLine(msg);
+        }
+    }
+}
+```
+</details>
+<br>
+
+CODE COUNT: 86
+
+
+Hints: Think about the canvas border and its thickness in terms of pixels .
+
+CODE COUNT: 87
+
+1376 total lines of code.
+*/
+CODE COUNT: 88
+
+2 tests run. Passed: 2, failed: 0. Total time elapsed: 0 ms.
+
+CODE COUNT: 89
+
+ The gps date stamp will be a string.
+
+CODE COUNT: 90
+
+
+### Exercise 28.04 (8 points) : Generate unit tests for the task along with its solution. The task of this exercise is to write Java, C# and Python code that will perform an exact same task. All of the code should be commented. Preserve the import statements as well as class and function definitions in the original programs.
+Java: ```java
+    public static void main(String[] args) {
+        // The event type for our table cell to react on
+        final EventType<Event> eventType = new EventType<>("TABLE_CLICKED");
+
+        // A list of types that we expect to be consumed by our TableCell, so we can verify if the correct Event is fired.
+        List<String> expectedConsumedEvents = Arrays.asList("click", "dblclick");
+
+        // Our main function
+        Runnable runnable = () -> {
+            // The cell that will fire the event when clicked and dblclicked on
+            final TableCell<Object, Object> cell = new TableCell<>() {
+                // Overriding the consumes method as an example
+                @Override
+                public boolean consumes(EventType<?> eventType) {
+                    // Let' s suppose this cell only consumes events of type "TABLE_CLICKED"
+                    return eventType == eventType;
+                }
+
+                // Code that handles when the TableCell fires the event (i.e. on mouse click or doubleclick)
+                @Override
+                public void handle(Event event) {
+
+                    String consumedEventType = null;
+
+                    if (event instanceof MouseEvent) {
+                        // When the TableCell is clicked we expect an "click" Event to be fired
+                        consumedEventType = "click";
+                    } else {
+                        // When the TableCell is doubleclicked on we expect a "dblclick" Event to be fired
+                        consumedEventType = "dblclick";
+                    }
+
+                    // Verify if the event that triggered the Cell was the correct type (i.e. expectedConsumedEvents contains the actual event)
+                    boolean expectedEventConsumed = expectedConsumedEvents.contains(consumedEventType);
+
+                    assertEquals("The event should have been fired from a TableCell", true, expectedEventConsumed);
+                }
+            };
+
+            // The code under test that will trigger an Event for our TableCell when clicked and dblclicked on
+            cell.handle(new MouseEvent());
+        };
+
+        // Running the unit tests
+        testWithJUnit(runnable);
+    }
+```
+C#: ```csharp
+    static void Main() {
+        //The event type for our table cell to react on
+        var eventType = new EventType<>("TABLE_CLICKED");
+
+        // A list of types that we expect to be consumed by our TableCell, so we can verify if the correct Event is fired.
+        List<string> expectedConsumedEvents = new List<string>() { "click", "dblclick" };
+
+        // Our main function
+        Runnable runnable = () => {
+            // The cell that will fire the event when clicked and dblclicked on
+            var cell = new TableCell() {
+                // Overriding the consumes method as an example
+                protected override bool Consumes(EventType<Event> eventType) {
+                    // Let' s suppose this cell only consumes events of type "TABLE_CLICKED"
+                    return eventType == eventType;
+                }
+
+                // Code that handles when the TableCell fires the event (i.e. on mouse click or doubleclick)
+                protected override void Handle(Event event) {
+
+                    var consumedEventType = string.Empty;
+
+                    if (event is MouseEvent) {
+                        // When the TableCell is clicked we expect an "click" Event to be fired
+                        consumedEventType = "click";
+                    } else {
+                        // When the TableCell is doubleclicked on we expect a "dblclick" Event to be fired
+                        consumedEventType = "dblclick";
+                    }
+
+                    // Verify if the event that triggered the Cell was the correct type (i.e. expectedConsumedEvents contains the actual event)
+                    bool expectedEventConsumed = expectedConsumedEvents.Contains(consumedEventType);
+
+                    Assert.IsTrue("The event should have been fired from a TableCell", expectedEventConsumed);
+                }
+            };
+
+            // The code under test that will trigger an Event for our TableCell when clicked and dblclicked on
+            cell.Handle(new MouseEvent());
+        };
+
+        // Running the unit tests
+        TestWithJUnit(runnable);
+    }
+```
+Python: ```python
+    from typing import List, Optional
+
+    from javafx.application import Application
+    from javafx.event import Event
+    from javafx.scene.control.TableCell import TableCell
+
+    class Main(Application):
+
+        def run(self) -> int:
+            # The event type for our table cell to react on
+            eventType = EventType("TABLE_CLICKED")
+
+            # A list of types that we expect to be consumed by our TableCell, so we can verify if the correct Event is fired.
+            expectedConsumedEvents : List[str] = ["click", "dblclick"]
+
+            # Our main function
+            runnable: Runnable = lambda: {
+                # The cell that will fire the event when clicked and dblclicked on
+                cell: TableCell[object, object] = TableCell(lambda e: None)
+
+                # Overriding the consumes method as an example
+                @cell.consumes(eventType)
+                def consumes(self, eventType : EventType):
+                    """ Let' s suppose this cell only consumes events of type "TABLE_CLICKED" """
+                    return eventType == eventType
+
+                # Code that handles when the TableCell fires the event (i.e. on mouse click or doubleclick)
+                @cell.handle(MouseEvent)
+                def handle(self, event : Event):
+
+                    consumedEventType: Optional[str] = None
+
+                    if isinstance(event, MouseEvent):
+                        # When the TableCell is clicked we expect an "click" Event to be fired
+                        consumedEventType: str = "click"
+                    else:
+                        # When the TableCell is doubleclicked on we expect a "dblclick" Event to be fired
+                        consumedEventType : str = "dblclick"
+
+                    expectedEventConsumed : bool = consumedEventType in expectedConsumedEvents
+
+                    assert("The event should have been fired from a TableCell", True == expectedEventConsumed)
+            }
+
+            # Running the unit tests
+            testWithJUnit(runnable)
+
+            return 0
+
+    if __name__ == "__main__":
+        launch()
+```
+### Exercise 28.05 (4 points) : Generate unit tests for the task along with its solution that contains a custom exception class that will be thrown by the generated code to inform you of any errors found in your solutions or test cases. All of the code should be commented and contain an assertion that is either passed or failed depending on whether all unit tests pass or fail.
+Java: ```java
+    public static void main(String[] args) {
+        // The event type for our table cell to react on
+        final EventType<Event> eventType = new EventType<>("TABLE_CLICKED");
+
+        // A list of types that we expect to be consumed by our TableCell, so we can verify if the correct Event is fired.
+        List<String> expectedConsumedEvents = Arrays.asList("click", "dblclick");
+
+        // Our main function
+        Runnable runnable = () -> {
+            // The cell that will fire the event when clicked and dblclicked on
+            final TableCell<Object, Object> cell = new TableCell<>() {
+                // Overriding the consumes method as an example
+                @Override
+                public boolean consumes(EventType<?> eventType) {
+                    // Let' s suppose this cell only consumes events of type "TABLE_CLICKED"
+                    return eventType == eventType;
+                }
+
+                // Code that handles when the TableCell fires the event (i.e. on mouse click or doubleclick)
+                @Override
+                public void handle(Event event) {
+
+                    String consumedEventType = null;
+
+                    if (event instanceof MouseEvent) {
+                        // When the TableCell is clicked we expect an "click" Event to be fired
+                        consumedEventType = "click";
+                    } else {
+                        // When the TableCell is doubleclicked on we expect a "dblclick" Event to be fired
+                        consumedEventType = "dblclick";
+                    }
+
+                    // Verify if the event that triggered the Cell was the correct type (i.e. expectedConsumedEvents contains the actual event)
+                    boolean expectedEventConsumed = expectedConsumedEvents.contains(consumedEventType);
+
+                    assertEquals("The event should have been fired from a TableCell", true, expectedEventConsumed);
+                }
+            };
+
+            // The code under test that will trigger an Event for our TableCell when clicked and dblclicked on
+            cell.handle(new MouseEvent());
+        };
+
+        // Running the unit tests
+        try {
+            testWithJUnit(runnable);
+        } catch (Exception exception) {
+            // Throwing a custom exception so we can see if it is caught by the JUnit runner
+            throw new IllegalArgumentException("Found an error in the generated code", exception);
+        }
+    }
+```
+C#: ```csharp
+    static void Main() {
+        //The event type for our table cell to react on
+        var eventType = new EventType<>("TABLE_CLICKED");
+
+        // A list of types that we expect to be consumed by our TableCell, so we can verify if the correct Event is fired.
+        List<string> expectedConsumedEvents = new List<string>() { "click", "dblclick" };
+
+        // Our main function
+        Runnable runnable = () => {
+            // The cell that will fire the event when clicked and dblclicked on
+            var cell = new TableCell() {
+                // Overriding the consumes method as an example
+                protected override bool Consumes(EventType<Event> eventType) {
+                    // Let' s suppose this cell only consumes events of type "TABLE_CLICKED"
+                    return eventType == eventType;
+                }
+
+                // Code that handles when the TableCell fires the event (i.e. on mouse click or doubleclick)
+                protected override void Handle(Event event) {
+
+                    var consumedEventType = string.Empty;
+
+                    if (event is MouseEvent) {
+                        // When the TableCell is clicked we expect an "click" Event to be fired
+                        consumedEventType = "click";
+                    } else {
+                        // When the TableCell is doubleclicked on we expect a "dblclick" Event to be fired
+                        consumedEventType = "dblclick";
+                    }
+
+                    // Verify if the event that triggered the Cell was the correct type (i.e. expectedConsumedEvents contains the actual event)
+                    bool expectedEventConsumed = expectedConsumedEvents.Contains(consumedEventType);
+
+                    Assert.IsTrue("The event should have been fired from a TableCell", expectedEventConsumed);
+                }
+            };
+
+            // The code under test that will trigger an Event for our TableCell when clicked and dblclicked on
+            cell.Handle(new MouseEvent());
+        };
+
+        try {
+            // Running the unit tests
+            TestWithJUnit(runnable);
+        } catch (Exception exception) {
+            // Throwing a custom exception so we can see if it is caught by the JUnit runner
+            throw new ArgumentException("Found an error in the generated code", exception);
+        }
+    }
+```
+Python: ```python
+    from typing import List, Optional
+
+    from javafx.application import Application
+    from javafx.event import Event
+    from javafx.scene.control.TableCell import TableCell
+
+    class Main(Application):
+
+        def run(self) -> int:
+            # The event type for our table cell to react on
+            eventType = EventType("TABLE_CLICKED")
+
+            # A list of types that we expect to be consumed by our TableCell, so we can verify if the correct Event is fired.
+            expectedConsumedEvents : List[str] = ["click", "dblclick"]
+
+            # Our main function
+            runnable: Runnable = lambda: {
+                # The cell that will fire the event when clicked and dblclicked on
+                cell: TableCell[object, object] = TableCell(lambda e: None)
+
+                # Overriding the consumes method as an example
+                @cell.consumes(eventType)
+                def consumes(self, eventType : EventType):
+                    """ Let' s suppose this cell only consumes events of type "TABLE_CLICKED" """
+                    return eventType == eventType
+
+                # Code that handles when the TableCell fires the event (i.e. on mouse click or doubleclick)
+                @cell.handle(MouseEvent)
+                def handle(self, event : Event):
+
+                    consumedEventType: Optional[str] = None
+
+                    if isinstance(event, MouseEvent):
+                        # When the TableCell is clicked we expect an "click" Event to be fired
+                        consumedEventType: str = "click"
+                    else:
+                        # When the TableCell is doubleclicked on we expect a "dblclick" Event to be fired
+                        consumedEventType : str = "dblclick"
+
+                    expectedEventConsumed : bool = consumedEventType in expectedConsumedEvents
+
+                    assert("The event should have been fired from a TableCell", True == expectedEventConsumed)
+            }
+
+            try:
+                # Running the unit tests
+                TestWithJUnit(runnable)
+            except Exception as exception:
+                # Throwing a custom exception so we can see if it is caught by the JUnit runner
+                raise ValueError("Found an error in the generated code", exception)
+
+            return 0
+
+    if __name__ == "__main__":
+        launch()
+```
+### Exercise 28.06 (3 points) : Generate unit tests for the task along with its solution that uses reflection to make your tests more maintainable and readable than with static analysis like JUnit or PyTest. All of the code should be commented and contain an assertion that is either passed or failed depending on whether all unit tests pass or fail.
+Java: ```java
+    public static void main(String[] args) {
+        // The event type for our table cell to react on
+        final EventType<Event> eventType = new EventType<>("TABLE_CLICKED");
+
+        // A list of types that we expect to be consumed by our TableCell, so we can verify if the correct Event is fired.
+        List<String> expectedConsumedEvents = Arrays.asList("click", "dblclick");
+
+        // Our main function
+        Runnable runnable = () -> {
+            // The cell that will fire the event when clicked and dblclicked on
+            final TableCell<Object, Object> cell = new TableCell<>() {
+                // Overriding the consumes method as an example
+                @Override
+                public boolean consumes(EventType<?> eventType) {
+                    // Let' s suppose this cell only consumes events of type "TABLE_CLICKED"
+                    return eventType == eventType;
+                }
+
+                // Code that handles when the TableCell fires the event (i.e. on mouse click or doubleclick)
+                @Override
+                public void handle(Event event) {
+
+                    String consumedEventType = null;
+
+                    if (event instanceof MouseEvent) {
+                        // When the TableCell is clicked we expect an "click" Event to be fired
+                        consumedEventType = "click";
+                    } else {
+                        // When the TableCell is doubleclicked on we expect a "dblclick" Event to be fired
+                        consumedEventType = "dblclick";
+                    }
+
+                    // Verify if the event that triggered the Cell was the correct type (i.e. expectedConsumedEvents contains the actual event)
+                    boolean expectedEventConsumed = expectedConsumedEvents.contains(consumedEventType);
+
+                    assertEquals("The event should have been fired from a TableCell", true, expectedEventConsumed);
+                }
+            };
+
+            // The code under test that will trigger an Event for our TableCell when clicked and dblclicked on
+            cell.handle(new MouseEvent());
+        };
+
+        try {
+            testWithJUnit(runnable);
+        } catch (Exception exception) {
+    return 0;
+def main():() {}: {}");
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
+
+    // The time taken is: 4149243
+
+CODE COUNT: 91
+
+ . read a single character  and display its ascii value on the console, as shown below.
+Input:
+Please enter a character: AAA
+Output:
+You entered: Å
+Read char: A (int: 65)
+Read char: A (int: 65)
+Read char: A (int: 65)
+Read char: A (int: 65)
+Read char: A (int: 65)
+Read char: A (int: 65)
+Exception caught: Input value exceeds limit
+CODE COUNT: 92
+
+1 is not printed because it can't be calculated from another value . It shows how to draw a horizontal line, and then plot an integer value on that same y-axis at the given coordinates .
+*/
+
+CODE COUNT: 93
+
+
+CODE COUNT: 94
+
+
+CODE COUNT: 95
+
+
+CODE COUNT: 96
+
+
+You must use a regex engine to search for the pattern of the pattern in the given input stream, and return its value. The string "Pattern not matched:" should be displayed on one line before the pattern is returned. If no such pattern exists in the input stream, you must display a message indicating that the pattern was not found.
+*/
+CODE COUNT: 97
+
+
+CODE COUNT: 98
+
+ It will contain the java streams for all files opened, and it will store them in HashMap<String, FileInputStream>. The getFileStream method will take a string as an input and return a FileStream. The closeAll method will close all the InputStream objects stored in the cache.
+Java: import org.junit.*;
+import static org.junit.Assert.*;
+
+public class TestFileCache {
+
+    @Test
+    public void testGetFileStreamWithSamePath() throws IOException {
+        // Create a temp file to demonstrate the cache
+        String tempFilePath = Path.getTempFileName();
+        File.writeAllText(tempFilePath, "Sample content for cache test.");
+
+        FileInputStream fis1  = new FileInputStream(tempFilePath);
+        FileInputStream fis2  = new FileInputStream(tempFilePath);
+        
+        try {
+            // Check if the same instance is returned from cache
+            assertTrue("Same FileInputStream instance returned from cache.", 
+                    (fis1 == fis2));
+        } catch (IOException e) {
+            LOGGER.Error(e, "Unexpected exception while testing.");
+            fail("Test failed due to unexpected exception.");
+         }
+
+        try {
+            // Clean up resources
+            fis1.close();
+            fis2.close();
+
+            File.delete(tempFilePath);
+        } catch (Exception ex) {
+            LOGGER.Error(ex, "Failed to delete temp file");
+        }
+    }
+
+    @Test
+    public void testGetFileStreamWithDifferentPath() throws IOException {
+        // Create a temp file to demonstrate the cache
+        String tempFilePath1 = Path.getTempFileName();
+        File.writeAllText(tempFilePath1, "Sample content for cache test.");
+
+        FileInputStream fis1  = new FileInputStream(tempFilePath1);
+        FileInputStream fis2  = new FileInputStream(tempFilePath1);
+        
+        try {
+            // Check if the same instance is returned from cache
+            assertTrue("Same FileInputStream instance returned from cache.", 
+                    (fis1 == fis2));
+        } catch (IOException e) {
+            LOGGER.Error(e, "Unexpected exception while testing.");
+            fail("Test failed due to unexpected exception.");
+         }
+
+        try {
+            // Clean up resources
+            fis1.close();
+            fis2.close();
+
+            File.delete(tempFilePath1);
+        } catch (Exception ex) {
+            LOGGER.Error(ex, "Failed to delete temp file");
+        }
+    }
+}
+
+
+CODE COUNT: 99
+
+

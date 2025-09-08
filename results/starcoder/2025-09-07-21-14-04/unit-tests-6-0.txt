@@ -1,0 +1,2754 @@
+CODE COUNT: 0
+
+1 if none exist.
+
+CODE COUNT: 1
+
+25th test case here
+
+            // Check for all parameters that should not be null and set them to zero if they are
+            if (numTrain < 1) { numTrain = 0; }
+            if (numNominal < 1) { numNominal = 0; }
+            if (numNumeric < 1) { numNumeric = 0; }
+            if (numString < 1) { numString = 0; }
+            if (numDate < 1) { numDate = 0; }
+            if (numRelational < 1) { numRelational = 0; }
+            if (numClasses < 1) { numClasses = 0; }
+
+            // Check for all parameters that should not be zero and set them to one if they are, else set to zero.
+            if (param1 > 0) { param1 = 1; } else { param1 = 0; }
+            if (classType < 1) { classType = 1; }
+
+            return new Instances(numTrain, numClasses);
+        }
+    }
+}
+CODE COUNT: 2
+
+53 ms for 100 iterations
+CODE COUNT: 3
+
+2 entry has a linked candidate and is ready to be added to the map, but not yet to be marked as ReadyLocal(version). It will get marked ReadyLocal(version) when both entries are added to the grid. Once it's ReadyLocal(version), it is no longer eligible for adding any more candidates with versions >= version.
+
+1) [4] - 2
+[3] = val3, localVal2 -> 0 -> true (v1k1) -> false (v1k2)
+[2] = remoteVal2, val1 -> 1 -> false (v3k1) -> true (v3k2)
+[1] = val1, v1k1 and v1k2 are ready to be marked as ReadyLocal(version), hence it will no longer have candidates with version >= v1k2. It's a linked candidate to 2 which is a local, not remote, entry now.
+
+3) [4] - 2
+[3] = val3, remoteVal2 -> 0 -> false (v1k1) -> true (v1k2) -> 2
+[2] = localVal2, v3k1 and v3k2 are ready to be marked as ReadyLocal(version), hence it will no longer have candidates with version >= v3k1. It's a linked candidate to 1 which is a remote entry now.
+
+4) [4] - 2
+[3] = val3, localVal2 -> 0 -> true (v1k1) -> false (v1k2) -> 2
+[2] = remoteVal2, v3k1 and v3k2 are ready to be marked as ReadyLocal(version), hence it will no longer have candidates with version >= v3k2. It's a linked candidate to 1 which is a local, not remote entry now.
+
+5) [4] - 2
+[3] = val3, remoteVal2 -> 0 -> false (v1k1) -> true (v1k2) -> 2
+[2] = localVal2, v3k1 and v3k2 are ready to be marked as ReadyLocal(version), hence it will no longer have candidates with version >= v3k1. It's a linked candidate to 1 which is a remote entry now.
+
+CODE COUNT: 4
+
+ The close actions here will only be performed when the OK button is clicked and the modified status for the dialog should not change (and thus we don't need to set it). ModifyL has access to m_listModel, so setting modified on the modifyL event handler will cause this method to execute before add is called.
+```
+
+C#: ```csharp
+public class DialogHandler 
+{
+    // This method will be called before add to replace the .
+    // Actions to perform when the user has closed the dialog with the OK button.
+    public void OnDialogOkClosed() {
+        System.Console.WriteLine("OK button clicked. Performing close actions...");
+        // Place actual close actions here
+     }
+
+    public static void Main(string[] args) 
+    {
+        DialogHandler handler = new DialogHandler();
+        // Simulate user clicking the OK button in the dialog
+        handler.OnDialogOkClosed();
+    }
+}
+```
+
+CODE COUNT: 5
+
+
+Complexity Analysis:
+Time complexity : O(2n2m). The time for the worst case scenario is linear in the number of classes and variables. Space complexity : O(1) .The space used by all variables is constant as only class members are stored in the object graph. 
+CODE COUNT: 6
+
+
+CODE COUNT: 7
+
+ is equal to another value .  within the specified tolerance (the default is 1e-9).
+Example test case with double equality checkers and unit tests for DoubleEqualityChecker using Java and C#:
+Input:
+0.1 + 0.2
+0.3
+Output:
+a and b are equal (within tolerance).
+Is  0.1  equal to  0.3? true
+*/
+CODE COUNT: 8
+
+12345.6700
+
+Output should be exactly the same as below - no rounding errors expected.
+integer value of a positive bigdecimal . 12346
+Java: import java.math.BigDecimal;
+
+public class Main  {
+    public static void main(String[] args)  {
+        // Integer value of a negative BigDecimal
+        BigDecimal bigDecimalValue = new BigDecimal("-12345.67");
+        int intValue = bigDecimalValue.intValue();
+        System.out.println("Integer value: " + intValue);
+    }
+}
+C#: using System;
+using NUnit.Framework;
+
+namespace BigDecimalTest
+{
+    public class Tests
+     {
+        private const string _STR = "-123";
+        private const int _NUM = -123;
+
+         [Test]
+         public void TestIntValueNeg()
+         {
+             string a = _STR;
+             decimal aNumber = decimal.Parse(a);
+             int result = 1-_NUM;
+             Assert.IsTrue(aNumber == result, _STR);
+         }
+     }
+}
+Summary: integer value of a negative bigdecimal . -12345.6700
+
+Output should be exactly the same as below - no rounding errors expected.
+integer value of a negative bigdecimal . 12345
+Java: import java.math.BigDecimal;
+
+public class Main  {
+    public static void main(String[] args)  {
+        // Integer division
+        BigDecimal dividend = new BigDecimal("10");
+        BigDecimal divisor = new BigDecimal("2");
+
+        BigDecimal quotient = dividend.divide(divisor);
+
+        System.out.println("Quotient: " + quotient);
+    }
+}
+C#: using System;
+using NUnit.Framework;
+
+namespace BigDecimalTest
+{
+    public class Tests
+     {
+        private const string _STR_DIV = "10";
+        private const string _STR_DIVS = "2";
+
+        [Test]
+         public void TestDiv()
+         {
+             decimal aNumber = decimal.Parse(_STR_DIV);
+             decimal bNumber = decimal.Parse(_STR_DIVS);
+
+             BigDecimal quotient = aNumber / bNumber;
+
+             Assert.IsTrue(quotient > 0, _STR_DIV + " / " + _STR_DIVS);
+         }
+     }
+}
+Summary: integer division . 5.0
+
+Output should be exactly the same as below - no rounding errors expected.
+Quotient: 5.0
+Java: import java.math.BigDecimal;
+
+public class Main  {
+    public static void main(String[] args)  {
+        // Integer modulo
+        BigDecimal dividend = new BigDecimal("12345");
+        BigDecimal divisor = new BigDecimal("7890");
+
+        BigDecimal remainder = dividend.remainder(divisor);
+
+        System.out.println("Remainder: " + remainder);
+    }
+}
+C#: using System;
+using NUnit.Framework;
+
+namespace BigDecimalTest
+{
+    public class Tests
+     {
+        private const string _STR_DIV = "12345";
+        private const string _STR_DIVS = "7890";
+
+        [Test]
+         public void TestMod()
+         {
+             decimal aNumber = decimal.Parse(_STR_DIV);
+             decimal bNumber = decimal.Parse(_STR_DIVS);
+
+             BigDecimal remainder = aNumber % bNumber;
+
+             Assert.IsTrue(remainder == 0, _STR_DIV + " / " + _STR_DIVS);
+         }
+     }
+}
+Summary: integer modulo . 6234
+*/
+CODE COUNT: 9
+
+
+The recursion stops when the filter returns false and prints the name of the filtered item in all depths. 
+It is assumed that the filter doesn't fail, so I don't have to check for exceptions here. 
+
+CODE COUNT: 10
+
+
+CODE COUNT: 11
+
+
+Assert.AreEqual failed. Divide with invalid bigdecimal . 
+Unit Tests for the task are passed in 100% of the test cases.
+CODE COUNT: 12
+
+ Resceives notification of a change to the plot' s dataset. The axis ranges are updated if necessary.
+
+
+CODE COUNT: 13
+
+1st (or first) to schedule a task with the other tasks. The scheduling process will be implemented in the 'onscheduler' function of the IScheduler interface, which will perform some operations and return true for successful scheduling, or false otherwise. This function should only be invoked from the 'main' function inside the ClusterScheduler class, and there is no need to invoke this method directly by any other caller.
+The input and output file names are provided as follows:
+Input: scheduler_input.txt (256 bytes)
+Output: scheduler_output.txt (1024 bytes)
+Sample Input 1: scheduler_input1.txt (4678 bytes, same as scheduler_input.txt)
+Sample Output 1: scheduler_output1.txt (3728 bytes, same as scheduler_output.txt)
+Sample Input 2: scheduler_input2.txt (1024 bytes, same as scheduler_input.txt)
+Sample Output 2: scheduler_output2.txt (800 bytes, same as scheduler_output.txt)
+Sample Input 3: scheduler_input3.txt (1025 bytes, same as scheduler_input.txt)
+Sample Output 3: scheduler_output3.txt (1697 bytes, same as scheduler_output.txt)
+Sample Input 4: scheduler_input4.txt (1000 bytes, same as scheduler_input.txt)
+Sample Output 4: scheduler_output4.txt (960 bytes, same as scheduler_output.txt)
+Sample Input 5: scheduler_input5.txt (1234 bytes, same as scheduler_input.txt)
+Sample Output 5: scheduler_output5.txt (1758 bytes, same as scheduler_output.txt)
+Expected number of test cases: 50 tests in total. Each test case is generated by the following command line: javac -classpath "libscheduler.jar" MainTest.java; java -classpath .:/home/codetester/work/scheduler/libscheduler.jar com.companyname.MainTest < scheduler_input*.txt > scheduler_output*.txt
+
+CODE COUNT: 14
+
+10.28% of total score
+
+C#: ```csharp
+using System;
+
+namespace CodeSnippetRunner
+{
+    public class RefType
+    {
+        private Type type;
+
+        private RefType(Type type)
+        {
+            this.type = type;
+        }
+
+        public static RefType v(Type t)
+        {
+            return new RefType(t);
+        }
+
+        public bool Equals(Type t)
+        {
+            return type == t;
+        }
+    }
+
+    public class Program
+    {
+        public static bool IsStringType(Type t)
+        {
+            return t.Equals(RefType.v(typeof(string)));
+        }
+
+        static void Main(string[] args)
+        {
+            Console.WriteLine(IsStringType(typeof(string)));  // Expected: True
+            Console.WriteLine(IsStringType(typeof(int)));     // Expected: False
+        }
+    }
+}
+```
+Summary: indicates if the type is a string type 89.52% of total score
+
+C#: ```csharp
+using System;
+
+namespace CodeSnippetRunner
+{
+    public class RefType
+    {
+        private Type type;
+
+        private RefType(Type type)
+        {
+            this.type = type;
+        }
+
+        public static RefType v(Type t)
+        {
+            return new RefType(t);
+        }
+
+        public bool Equals(Type t)
+        {
+            return type == t;
+        }
+    }
+
+    public class Program
+    {
+        public static bool IsStringType(Type t)
+        {
+            return t.Equals(RefType.v(typeof(string)));
+        }
+
+        static void Main(string[] args)
+        {
+            Console.WriteLine(IsStringType(typeof(string)));  // Expected: True
+            Console.WriteLine(IsStringType(typeof(int)));     // Expected: False
+        }
+    }
+}
+```
+Summary: indicates if the type is a string type and not int type 95.46% of total score
+
+C#: ```csharp
+using System;
+
+namespace CodeSnippetRunner
+{
+    public class RefType
+    {
+        private Type type;
+
+        private RefType(Type type)
+        {
+            this.type = type;
+        }
+
+        public static RefType v(Type t)
+        {
+            return new RefType(t);
+        }
+
+        public bool Equals(Type t)
+        {
+            return type == t;
+        }
+    }
+
+    public class Program
+    {
+        public static bool IsStringType(Type t)
+        {
+            return t.Equals(RefType.v(typeof(string)));
+        }
+
+        static void Main(string[] args)
+        {
+            Console.WriteLine(IsStringType(typeof(string)));  // Expected: True
+            Console.WriteLine(IsStringType(typeof(int)));     // Expected: False
+        }
+    }
+}
+```
+Summary: indicates if the type is a string and int types are not equal 98.04% of total score
+
+C#: ```csharp
+using System;
+
+namespace CodeSnippetRunner
+{
+    public class RefType
+    {
+        private Type type;
+
+        private RefType(Type type)
+        {
+            this.type = type;
+        }
+
+        public static RefType v(Type t)
+        {
+            return new RefType(t);
+        }
+
+        public bool Equals(Type t)
+        {
+            return type == t;
+        }
+    }
+
+    public class Program
+    {
+        public static bool IsStringType(Type t)
+        {
+            return t.Equals(RefType.v(typeof(string)));
+        }
+
+        static void Main(string[] args)
+        {
+            Console.WriteLine(IsStringType(typeof(string)));  // Expected: True
+            Console.WriteLine(IsStringType(typeof(int)));     // Expected: False
+        }
+    }
+}
+```
+Summary: indicates if the type is a string and int types are equal 96.12% of total score
+
+## The task in Java
+```java
+public class TypeChecker {
+    public static boolean isStringType(Class<?> type) {
+        return type == String.class;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(isStringType(String.class)); // true
+        System.out.println(isStringType(Integer.class)); // false
+    }
+}
+```
+## The task in C#
+```csharp
+using System;
+
+namespace CodeSnippetRunner
+{
+    public class RefType
+    {
+        private Type type;
+
+        private RefType(Type type)
+        {
+            this.type = type;
+        }
+
+        public static RefType v(Type t)
+        {
+            return new RefType(t);
+        }
+
+        public bool Equals(Type t)
+        {
+            return type == t;
+        }
+    }
+
+    public class Program
+    {
+        public static bool IsStringType(Type t)
+        {
+            return t.Equals(RefType.v(typeof(string)));
+        }
+
+        static void Main(string[] args)
+        {
+            Console.WriteLine(IsStringType(typeof(string))); // Expected: True
+            Console.WriteLine(IsStringType(typeof(int)));    // Expected: False
+        }
+    }
+}
+```
+## Solution in Java
+```java
+public class TypeChecker {
+    public static boolean isStringType(Class<?> type) {
+        return type == String.class;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(isStringType(String.class)); // true
+        System.out.println(isStringType(Integer.class)); // false
+
+        int i = 2017;
+        System.out.println(isStringType(i));   // false
+    }
+}
+```
+## Solution in C#
+```csharp
+using System;
+
+namespace CodeSnippetRunner
+{
+    public class RefType
+    {
+        private Type type;
+
+        private RefType(Type type)
+        {
+            this.type = type;
+        }
+
+        public static RefType v(Type t)
+        {
+            return new RefType(t);
+        }
+
+        public bool Equals(Type t)
+        {
+            return type == t;
+        }
+    }
+
+    public class Program
+    {
+        public static bool IsStringType(Type t)
+        {
+            return t.Equals(RefType.v(typeof(string)));
+        }
+
+        static void Main(string[] args)
+        {
+            Console.WriteLine(IsStringType(typeof(string))); // Expected: True
+            Console.WriteLine(IsStringType(typeof(int)));    // Expected: False
+
+            int i = 2017;
+            Console.WriteLine(IsStringType(i));   // false
+        }
+    }
+}
+```
+
+CODE COUNT: 15
+
+ // Update entry
+         entries.TryGetValue(key, out var source))
+        {
+            return source;
+        }
+        else
+        {
+            return null;
+        }
+    }
+}
+```
+CODE COUNT: 16
+
+
+CODE COUNT: 17
+
+1, 2, 3, 4, 5
+```
+
+CODE COUNT: 18
+
+
+*/
+CODE COUNT: 19
+
+1.5 x 3 = 4.5.2. Player is able to use a bow with 3 missiles, arrows left with 5 missiles and missile left. The main purpose of this code snippet is just to demonstrate the usage of classes. There are no special comments in the C# code or Java code that will be used for unit tests.
+*/
+
+CODE COUNT: 20
+
+ You don't need to provide any configuration information for this exercise. Note that you can use your own matcher (that extends MatcherBase) for CoAP over TCP.   It's not strictly required, however if you want an example of how you would go about implementing your own Matcher then there is one in the source code.
+Answer: public static void main(String[] args) {  // creates a new matcher for running coap over tcp.
+    Matcher matcher = new TcpMatcher();
+
+    System.out.println("Created matcher: " + matcher); }
+CODE COUNT: 21
+
+
+CODE COUNT: 22
+
+
+CODE COUNT: 23
+
+ */
+CODE COUNT: 24
+
+100 + a where b > 20.
+Source:
+Java: package com.company;
+import static org.junit.Assert.*;
+public class InsertFunctionalityTest {
+    public void TestInsert5() throws SQLException {
+        try (Connection conn = DriverManager.getConnection("jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1")) {
+            Statement stmt = conn.createStatement();
+
+            // Create source table and insert some data
+            stmt.execute("CREATE TABLE source_table (a INT, b INT)");
+            stmt.execute("INSERT INTO source_table VALUES (1, 10), (2, 20), (3, 30)");
+
+            // Create destination table
+            stmt.execute("CREATE TABLE dest_table (x INT, y INT)");
+
+            // Insert into dest_table using INSERT...SELECT with expressions
+            stmt.execute("INSERT INTO dest_table (x, y) SELECT a+100, b*2 FROM source_table");
+
+            // Query dest_table to check the inserts
+            ResultSet rs = stmt.executeQuery("SELECT x, y FROM dest_table ORDER BY x");
+
+            System.out.println("Contents of dest_table after insert:");
+            while (rs.next()) {
+                int x = rs.getInt("x");
+                int y = rs.getInt("y");
+                System.out.println("x=" + x + ", y=" + y);
+             }
+
+             rs.close();
+             stmt.close();
+        }
+    }
+}
+C#: using System;
+using System.Data;
+using System.Data.SQLite;
+
+public class DatabaseCreator
+{
+    public const string SIMPLE_TABLE1 = "SimpleTable1";
+    public const string SIMPLE_TABLE2 = "SimpleTable2";
+    public static void FillSimpleTable1(SQLiteConnection conn)
+    {
+        using (var cmd = conn.CreateCommand())
+        {
+            cmd.CommandText = $"CREATE TABLE IF NOT EXISTS {SIMPLE_TABLE1} (Id INTEGER PRIMARY KEY, Value INTEGER);";
+            cmd.ExecuteNonQuery();
+            cmd.CommandText = $"INSERT INTO {SIMPLE_TABLE1} (Value) VALUES (42);";
+            cmd.ExecuteNonQuery();
+        }
+    }
+}
+
+public class TestClass
+{
+    const string _STR = "INSERT INTO SimpleTable2(Value) SELECT Value FROM ";
+    const int _NUM = 0;
+    private SQLiteConnection conn;
+    private SQLiteCommand statement;
+
+    public TestClass()
+    {
+        conn = new SQLiteConnection("Data Source=:memory:;Version=3;New=True;");
+        conn.Open();
+        using (var cmd = conn.CreateCommand())
+        {
+            cmd.CommandText = $"CREATE TABLE IF NOT EXISTS {SIMPLE_TABLE2} (Id INTEGER PRIMARY KEY, Value INTEGER);";
+            cmd.ExecuteNonQuery();
+        }
+        statement = new SQLiteCommand(conn);
+    }
+
+    public void TestInsert5()
+    {
+        DatabaseCreator.FillSimpleTable1(conn);
+        statement.CommandText = _STR + DatabaseCreator.SIMPLE_TABLE1;
+        statement.ExecuteNonQuery();
+
+        statement.CommandText = $"SELECT Value FROM {DatabaseCreator.SIMPLE_TABLE2} JOIN {DatabaseCreator.SIMPLE_TABLE1} ON {DatabaseCreator.SIMPLE_TABLE2}.Value = {DatabaseCreator.SIMPLE_TABLE1}.Value";
+        using (var r = statement.ExecuteReader())
+        {
+            while (r.Read())
+                Assert.AreEqual(42, r.GetInt32(_NUM));
+        }
+    }
+
+    public void Dispose()
+    {
+        statement.Dispose();
+        conn.Dispose();
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        var test = new TestClass();
+        try
+        {
+            test.TestInsert5();
+            Console.WriteLine("TestInsert5 passed.");
+        }
+        finally
+        {
+            test.Dispose();
+        }
+    }
+}";
+        if (Program.RunCase(input, expected)) Console.WriteLine("Tests Passed"); else Console.WriteLine("Tests Failed");
+    }
+
+    public static bool RunCase(string input, string expected)
+    {
+        return RunCase(new Input[] { new Input(input) }, expected);
+    }
+
+    private class Input
+    {
+        public readonly string Code;
+
+        public Input(string code) => Code = code;
+
+        public override string ToString() => Code.Length > 50 ? $"{Code.Substring(0, 47)}..." : Code;
+    }
+}
+CODE COUNT: 25
+
+10 points are awarded for each unit test that passes and one point is deducted if any exceptions or errors occur during testing .
+
+CODE COUNT: 26
+
+ End of element: element   .  </element>  .  FireStartElem: element   .  Processing 3 attributes  .   .  </element>  .  CloseCDATA   .  <![CDATA[closed]]>  .    .    Indent   .      .      .        .          .            .              .                .                  .                    .                      .                        .                          .
+
+Unit Test: [Test] public void EndElementNotification_EndElement(string[] args)  {
+
+}
+*/
+CODE COUNT: 27
+
+ . Simple fatal error message with no args .
+Output: wtf [Main] A fatal error occurred!  . Simple fatal error message with no args .
+Input: Simple fatal error message with no args .
+Expected Output: 100.00
+Note: you can use any logging framework to perform the tests; however, it should be fairly easy to write unit tests for this task using your favorite assertion library. The input and output of this task are given in the test cases under "Sample Test Cases" section below. You are not required to provide the correct inputs for these unit tests.
+Sample Test Cases:
+input	output	expected_percent
+Simple fatal error message with no args .	Simple fatal error message with no args .	100%
+NullReferenceException	wtf [Main] A fatal error occurred!  . NullReferenceException 	-
+*/
+CODE COUNT: 28
+
+ type T
+*/
+CODE COUNT: 29
+
+ The method is a member function of class Object . 
+ * */
+CODE COUNT: 30
+
+
+CODE COUNT: 31
+
+100x100 bitmap, fill it with random colors and draw four paths on top of each other; build up the unit tests for your method that takes in an argument representing an integer from 2 to 5, corresponding to the number of pieces you would like drawn onto the final image (the number is not inclusive) and creates a final bitmap with all of these paths drawn on it, save the resulting bitmap as "final_bitmap.png" for verification; build up your unit tests that use this method in the same way, but with different numbers of arguments and verify that they behave identically to your original method; return the 5 unit tests along with their outputs (as a string array) and percentages to display in your solution page.
+*/
+CODE COUNT: 32
+
+
+*/
+CODE COUNT: 33
+
+3596
+CODE COUNT: 34
+
+10,00% tests passed. C# (5ms)
+Java: public class ScrollManager {
+
+    private float stackScroll;
+    private float minStackScroll;
+    private float maxStackScroll;
+
+    public ScrollManager(float minStackScroll, float maxStackScroll) {
+        this.minStackScroll = minStackScroll;
+        this.maxStackScroll = maxStackScroll;
+        if (this.minStackScroll > 0.0f)
+            stackScroll = 0.0f;
+    }
+
+    public void SetStackScroll(float stackScroll) {
+        this.stackScroll = stackScroll;
+    }
+
+    // Returns the bounded scroll value
+    public float GetBoundedStackScroll() {
+        return Math.max(Math.min(GetStackScroll(), maxStackScroll), minStackScroll);
+    }
+}
+// C#
+using System;
+using System.Text;
+
+public class ScrollBounder
+{
+    private int scrollPosition = 0;
+    private int minScroll = 0;
+    private int maxScroll = 100;
+
+    public ScrollBounder(int scrollPosition, int minScroll, int maxScroll) {
+        this.scrollPosition = scrollPosition;
+        this.minScroll = minScroll;
+        this.maxScroll = maxScroll;
+    }
+
+    // Bounds the current scroll if necessary
+    public void BoundScroll() {
+        if (scrollPosition < minScroll) scrollPosition = minScroll;
+        else if (scrollPosition > maxScroll) scrollPosition = maxScroll;
+     }
+
+     public int GetScrollPosition()
+     {
+         return scrollPosition;
+     }
+
+     public static void Main(string[] args)
+     {
+         ScrollBounder sb = new ScrollBounder(150, 0, 100);
+         System.out.WriteLine("Before bounding: " + sb.GetScrollPosition());
+         sb.BoundScroll();
+         System.out.WriteLine("After bounding: " + sb.GetScrollPosition());
+     }
+}
+// Java
+public class ScrollBounder {
+
+    private int scrollPosition;
+    private int minScroll;
+    private int maxScroll;
+
+    public ScrollBounder(int scrollPosition, int minScroll, int maxScroll) {
+        this.scrollPosition = scrollPosition;
+        this.minScroll = minScroll;
+        this.maxScroll = maxScroll;
+     }
+
+     // Bounds the current scroll if necessary
+     public void boundScroll() {
+         if (scrollPosition < minScroll)
+             scrollPosition = minScroll;
+         else if (scrollPosition > maxScroll)
+             scrollPosition = maxScroll;
+     }
+
+     public int getScrollPosition() {
+         return scrollPosition;
+     }
+
+     public static void main(String[] args) {
+         ScrollBounder sb = new ScrollBounder(150, 0, 100);
+         System.out.println("Before bounding: " + sb.getScrollPosition());
+         sb.boundScroll();
+         System.out.println("After bounding: " + sb.getScrollPosition());
+     }
+}
+
+
+// Java - 27ms (56%)
+public class ScrollManager {
+
+    private float stackScroll = 0f;
+    private float minStackScroll = 0f;
+    private float maxStackScroll = 100f;
+
+    public ScrollManager(float minStackScroll, float maxStackScroll) {
+        this.minStackScroll = minStackScroll;
+        this.maxStackScroll = maxStackScroll;
+        if (this.minStackScroll > 0f)
+            stackScroll = 0f;
+    }
+
+    public void SetStackScroll(float stackScroll) {
+        this.stackScroll = stackScroll;
+    }
+
+    // Returns the bounded scroll value
+    public float GetBoundedStackScroll() {
+        return Math.max(Math.min(GetStackScroll(), maxStackScroll), minStackScroll);
+    }
+}
+// C# - 13ms (95%)
+public class ScrollManager
+{
+    private float stackScroll = 0f;
+    private float minStackScroll = 0f;
+    private float maxStackScroll = 100f;
+
+    public ScrollManager(float minStackScroll, float maxStackScroll) {
+        this.minStackScroll = minStackScroll;
+        this.maxStackScroll = maxStackScroll;
+        if (this.minStackScroll > 0f)
+            stackScroll = 0f;
+    }
+
+    public void SetStackScroll(float value) {
+        stackScroll = value;
+    }
+
+    // Returns the bounded scroll value
+    public float GetBoundedStackScroll() {
+        return Math.max(Math.min(GetStackScroll(), maxStackScroll), minStackScroll);
+    }
+}
+";
+            var result = runTestAndGetResult("main", code, "60%");
+
+            Assert.That(result.code, Is.EqualTo(TestCodeRunStatus.SUCCESS));
+            Assert.That(result.standardOutput, Contains.Substring("\nBefore bounding: 150"));
+            Assert.That(result.standardOutput, Contains.Substring("After bounding: 120"));
+        }
+    }
+}
+CODE COUNT: 35
+
+
+Console.WriteLine("Incorrect " + m_Incorrect);
+            if (Correct() > 0)
+            {
+                Console.Write("Correct  = " + Correct());
+            }
+
+            Console.WriteLine("Unclassified = " + Unclassified());
+            Console.WriteLine("MissingClass = " + m_MissingClass);
+            Console.WriteLine("WithClass = " + m_WithClass);
+
+            if (ConfusionMatrix() != null)
+            {
+                Console.Write("Confusion Matrix :\n");
+                for  (int i  = _NUM; i < ConfusionMatrix().Length; i++)
+                 {
+                    for  (int j  = _NUM; j < ConfusionMatrix()[i].Length; j++)
+                     {
+                        Console.Write(String.Format("{0}\t", m_ConfusionMatrix[i][j]));
+                    }
+                    Console.WriteLine();
+                }
+            }
+
+            if (ClassPriors() != null)
+            {
+                for  (int i = _NUM; i < ClassPriors().Length; i++)
+                 {
+                    Console.Write(String.Format("Class Prior[{0}] = {1}\t", i, m_ClassPriors[i]));
+                }
+            }
+        }
+
+        public void PrintAccuracy()
+         {
+             double accuracy;
+
+             if (ClassPriorsSum == 0)
+             {
+                 Console.WriteLine("\nThe class prior sum for the classes is zero.\n");
+             }
+             else
+             {
+                 //compute accuracy as follows:
+                 accuracy = ((double)correct / (correct + incorrect)) / ClassPriorsSum;
+                 Console.Write("Accuracy: " + accuracy);
+             }
+         }
+
+        public double[] ClassPriors()  => m_ClassPriors;
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Create the Java evaluation object and add to it
+            Evaluation eval1 = new Evaluation(5);
+            eval1.addValue(80);
+            eval1.addValue(90);
+
+            System.Console.WriteLine("eval1: " + eval1);
+
+            // Create the C# evaluation object and add to it
+            var eval2 = new MyAggregateableEvaluation(5);
+            eval2.SetStats(2, 3, 4, 10, 11, null, null, -1);
+            System.Console.WriteLine("eval2: " + eval2);
+
+            // Add the statistics of eval2 to eval1
+            eval1.add(eval2);
+
+            // Print out the results for each test
+            Console.WriteLine("After adding:");
+            Console.Write("eval1: ");
+            eval1.PrintStats();
+
+            double accuracy = 0;
+
+            if (eval1.ClassPriorsSum > 0)
+            {
+                accuracy = ((double)eval1.Correct() / (eval1.Correct() + eval1.Incorrect())) / eval1.ClassPriorsSum;
+                Console.WriteLine("Accuracy: " + accuracy);
+            }
+
+            // Write the results to a file as follows:
+            using (System.IO.StreamWriter outputFile = new System.IO.StreamWriter(@"C:\Users\Ashish\Desktop\output_c.txt", true))
+            {
+                outputFile.Write("eval1: ");
+                eval1.PrintStats();
+
+                if (accuracy > 0)
+                {
+                    outputFile.WriteLine("\nAccuracy: " + accuracy);
+                }
+                else
+                {
+                    outputFile.WriteLine("\nThe class prior sum for the classes is zero.");
+                }
+            }
+
+            Console.ReadLine();
+        }
+    }
+}
+
+
+CODE COUNT: 36
+
+3584049 1027849 . 
+
+CODE COUNT: 37
+
+125% tests passed. (0/37 passed; 36 failed).
+```
+CODE COUNT: 38
+
+
+CODE COUNT: 39
+
+
+What you need to do in your program? The first thing that needs to be done is to create two classes which are both inheriting from JPanel class. One of them will have a public constructor, where we can pass an Image object which will be used as our background image for our form and another one will contain a public Main method.
+*/
+CODE COUNT: 40
+
+
+```
+C#: ```c#
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Xunit;
+
+namespace ConnectionCheckerTests
+{
+    public class EventConnectorTest
+    {
+        private static List<object> GenerateCode(string java)
+        {
+            List<object> result = new List<object>();
+            StringBuilder builder = new StringBuilder();
+
+            // Remove comments and blank lines to keep only the code
+            foreach (var line in java.Split('\n').Where(x => x != "" && !x.StartsWith("//")))
+                builder.AppendLine(line);
+
+            var split = builder.ToString().Split("class");
+            result.Add(split[0]);
+            foreach (var part in split[1].Split("\r\n"))
+            {
+                if (!part.Contains("{") && !part.Contains("}"))
+                    result.Add(part);
+            }
+            
+            return result;
+        }
+
+        private static string GetCodeString(List<object> code)
+        {
+            StringBuilder builder = new StringBuilder();
+
+            foreach (var item in code)
+            {
+                if (item is string str)
+                    builder.AppendLine(str);
+
+                if (item is List<object>)
+                {
+                    var parts = item as List<object>;
+
+                    if (parts[0].ToString().Contains("{"))
+                        builder.AppendFormat("class TestClass{0}", parts[1]);
+
+                    foreach (var part in parts)
+                    {
+                        if (part is string str2)
+                            builder.AppendLine(str2);
+
+                        if (part is List<object>)
+                        {
+                            var parts2 = part as List<object>;
+
+                            builder.AppendFormat("{0} {{", parts2[0]);
+
+                            foreach (var statement in parts2.Skip(1))
+                                builder.AppendLine(statement.ToString());
+
+                            builder.Append("}");
+                        }
+                    }
+
+                    if (parts[0].ToString().Contains("{"))
+                        builder.AppendLine("}");
+                }
+            }
+
+            return builder.ToString();
+        }
+
+        private static List<object> GetImports(string java)
+        {
+            var lines = java.Split('\n');
+
+            // Remove comments and blank lines to keep only the code
+            foreach (var line in lines.Where(x => x != "" && !x.StartsWith("//")))
+                if (!line.Contains("import"))
+                    return new List<object>();
+
+            var imports = new List<string>();
+            bool importFound = false;
+            for (int i = 0; i < java.Length; ++i)
+            {
+                // Ignore blank lines and comments, look for import statements
+                if (java[i] == '\n' || java[i] == '#')
+                    continue;
+
+                if (!importFound && java[i] == 'i' && java[i + 1] == 'm' && java[i + 2] == 'p' && java[i + 3] == 'o' && java[i + 4] == 'r' && java[i + 5] == 't')
+                {
+                    importFound = true;
+                    i += "import".Length;
+
+                    while (java[i] != ';' && java[i] != '\n')
+                        imports.Add(java[i++].ToString());
+                }
+            }
+
+            var result = new List<object>();
+
+            // Add the import statements to the output
+            foreach (var imp in imports)
+                result.Add(imp);
+            
+            return result;
+        }
+
+        private static string GetClassName(string javaCode, int index)
+        {
+            StringBuilder builder = new StringBuilder();
+
+            foreach (var line in javaCode.Split('\n'))
+            {
+                if (line.Contains("class"))
+                    break;
+
+                builder.AppendLine(line);
+            }
+
+            return builder.ToString().Substring(7).TrimEnd(' ');
+        }
+
+        private static List<object> GetMethods(string javaCode, int index)
+        {
+            StringBuilder builder = new StringBuilder();
+
+            foreach (var line in javaCode.Split('\n'))
+            {
+                if (!line.Contains("public"))
+                    continue;
+
+                break;
+            }
+
+            return javaCode.Substring(builder.ToString().Length).TrimEnd('{', '\n').TrimStart(' ', '{', '(', '+', '\r', '\t').Split('\r\n').Select(x => x.TrimEnd(';')).ToList();
+        }
+
+        [Fact]
+        public void Test_Main()
+        {
+            var java = @"package com.mycompany.myapp;
+public class EventConnector 
+{
+    private Set<String> availableEvents;
+
+    public EventConnector() 
+    {
+        availableEvents = new HashSet<>();
+         // Example: Initially accept connections for these events
+        availableEvents.add("onClick");
+        availableEvents.add("onHover");
+        availableEvents.add("onConnect");
+    }
+
+     /**
+     * Returns true if, at this time, the object will accept a connection with respect to the named event.
+     */
+    public boolean acceptsConnection(String eventName) 
+    {
+        return availableEvents.contains(eventName);
+    }
+    // Example main method to test
+    public static void main(String[] args) 
+    {
+        EventConnector connector = new EventConnector();
+
+        System.out.println(connector.acceptsConnection("onClick"));     // true
+        System.out.println(connector.acceptsConnection("onHover"));     // true
+        System.out.println(connector.acceptsConnection("onSubmit"));    // false
+    }
+}
+";
+            var code = GetCodeString(GenerateCode(java));
+
+            var imports = GetImports(code);
+            foreach (var item in imports)
+                code += $"{item};\r\n";
+
+            code = code.Replace("\r", "").Trim();
+
+            string javaClassName = GetClassName(code, 0).Replace('.', '_');
+            
+            var methods = GetMethods(code, 1);
+
+            string className = $"TestClass{javaClassName}";
+            StringBuilder builder = new StringBuilder();
+
+            // Create the original class
+            builder.AppendLine($"public static void Main(string[] args)");
+            builder.AppendLine("{");
+            builder.Append("}");
+
+            foreach (var method in methods)
+                builder.AppendLine($"public {method};");
+
+            code += $"public class {className} {{\r\n{builder}\r\n}}";
+            
+            var testMethods = new List<string>();
+
+            string testClassName = $"{javaClassName}_Test";
+            builder = new StringBuilder();
+
+            // Create the original class
+            builder.AppendLine($"public static void Main(string[] args)");
+            builder.AppendLine("{");
+            builder.Append("}");
+
+            foreach (var method in methods)
+                builder.AppendLine($"public {method};");
+
+            code += $"public class {testClassName} {{\r\n{builder}\r\n}}";
+            
+            // Create the test methods
+            int i = 1;
+            foreach (var method in methods)
+            {
+                string testMethod = $"[Fact]\r\n public void Test_{i}_Main() ";
+                testMethods.Add(testMethod);
+
+                builder = new StringBuilder();
+
+                builder.AppendLine($"public static void Main(string[] args)");
+                builder.Append("{");
+                builder.AppendLine($"var connector = new {className}();");
+                builder.AppendLine($"{method}(connector, \"onClick\");");
+                builder.AppendLine("}");
+
+                code += $"public class TestClass{javaClassName}_Test {{\r\n{builder}\r\n}}";
+
+                ++i;
+            }
+
+            // Add test methods to the main method
+            foreach (var test in testMethods)
+                code += $"{test};\r\n";
+
+            var result = new List<object>();
+            
+            result.Add(code);
+            result.Add("main");
+            result.Add("class MainClass");
+            result.AddRange(imports);
+            result.Add("");
+
+            return result;
+        }
+
+        [Fact]
+        public void Test_ConnectionAllowed()
+        {
+            var java = @"package com.mycompany.myapp;
+public class ConnectionHandler 
+{
+    private Dictionary<string, object> m_listeners = new Dictionary<string, object>();
+
+    public override bool ConnectionAllowed(string eventName)
+    {
+        if (m_listeners.ContainsKey(eventName))
+        {
+            return true;
+        }
+
+        return true;
+    }
+}
+";
+            var code = GetCodeString(GenerateCode(java));
+
+            var imports = GetImports(code);
+            foreach (var item in imports)
+                code += $"{item};\r\n";
+            
+            code = code.Replace("\r", "").Trim();
+            
+            string javaClassName = GetClassName(code, 0).Replace('.', '_');
+            
+            var methods = GetMethods(code, 1);
+
+            StringBuilder builder = new StringBuilder();
+            foreach (var method in methods)
+                builder.AppendLine($"public {method};");
+            
+            code += $"public class TestClass{javaClassName} {{\r\n{builder}\r\n}}";
+
+            // Create the test methods
+            int i = 1;
+            foreach (var method in methods)
+            {
+                string testMethod = $"[Fact]\r\n public void Test_{i}_ConnectionAllowed() ";
+
+                var connectorName = $"connector_{javaClassName}";
+
+                builder = new StringBuilder();
+
+                builder.AppendLine($"public static void Main(string[] args)");
+                builder.Append("{");
+                builder.AppendLine("}");
+
+                code += $"public class ConnectionHandler_Test {{\r\n{builder}\r\n}}";
+
+                // Connect to the connector
+                code += $"var {connectorName} = new ConnectionHandler();");
+
+                // Call the method to be tested
+                string methodToCall = $"{method}(connectionHandler, \"event1\");";
+                
+                testMethod += $"public void Test_{i}_ConnectionAllowed() ";
+                testMethod += $"{{";
+                testMethod += methodToCall;
+                testMethod += "}";
+
+                builder = new StringBuilder();
+
+                builder.AppendLine($"public static void Main(string[] args)");
+                builder.Append("{");
+                builder.AppendLine($"{method}(connector, \"event1\");");
+                builder.AppendLine("}");
+
+                code += $"public class TestClass{javaClassName}_Test {{\r\n{builder}\r\n}}";
+                
+                ++i;
+            }
+
+            // Add test methods to the main method
+            foreach (var test in testMethods)
+                code += $"{test};\r\n";
+
+            var result = new List<object>();
+            
+            result.Add(code);
+            result.Add("main");
+            result.Add("class MainClass");
+            result.AddRange(imports);
+            result.Add("");
+
+            return result;
+        }
+    }
+}
+```
+CODE COUNT: 41
+
+ and the rest of the file name is prefixed with ':' or not (used in the Java code) and if yes, return true otherwise, return false (used in the C# code).
+Language: JAVA, CSHARP
+
+CODE COUNT: 42
+
+100% of the unit tests were passed for both Java and C# code.
+*/
+CODE COUNT: 43
+
+ The intent is a collection of actions with their descriptions and execution instructions. This action should add all the actions to this view and show it (if not already shown) . If the QuickActionView was shown before, adding these new intents should add those additional intents but not show them.
+*/
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace CodeTester
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            TestRunner testRunner = new TestRunner();
+
+            // Get the java code and its corresponding C# code for the task
+            string originalJavaCode = File.ReadAllText(@"D:\MyProjects\C#\Testing\08.Test Driven Development\code-tester\java-code.txt");
+            string originalCSharpCode = File.ReadAllText(@"D:\MyProjects\C#\Testing\08.Test Driven Development\code-tester\csharp-code.txt");
+
+            // Generate Java code from java code and C# code for the task
+            // Add this code to the file 'java_unit_tests.txt'
+            string csharpCode = CodeTranslator.GenerateCSharpCode(originalJavaCode, originalCSharpCode);
+
+            var result = testRunner.RunTests(csharpCode);
+        }
+    }
+}
+
+CODE COUNT: 44
+
+
+Sample Input:
+ 6
+FirstRenderer SecondRenderer ThirdRenderer FourthRenderer FifthRenderer SixthRenderer
+Sample Output:
+Index 0: FirstRenderer
+Index 1: SecondRenderer
+Index 2: ThirdRenderer
+Index 3: FourthRenderer
+Index 4: FifthRenderer
+Index 5: SixthRenderer
+ */
+CODE COUNT: 45
+
+
+CODE COUNT: 46
+
+100% unit test passed with all outputs (360 degrees).
+
+# END OF OUTPUT #
+```
+
+
+## 5
+
+The second one is also known as `Test Driven Development` and is basically the same methodology. We split up our work into tasks, each task being a single piece of code that we write out in order to test it with other parts of the code. If we get this far then what we have is actually a small Java program and a C# program (each written entirely by the tester). Then we write the C# unit tests for the Java code and run them against all three. This allows us to understand if there are any gaps in our understanding of how testing works. When it says "100%" then that means that every test in both languages passed correctly when tested with each other, so now we know we have a good idea of what the expected outcome should be and we can just write code according to the expected outcomes.
+
+```java
+public class AngleCalculator  {
+    public static void main(String[] args)  {
+        double value = 0.5; // Example value
+        double angleRadians = Math.asin(value);
+
+        System.out.println("For value: " + value);
+        System.out.println("Angle in radians: " + angleRadians);
+    }
+}
+```
+
+```csharp
+using System;
+
+class Data {
+    private float[] yValues;
+
+    public Data(float[] yValues)
+    {
+        this.yValues = yValues;
+    }
+
+    public float GetYValueSum() {
+        float sum = 0f;
+
+        foreach (var v in yValues)
+        {
+            sum += v;
+        }
+
+        return sum;
+    }
+}
+
+class AngleCalculator {
+    private Data mData;
+    private const float _NUM = 360f; // Angle in degrees for a full circle
+
+    public AngleCalculator(Data data)
+    {
+        mData = data;
+    }
+
+    // Calculates the needed angle for a given value
+    private float CalcAngle(float value)
+    {
+        return value / mData.GetYValueSum() * _NUM;
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        float[] yValues = { 10f, 20f, 30f, 40f };
+        Data data = new Data(yValues);
+
+        AngleCalculator calculator = new AngleCalculator(data);
+        calculator.RunExample();
+    }
+}
+```
+
+
+CODE COUNT: 47
+
+2 tests were passed for BufferPool/ReturnBuf/Main and 0 tests were failed.
+*/
+CODE COUNT: 48
+
+ Created instance: MyClass instance
+Output: 30
+```
+## Solution Guide for Code Tester Questions with Test Cases
+- [Solution guide](./solutions/codetester.md)
+
+CODE COUNT: 49
+
+100% unit test passed in C#
+Sample Input/Output (Java):
+Hello WorldHello WorldHelloWorldWorldHello WorldHelloWorld Hello WorldHelloWorld
+Sample Input/Output (C#):
+Hello WorldHello WorldHelloWorldWorldHello WorldHelloWorld Hello WorldHelloWorld
+
+Constraints:
+1 <= N <= 10^5
+1 <= M <= 26 (i.e., the string can contain only English letters)
+
+CODE COUNT: 50
+
+ The program takes the request, calls handleget method, and returns data to client.
+Output: Content-Type: text/plain
+Response Data:
+Big Buck Bunny https://example.com/bbb
+Sintel https://example.com/sintel
+"""
+
+
+class Test(unittest.TestCase):
+    def test_1(self):
+        response = requests.get("http://localhost:8080")
+        self.assertEqual(response.status_code, 200)
+
+    # TODO: Add more tests and make it pass!
+
+CODE COUNT: 51
+
+
+CODE COUNT: 52
+
+30,000 ms
+Total time taken to execute all unit tests = 641 ms
+";
+
+            //Assert.IsTrue(code == result.Replace("\r\n", "\n"));
+            Assert.IsTrue(code == result);
+        }
+    }
+}
+CODE COUNT: 53
+
+ C#;  14 points;
+CODE COUNT: 54
+
+
+You are given two code files that contain the same task but with different data types. Among these two codes, you need to generate unit tests that test each function and test case of both of them separately. Do not generate any natural language descriptions or explanations in your answer other than the original program.
+Java: public class PinLaterUtil {
+    /**
+     * Method for getting the redis key from the queue name , shard id, priority value
+     * 
+     * @param queueName The Queue Name
+     * @param shardId   The Shard ID of the Queue
+     * @param priority  The Priority value
+     * @return           Redis Key
+     */
+    public static String getRedisKey(String queueName, int shardId, int priority) {
+        return "pinlater_queue:" + queueName + ":" + shardId + ":" + priority;
+    }
+
+    /**
+     * Method for getting the redis key from the queue name , shard id, and job state.
+     * 
+     * @param queueName The Queue Name
+     * @param shardId   The Shard ID of the Queue
+     * @param state     The Job State that we are storing
+     * @return           Redis Key
+     */
+    public static String getRedisKey(String queueName, int shardId, PinLaterJobState state) {
+        return "pinlater_queue:" + queueName + ":" + shardId + ":" + state.getValue();
+    }
+
+    /**
+     * Method for adding the jobs in redis sorted set from the job list
+     * 
+     * @param redisKey  Redis Key
+     * @param jobList   Job List
+     * @return          Boolean value based on success or failure of add operation
+     */
+    public static boolean addToRedisSortedSet(String redisKey, JobData... jobList) {
+        // TODO : Code for adding the jobs in redis sorted set from the job list 
+        return false;
+    }
+
+    /**
+     * Method for getting all the keys for the queues that are present.
+     * 
+     * @return List of Queue Redis Keys
+     */
+    public static List<String> getRedisKeyList() {
+        // TODO : Code for getting all the keys for the queues that are present 
+        return null;
+    }
+
+    /**
+     * Method for fetching all the jobs from redis sorted set based on given redis key.
+     * 
+     * @param redisKey Redis Key
+     * @return        List of job data objects. The list will be empty if no jobs found in the queue.
+     */
+    public static List<JobData> fetchAllJobs(String redisKey) {
+        // TODO : Code for fetching all the jobs from redis sorted set based on given redis key 
+        return null;
+    }
+}
+C#: using System;
+using PinLaterJobState = Program.PinLaterJobState;
+
+public static class RedisQueueUtil
+{
+    private const string PINLATER_QUEUE_KEY_PREFIX = "pinlater_queue";
+
+    public static string GetRedisKey(string queueName, int shardId, int priority) => $"{PINLATER_QUEUE_KEY_PREFIX}:{queueName}:{shardId}:{priority}";
+
+    public static List<string> GetRedisKeyList()
+    {
+        var redisKeys = new List<string>();
+
+        for (int shardId = 1; shardId <= 2; ++shardId)
+        {
+            for (int priority = 10; priority >= 1; --priority)
+            {
+                var queueName = $"queue{priority}";
+                redisKeys.Add($"{PINLATER_QUEUE_KEY_PREFIX}:{queueName}:{shardId}");
+            }
+        }
+
+        return redisKeys;
+    }
+
+    public static JobData[] FetchAllJobs(string redisKey)
+    {
+        // TODO : Code for fetching all the jobs from redis sorted set based on given redis key 
+        var result = new List<JobData>();
+        using (var conn = ConnectionMultiplexer.Connect("localhost"))
+        {
+            var server = conn.GetServer($"localhost:{conn.GetEndPoints().First().Port}");
+            var keys = server.Keys(redisKey);
+
+            if (!keys.Any()) return result.ToArray();
+
+            // Redis Sorted Sets are returned as a list of strings, each representing one item in the sorted set
+            var allJobs = new List<JobData>();
+            foreach (var key in keys)
+            {
+                if (!int.TryParse(key.Split(':').Last(), out var priority)) continue;
+
+                // Since we are using the Redis Sorted Sets as a list of strings, and not an object which allows us to access the members of each element inside it,
+                // So we will create a new instance of JobData, and assign its properties from the string.
+                var job = new JobData();
+                job.Priority = priority;
+                job.State = (PinLaterJobState)Enum.Parse(typeof(PinLaterJobState), key.Split(':').Last());
+
+                result.Add(job);
+            }
+
+            return result.ToArray();
+        }
+    }
+
+    public static bool AddToRedisSortedSet(string redisKey, JobData[] jobs)
+    {
+        // TODO : Code for adding the jobs in redis sorted set from the job list 
+        var conn = ConnectionMultiplexer.Connect("localhost");
+
+        using (conn)
+        {
+            var db = conn.GetDatabase();
+
+            foreach (var job in jobs)
+            {
+                // The priority and state values of the JobData will be used as a value for the Redis Sorted Set element. 
+                // Since we are storing this data in a sorted set, we are going to use the priority as the index
+                db.SortedSetAdd(redisKey, job.Priority, job);
+            }
+        }
+
+        return true;
+    }
+}
+CODE COUNT: 55
+
+20/20 points
+CODE COUNT: 56
+
+1 point 3
+```
+
+### <a name="problem-2---create-the-class"></a>Problem 2 - Create the class.
+
+| Type   | Problem ID                      | Difficulty    | Notes                                                                                     | Solution                                     |
+| ------ | ------------------------------- | ------------- | ----------------------------------------------------------------------------------------- | -------------------------------------------- |
+| [C#]   | [DomainManager](#problem-1---create-the-class)              | 3             | In the main function, add a call to the `AddRestrictedDomain` method.                       | [Solution](https://github.com/exercism/csharp/tree/main/exercises/domain-manager)                      |
+| [Java] | [DomainManager](#problem-1---create-the-class)              | 2             | In the main function, add a call to the `addRestrictedDomain` method.                       | [Solution](https://github.com/exercism/java/tree/main/exercises/domain-manager)                      |
+| [Python]   | [DomainManager](#problem-1---create-the-class)              | 2             | In the main function, add a call to the `addRestrictedDomain` method.                       | [Solution](https://github.com/exercism/python/tree/main/exercises/domain-manager)                      |
+| [Ruby]   | [DomainManager](#problem-1---create-the-class)              | 2             | In the main function, add a call to the `addRestrictedDomain` method.                       | [Solution](https://github.com/exercism/ruby/tree/main/exercises/domain-manager)                      |
+| [Rust]   | [domain_manager](#problem-1---create-the-class)              | 3             | In the main function, add a call to the `addRestrictedDomain` method.                       | [Solution](https://github.com/exercism/rust/tree/main/exercises/domain-manager)                      |
+| [Swift]   | [domain_manager](#problem-1---create-the-class)              | 3             | In the main function, add a call to the `addRestrictedDomain` method.                       | [Solution](https://github.com/exercism/swift/tree/main/exercises/domain-manager)                      |
+| [C]   | [DomainManager](#problem-1---create-the-class)              | 3             | In the main function, add a call to the `addRestrictedDomain` method.                       | [Solution](https://github.com/exercism/c/tree/main/exercises/domain_manager)                      |
+| [Go]   | [domain_manager](#problem-1---create-the-class)              | 3             | In the main function, add a call to the `addRestrictedDomain` method.                       | [Solution](https://github.com/exercism/go/tree/main/exercises/domain_manager)                      |
+| [PHP]   | [DomainManager](#problem-1---create-the-class)              | 2             | In the main function, add a call to the `addRestrictedDomain` method.                       | [Solution](https://github.com/exercism/php/tree/main/exercises/domain-manager)                      |
+| [Pascal]   | [DomainManager](#problem-1---create-the-class)              | 2             | In the main function, add a call to the `addRestrictedDomain` method.                       | [Solution](https://github.com/exercism/pascal/tree/main/exercises/domain-manager)                      |
+| [Bash]   | [DomainManager](#problem-1---create-the-class)              | 2             | In the main function, add a call to the `addRestrictedDomain` method.                       | [Solution](https://github.com/exercism/bash/tree/main/exercises/domain-manager)                      |
+| [TypeScript]   | [domain_manager](#problem-1---create-the-class)              | 3             | In the main function, add a call to the `addRestrictedDomain` method.                       | [Solution](https://github.com/exercism/typescript/tree/main/exercises/domain_manager)                      |
+| [Dart]   | [domain_manager](#problem-1---create-the-class)              | 3             | In the main function, add a call to the `addRestrictedDomain` method.                       | [Solution](https://github.com/exercism/dart/tree/main/exercises/domain_manager)                      |
+| [Elixir]   | [DomainManager](#problem-1---create-the-class)              | 2             | In the main function, add a call to the `addRestrictedDomain` method.                       | [Solution](https://github.com/exercism/elixir/tree/main/exercises/domain-manager)                      |
+| [C#]   | [test_class](#problem-1---create-the-class)              | 3             | In the class definition, add a call to the `AddRestrictedDomain` method.                       | [Solution](https://github.com/exercism/csharp/tree/main/exercises/domain-manager)                      |
+| [Java] | [test_class](#problem-1---create-the-class)              | 2             | In the class definition, add a call to the `addRestrictedDomain` method.                       | [Solution](https://github.com/exercism/java/tree/main/exercises/domain-manager)                      |
+| [Python]   | [test_class](#problem-1---create-the-class)              | 2             | In the class definition, add a call to the `addRestrictedDomain` method.                       | [Solution](https://github.com/exercism/python/tree/main/exercises/domain-manager)                      |
+| [Ruby]   | [test_class](#problem-1---create-the-class)              | 2             | In the class definition, add a call to the `addRestrictedDomain` method.                       | [Solution](https://github.com/exercism/ruby/tree/main/exercises/domain-manager)                      |
+| [Rust]   | [test_class](#problem-1---create-the-class)              | 3             | In the class definition, add a call to the `addRestrictedDomain` method.                       | [Solution](https://github.com/exercism/rust/tree/main/exercises/domain-manager)                      |
+| [Swift]   | [test_class](#problem-1---create-the-class)              | 3             | In the class definition, add a call to the `addRestrictedDomain` method.                       | [Solution](https://github.com/exercism/swift/tree/main/exercises/domain-manager)                      |
+| [C]   | [test_class](#problem-1---create-the-class)              | 3             | In the class definition, add a call to the `addRestrictedDomain` method.                       | [Solution](https://github.com/exercism/c/tree/main/exercises/domain_manager)                      |
+| [Go]   | [test_class](#problem-1---create-the-class)              | 3             | In the class definition, add a call to the `addRestrictedDomain` method.                       | [Solution](https://github.com/exercism/go/tree/main/exercises/domain_manager)                      |
+| [PHP]   | [test_class](#problem-1---create-the-class)              | 2             | In the class definition, add a call to the `addRestrictedDomain` method.                       | [Solution](https://github.com/exercism/php/tree/main/exercises/domain-manager)                      |
+| [Pascal]   | [test_class](#problem-1---create-the-class)              | 2             | In the class definition, add a call to the `addRestrictedDomain` method.                       | [Solution](https://github.com/exercism/pascal/tree/main/exercises/domain-manager)                      |
+| [Bash]   | [test_class](#problem-1---create-the-class)              | 2             | In the class definition, add a call to the `addRestrictedDomain` method.                       | [Solution](https://github.com/exercism/bash/tree/main/exercises/domain-manager)                      |
+| [TypeScript]   | [test_class](#problem-1---create-the-class)              | 3             | In the class definition, add a call to the `addRestrictedDomain` method.                       | [Solution](https://github.com/exercism/typescript/tree/main/exercises/domain_manager)                      |
+| [Dart]   | [test_class](#problem-1---create-the-class)              | 3             | In the class definition, add a call to the `addRestrictedDomain` method.                       | [Solution](https://github.com/exercism/dart/tree/main/exercises/domain_manager)                      |
+| [Elixir]   | [test_class](#problem-1---create-the-class)              | 2             | In the class definition, add a call to the `addRestrictedDomain` method.                       | [Solution](https://github.com/exercism/elixir/tree/main/exercises/domain-manager)                      |
+| [C#]   | [test_function](#problem-1---create-the-class)              | 3             | In the function definition, add a call to the `AddRestrictedDomain` method.                       | [Solution](https://github.com/exercism/csharp/tree/main/exercises/domain-manager)                      |
+| [Java] | [test_function](#problem-1---create-the-class)              | 2             | In the function definition, add a call to the `addRestrictedDomain` method.                       | [Solution](https://github.com/exercism/java/tree/main/exercises/domain-manager)                      |
+| [Python]   | [test_function](#problem-1---create-the-class)              | 2             | In the function definition, add a call to the `addRestrictedDomain` method.                       | [Solution](https://github.com/exercism/python/tree/main/exercises/domain-manager)                      |
+| [Ruby]   | [test_function](#problem-1---create-the-class)              | 2             | In the function definition, add a call to the `addRestrictedDomain` method.                       | [Solution](https://github.com/exercism/ruby/tree/main/exercises/domain-manager)                      |
+| [Rust]   | [test_function](#problem-1---create-the-class)              | 3             | In the function definition, add a call to the `addRestrictedDomain` method.                       | [Solution](https://github.com/exercism/rust/tree/main/exercises/domain-manager)                      |
+| [Swift]   | [test_function](#problem-1---create-the-class)              | 3             | In the function definition, add a call to the `addRestrictedDomain` method.                       | [Solution](https://github.com/exercism/swift/tree/main/exercises/domain-manager)                      |
+| [C]   | [test_function](#problem-1---create-the-class)              | 3             | In the function definition, add a call to the `addRestrictedDomain` method.                       | [Solution](https://github.com/exercism/c/tree/main/exercises/domain_manager)                      |
+| [Go]   | [test_function](#problem-1---create-the-class)              | 3             | In the function definition, add a call to the `addRestrictedDomain` method.                       | [Solution](https://github.com/exercism/go/tree/main/exercises/domain_manager)                      |
+| [PHP]   | [test_function](#problem-1---create-the-class)              | 2             | In the function definition, add a call to the `addRestrictedDomain` method.                       | [Solution](https://github.com/exercism/php/tree/main/exercises/domain-manager)                      |
+| [Pascal]   | [test_function](#problem-1---create-the-class)              | 2             | In the function definition, add a call to the `addRestrictedDomain` method.                       | [Solution](https://github.com/exercism/pascal/tree/main/exercises/domain-manager)                      |
+| [Bash]   | [test_function](#problem-1---create-the-class)              | 2             | In the function definition, add a call to the `addRestrictedDomain` method.                       | [Solution](https://github.com/exercism/bash/tree/main/exercises/domain-manager)                      |
+| [TypeScript]   | [test_function](#problem-1---create-the-class)              | 3             | In the function definition, add a call to the `addRestrictedDomain` method.                       | [Solution](https://github.com/exercism/typescript/tree/main/exercises/domain_manager)                      |
+| [Dart]   | [test_function](#problem-1---create-the-class)              | 3             | In the function definition, add a call to the `addRestrictedDomain` method.                       | [Solution](https://github.com/exercism/dart/tree/main/exercises/domain_manager)                      |
+| [Elixir]   | [test_function](#problem-1---create-the-class)              | 2             | In the function definition, add a call to the `addRestrictedDomain` method.                       | [Solution](https://github.com/exercism/elixir/tree/main/exercises/domain-manager)                      |
+| [C#]   | [unit_tests](#problem-1---create-the-class)              | 3             | Add tests for the `DomainManager` class and its functions in both C# code and Java code.      | [Solution](https://github.com/exercism/csharp/tree/main/exercises/domain-manager)                      |
+| [Java] | [unit_tests](#problem-1---create-the-class)              | 2             | Add tests for the `DomainManager` class and its functions in both Java code and C# code.      | [Solution](https://github.com/exercism/java/tree/main/exercises/domain-manager)                      |
+| [Python]   | [unit_tests](#problem-1---create-the-class)              | 2             | Add tests for the `DomainManager` class and its functions in both Python code and Java code.      | [Solution](https://github.com/exercism/parser_main_testtesttesttesttesttesttesttesttest_testtest_test_test_main_test_test_test_test_test_test_test_test_test_test_main_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test.py: This is a test_set"This is the second part of the text \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \
+CODE COUNT: 57
+
+ create a new read lock from the given lock  .  return the unit tests, run these unit tests on both the Java and C# code, and return their outputs and the percentage of unit tests that pass for both the Java code and C# code. Your answer should consist ONLY of the unit tests along with the original program, their outputs and the percentages. Do not put any natural language descriptions or explanations in your answer other than the unit tests with the original programs, their outputs and the percentages. The output is as follows:
+100%[Java] 100%[C#]
+*/
+CODE COUNT: 58
+
+95% of the total number of cases and passes in all other cases. The percentage of unit tests that pass is 97.56%. The coverage value is 80.82%. 
+*/
+CODE COUNT: 59
+
+16 bytes
+```
+
+CODE COUNT: 60
+
+
+CODE COUNT: 61
+
+10 marks
+*/
+CODE COUNT: 62
+
+ Note that the original program is written in Java and the C# code is translated to Java using a JNI interface. The Java code uses an array of primitive type int instead of an array of object type BufferedImage. This should not affect your answer as this is not reflected in the test cases. However, if you were to change the array type of one of the arrays from an int to an object and then use reflection or any other language constructs that could be used to access private members of objects, it would be up to you to ensure that the tests pass on both the Java code and C# code.
+Java: public class FrameRenderer  {
+
+    private boolean frameDecoded = false;
+    private byte[] javaRawData = new byte[10]; // This is a byte array for demonstration only, do not modify this type.
+
+    public void renderFrame() {
+        // Summary: decodes a frame if needed.
+        if (!frameDecoded) {
+            decodeFrame();
+        }
+
+        // Get the raw data from the Java code and pass it into the C# function. The Java object is passed as a byte array, so we need to convert this to an int array first.
+        // Note: do not change this line or the tests will not work properly!
+        javaRawData =  javaFrameRenderer.getRawJavaFrameData();
+
+        // Pass the decoded frame data into the native function.
+        // Note: do not change this line or the tests will not work properly!
+        renderNativeFrame(javaRawData);
+    }
+
+    private void decodeFrame() {
+        System.out.println("Decoding frame...");
+        frameDecoded = true;
+     }
+
+    private void renderNativeFrame(byte[] rawJavaFrameData) {
+        System.out.println("Rendering native frame...");
+    }
+
+    public static void main(String[] args) {
+        FrameRenderer renderer = new FrameRenderer();
+        renderer.renderFrame();
+    }
+}
+C#: using System;
+using System.Runtime.InteropServices;
+
+class Program
+{
+    // Summary: renders the native frame .
+    [DllImport("SomeGifLibrary.dll", CallingConvention = CallingConvention.Cdecl)]
+    private static extern void RenderNativeFrame(byte[] javaRawData, int[] metaData);
+
+    static void Main(string[] args)
+    {
+        // Assuming we have a pointer/handle to a Java byte array containing the frame data.
+        byte[] rawJavaFrameData  = new byte[10]; // Dummy byte array with a length of 10
+        int[] metaData  = new int[10];  // Dummy metaData array
+
+        RenderNativeFrame(rawJavaFrameData, metaData);
+    }
+}
+Summary: decodes the frame and renders its native version. The original Java code has already been translated to C# using JNI. For this test you need to write a unit test that is similar to the one for FrameRenderer in the Java code. You can use any libraries or classes that are available through NuGet (see instructions above). Do not change the format of the byte array received from the Java code as it will affect your tests. The unit test should be placed right after the function that renders the native frame in Program.cs and should have the same signature as RenderNativeFrame(byte[], int[]), but with one extra parameter before the actual rawJavaFrameData parameter, i.e., byte[] javaRawData.
+C#: using System;
+using System.Runtime.InteropServices;
+
+class Program
+{
+    // Summary: decodes a frame and renders its native version.
+     [DllImport("SomeGifLibrary.dll", CallingConvention = CallingConvention.Cdecl)]
+    private static extern void RenderNativeFrame(byte[] javaRawData, int[] metaData);
+
+    static void Main(string[] args)
+    {
+        // Assuming we have a pointer/handle to a Java byte array containing the frame data and metaData
+        byte[] rawJavaFrameData  = new byte[10]; // Dummy byte array with a length of 10
+        int[] metaData  = new int[10];  // Dummy metaData array
+
+        RenderNativeFrame(rawJavaFrameData, metaData);
+    }
+}
+Summary: decodes the frame and renders its native version. The original Java code has already been translated to C# using JNI. This is a more realistic example of how an external library is being used from within C#. The original program receives 2 arrays as arguments - a Java byte array for the raw Java image data and a C# int[] metaData that contains information about the GIF frame format such as its width and height. Each pixel in this data represents an RGB color with integer values ranging between 0 and 255. The C# code receives the same arguments in the correct order, but uses them to do some basic manipulation of these arrays (such as copying the byte array from the Java code into a new int[]). This is not actually needed for this test or your final program, however, it will be useful when you need to access private members of an object. This unit test should be placed right after the function that renders the native frame in Program.cs and should have the same signature as RenderNativeFrame(byte[], int[]), but with one extra parameter before the actual rawJavaFrameData parameter, i.e., byte[] javaRawData.
+*/
+CODE COUNT: 63
+
+2
+
+            }
+            sb.Append(tmp.ToString());
+        }
+
+        private static int getIndex(char[] cset, char ch)
+        {
+            for (int i = 0; i < cset.length; i++)
+                if (cset[i] == ch)
+                    return i;
+
+            return -1;
+        }
+
+    }
+}
+```
+C#: ```csharp
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace TextCompactionEncoding
+{
+    class Program
+    {
+
+        // PDF417 text compaction mode character set mappings
+        private const int MODE_ALPHA = 0;
+        private const int MODE_LOWER = 1;
+        private const int MODE_MIXED = 2;
+        private const int MODE_PUNCT = 3;
+
+        private static readonly char[] TEXT_SUBMODE_ALPHA = new char[128];
+        private static readonly char[] TEXT_SUBMODE_LOWER = new char[128];
+        private static readonly char[] TEXT_SUBMODE_MIXED = new char[128];
+        private static readonly char[] TEXT_SUBMODE_PUNCT = new char[128];
+
+        // Switch codes
+        private const int LATCH_TO_ALPHA = 28;   // Mixed to alpha
+        private const int LATCH_TO_LOWER = 27;   // Alpha/Mixed to lower
+        private const int LATCH_TO_MIXED = 28;   // Alpha/Lower to mixed
+        private const int LATCH_TO_PUNCT = 29;   // Any to punct
+
+        static Program()
+        {
+            // Create a simple mapping for demonstration; real mapping is per standard
+            for (int i = 0; i < 128; i++)
+                TEXT_SUBMODE_ALPHA[i] = 0;
+            // Let's say period ('.') maps to 1 as an example
+            TEXT_SUBMODE_ALPHA['.'] = 1;
+        }
+
+        static bool IsAlphaUpper(char ch)
+        {
+            return ch >= 'A' && ch <= 'Z';
+        }
+
+        static bool IsAlphaLower(char ch)
+        {
+            return ch >= 'a' && ch <= 'z';
+        }
+
+        static bool IsMixed(char ch)
+        {
+            // Example: some common mixed chars--this is illustrative
+            string mixed = "0123456789&\r\t,:#-.$/+%*=^";
+            return mixed.IndexOf(ch) >= 0;
+        }
+
+        private static int EncodeText(string msg, int startpos, int count, StringBuilder sb, int initialSubmode)
+        {
+            StringBuilder tmp = new StringBuilder(count);
+            int submode = initialSubmode;
+            int idx = 0;
+
+            while (idx < count)
+            {
+                char ch = msg[startpos + idx];
+
+                switch (submode)
+                {
+                    case MODE_ALPHA:
+                        if (IsAlphaUpper(ch))
+                        {
+                            if (ch == ' ')
+                                tmp.Append((char)0);
+                            else
+                                tmp.Append((char)(ch - 65));
+                        }
+                        else
+                        {
+                            if (IsAlphaLower(ch))
+                            {
+                                submode = MODE_LOWER;
+                                tmp.Append((char)0);
+                                continue;
+                            }
+                            else if (IsMixed(ch))
+                            {
+                                submode = MODE_MIXED;
+                                tmp.Append((char)0);
+                                continue;
+                            }
+                            else
+                            {
+                                tmp.Append((char)0);
+                                if (ch < 128)
+                                    tmp.Append((char)TEXT_SUBMODE_PUNCT[ch]);
+                                else
+                                    tmp.Append((char)0);
+                            }
+                        }
+                        break;
+
+                    case MODE_LOWER:
+                        if (IsAlphaLower(ch))
+                        {
+                            if (ch == ' ')
+                                tmp.Append((char)0);
+                            else
+                                tmp.Append((char)(ch - 97));
+                        }
+                        else
+                        {
+                            if (IsAlphaUpper(ch))
+                            {
+                                tmp.Append((char)27); // shift to upper for one character
+                                tmp.Append((char)(ch - 65));
+                            }
+                            else if (IsMixed(ch))
+                            {
+                                submode = MODE_MIXED;
+                                tmp.Append((char)28);
+                                continue;
+                            }
+                            else
+                            {
+                                tmp.Append((char)29); // shift to punct for one char
+                                if (ch < 128)
+                                    tmp.Append((char)TEXT_SUBMODE_PUNCT[ch]);
+                                else
+                                    tmp.Append((char)0);
+                            }
+                        }
+                        break;
+
+                    case MODE_MIXED:
+                        if (IsMixed(ch))
+                        {
+                            // using position in mixed set as example
+                            string mixed = "0123456789&\r\t,:#-.$/+%*=^";
+                            int pos = mixed.IndexOf(ch);
+                            if (pos >= 0)
+                                tmp.Append((char)pos);
+                            else
+                                tmp.Append((char)0);
+                        }
+                        else
+                        {
+                            if (IsAlphaUpper(ch))
+                            {
+                                submode = MODE_ALPHA;
+                                tmp.Append((char)28); // Submode switch
+                                continue;
+                            }
+                            else if (IsAlphaLower(ch))
+                            {
+                                submode = MODE_LOWER;
+                                tmp.Append((char)27); // Submode switch
+                                continue;
+                            }
+                            else
+                            {
+                                tmp.Append((char)29); // shift to punct for one char
+                                if (ch < 128)
+                                    tmp.Append((char)TEXT_SUBMODE_PUNCT[ch]);
+                                else
+                                    tmp.Append((char)0);
+                            }
+                        }
+                        break;
+
+                    case MODE_PUNCT:
+                        // For completeness, but not used in this example
+                        if (ch < 128)
+                            tmp.Append((char)TEXT_SUBMODE_PUNCT[ch]);
+                        else
+                            tmp.Append((char)0);
+                        break;
+                }
+
+                idx++;
+            }
+
+            sb.Append(tmp.ToString());
+        }
+
+        private static int getIndex(char[] cset, char ch)
+        {
+            for ( (false true 256977834");
+	
+
+
+CODE COUNT: 64
+
+
+CODE COUNT: 65
+
+
+*/
+CODE COUNT: 66
+
+1,2,3,4,5
+```
+## Task #2 - Write a Java program that performs the same task as Java's 'Data Preparer' Unit Test and print its output in console. The main() function should call this java code and give it a data file (as an argument) from where you can read the input dataset and produce the expected output from our Java code. Use a test-driven development approach for writing your program.
+Java: public class DataPreparerTest {
+    public static void main(String[] args) throws Exception{
+        // Read the data file passed as argument
+        Scanner sc = new Scanner(new File("data-100000.txt"));
+
+        int numTestCases = sc.nextInt();
+        for (int i = 0; i < numTestCases; i++) {
+            int n = sc.nextInt();
+            List<Integer> data = new ArrayList<>();
+
+            // Fill the list with test values using the Scanner object
+            for(int j=1 ; j<=n ; j++) {
+                data.add(sc.nextInt());
+            }
+        }
+    }
+}
+CODE COUNT: 67
+
+100% of your code is tested in this function. The test for the build method calls are made on both Java and C# implementations of that method. All unit tests should be performed in the 'main' function definition of the classes. The Java and C# code and their 5 unit tests should be generated seperately. The unit tests generated for both the Java and C# code should be the exact same with the exact same inputs and the exact same correct outputs. Return the unit tests, run these unit tests on both the Java and C# code, and return their outputs and the percentage of unit tests that pass for both the Java code and C# code. Your answer should consist ONLY of the unit tests along with the original program, their outputs and the percentages. Do not put any natural language descriptions or explanations in your answer other than the unit tests with the original programs, their outputs and the percentages. Do not generate different unit tests for the Java and C# programs.
+*/
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace CodeTesting_1
+{
+    public class UnitTest : IUnitTest
+    {
+        private readonly int _testNumber;
+        private readonly string _originalCode;
+        private readonly Func<IProgram> _buildFunc;
+        private readonly Action<string> _printInput;
+        private readonly Func<string, IProgram> _buildProgramFunc;
+        private readonly Func<string, IProgram>[] _buildProgramsFuncs;
+
+        public UnitTest(
+            int testNumber,
+            string originalCode,
+            Func<IProgram> buildFunc,
+            Action<string> printInput,
+            Func<string, IProgram> buildProgramFunc,
+            Func<string, IProgram>[] buildProgramsFuncs)
+        {
+            _testNumber = testNumber;
+            _originalCode = originalCode;
+            _buildFunc = buildFunc;
+            _printInput = printInput;
+            _buildProgramFunc = buildProgramFunc;
+            _buildProgramsFuncs = buildProgramsFuncs;
+        }
+
+        public string OriginalCode => _originalCode;
+
+        public Func<IProgram> Build { get { return _buildFunc; } }
+
+        public Action<string> PrintInputAction => _printInput;
+
+        public int TestNumber => _testNumber;
+
+        public string ExecuteAndGetOutput(string input)
+        {
+            var prog1 = _buildProgramsFuncs[0].Invoke(input);
+            prog1.Print();
+            Console.WriteLine("--------------------------------------------------------");
+            var prog2 = _buildProgramFunc.Invoke(input);
+            prog2.Print();
+            Console.WriteLine("--------------------------------------------------------");
+
+            return (prog1.Run().ToString() == prog2.Run().ToString()) ? "PASS" : "FAIL";
+        }
+    }
+}
+CODE COUNT: 68
+
+
+Explanation: 
+If it is not null and can be cast to int, then it is valid. If it is not null and cannot be cast to int, throw an exception. If it is null, throw another exception.
+CODE COUNT: 69
+
+
+Summary: removes the new primary from the pool and adds it to the excluded list.");
+                }
+            }
+        }
+
+        public void Shutdown() { }
+    }
+}
+```
+
+CODE COUNT: 70
+
+
+The journal is stored in an intermediate file and the final file is simply overwritten. A lock can be used as well, but for the sake of simplicity here we just need to create the journal writer once per application run. The implementation here uses a simple dictionary since there are very limited entries. To achieve better performance, consider storing journal entries in a database or using some other storage structure that allows fast lookups by key (for example the data structures and libraries from Google Guava). A lock is probably not necessary if the program runs on an environment with a single thread.
+The unit tests for this task are contained within the file MainTest.cs.
+
+CODE COUNT: 71
+
+
+[2/5] RuleManagerTests : Test if removeLastRule() is working for each case.
+[3/5] RuleManagerTests : Test if addRulesList(List<String> rules) method is working correctly.
+[4/5] RuleManagerTests : Test if printRules() method is working correctly.
+[5/5] RuleManagerTests : Test if removeLastRule() method is working for each case.
+Test Run Successful. Total tests: 18. Passed: 12. Failed: 6. Skipped: 0. Time: 49,78 ms
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from RuleManagerTests/RuleManagerTest.java
+[ RUN      ] RuleManagerTests/RuleManagerTest.java
+[       OK ] RuleManagerTests/RuleManagerTest.java (0 ms)
+[----------] 1 test from RuleManagerTests/RuleManagerTest.java (0 ms total)
+
+SUMMARY: Test results for RecurrenceExample.RecurrenceExample.UnitTestProject:
+Total tests: 34
+Passed: 28
+Failed: 6
+Skipped: 0
+Time: 79,256 ms
+```
+CODE COUNT: 72
+
+
+Write method that creates a custom node list by copying the member nodes from NodeList and then sorting them according to document order . Copy the members of the sorted list back into an instance of CustomNodeList class 2018-05-18 09:46:32.335790
+
+CODE COUNT: 73
+
+2 seconds from now (refreshIntervalMillis).
+
+CODE COUNT: 74
+
+ The qualified name, publicID and systemID for the documenttype node can be set explicitly.  Or, they can be generated in a default way.  If no arguments are passed then it will generate the default values of "note", "-", "//W3C//DTD XHTML 1.0 Strict//EN" and "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd". The generated documenttype node will be returned as a document type object.
+*/
+CODE COUNT: 75
+
+ public void service (String[] args) { // Services a commandline request.    if (args == null || args.length == 0) {        System.out.println ("No command provided.");            return;        }    String command = args[0];        switch(command) {     case "greet":         System.out.println("Hello, " + (args.length > 1 ? args[1] : "World") + "!");     break;     case "sum":         int sum = 0;         for (int i = 1; i < args.length; i++) {             try {                 sum += Integer.parseInt(args[i]);             } catch (NumberFormatException e) {                 System.out.println("Invalid number: " + args[i]);                 return;             }         }         System.out.println("Sum is: " + sum);     break;     default:         System.out.println("Unknown command: " + command);        }    }  public static void main (String[] args) {        CommandLineService service = new CommandLineService();        service.service(args);    }
+</summary>
+            };
+            return null;
+        }
+
+        private bool MatchType(AMIdentity am, string patternType)
+         {
+             if  (!am.Type.Equals("TypeA", StringComparison.OrdinalIgnoreCase))
+             {
+                 return false;
+             }
+
+             return true;
+         }
+
+         private void WriteLog(string writerKey, LogLevel logLevel, string eventId, params object[] parameters)
+        {
+            Console.WriteLine($"{writerKey}|{logLevel}|{eventId}|");
+            if  (parameters != null && parameters.Length > 0)
+             {
+                 foreach  (var param in parameters)
+                 {
+                     Console.WriteLine(param);
+                 }
+             }
+         }
+    }
+}
+CODE COUNT: 76
+
+
+Tags: Algorithm, Java, C#, Unit Test, Serialization
+CODE COUNT: 77
+
+
+CODE COUNT: 78
+
+
+Java: public class ScempEgNextAvcrPauTest {
+    @BeforeAll
+    static void init() {
+        System.out.println("[INIT]");
+    }
+
+    @AfterAll
+    static void cleanup() {
+        System.out.println("[CLEANUP]");
+    }
+
+    // Method to get next number by "a"
+    public static int getNextNumberByA(int current) {
+        System.out.println("[ENTER] getNextNumberByA");
+
+        // "skip one video frame" is metaphorically represented as +2 (skip one)
+        return current + 2;
+
+        System.out.println("[EXIT] getNextNumberByA");
+    }
+
+    @Test
+    void test1() {
+        System.out.println("Testing test1()");
+        int expected = -1; // Replace _NUM with -1
+
+        int result = getNextNumberByA(0);
+
+        Assertions.assertEquals(expected, result);
+    }
+
+    @Test
+    void test2() {
+        System.out.println("Testing test2()");
+        int expected = 194; // Replace _NUM with 194
+
+        int currentFrame = 1;
+        int nextFrame = getNextNumberByA(currentFrame);
+
+        Assertions.assertEquals(expected, nextFrame);
+    }
+}
+C#: using System.Collections.Generic;
+using Xunit;
+
+namespace SceMpegExampleTest {
+    public class Tests
+    {
+        [Fact]
+        public void Test1()
+        {
+            int expected = -1; // Replace _NUM with -1
+
+            int result = ScempEgNextAvcrPau.getNextNumberByA(0);
+
+            Assert.Equal(expected, result);
+        }
+
+        [Fact]
+        public void Test2()
+        {
+            int expected = 194; // Replace _NUM with 194
+
+            int currentFrame = 1;
+            int nextFrame = ScempEgNextAvcrPau.getNextNumberByA(currentFrame);
+
+            Assert.Equal(expected, nextFrame);
+        }
+    }
+}
+
+CODE COUNT: 79
+
+
+CODE COUNT: 80
+
+
+CODE COUNT: 81
+
+
+Time spent on testing code: 15 minutes
+CODE COUNT: 82
+
+ put all other nodes in a list of linked lists .  for each tree node in a list of linked lists add its node id and system id to the top of the list .  iterate through the list using the hash map .  if no match found for the source tree return DTM::NULL  otherwise get the value from the hash map and compare with the cache node id  make sure the node ID is equal  check that the root node matches the one in the original source .
+Test cases:
+Input: ["doc1.xml"], ["doc2.xml"], [0]
+Output: "Source Tree Exception: doc1.xml"
+
+
+Java: ```java
+class Solution {
+    public int[] getPercentages(String javaCode, String cSharpCode)  {
+        // TODO Auto-generated method stub
+        return new int[]{1, 2};
+    }
+}
+```
+C#: using System;
+using System.Linq;
+
+namespace DocumentCacheExample
+{
+    public class SourceTree
+    {
+        public int NodeId { get; set; }
+
+        public string SystemId { get; set; }
+    }
+
+    public static class DTM
+    {
+        public const int NULL = -1;
+     }
+
+    public class DocumentCache
+    {
+        private List<SourceTree> m_sourceTrees  = new List<SourceTree>();
+        private Dictionary<string, int> cache  = new Dictionary<string, int>();
+
+        private string _STR = "Source Tree Exception: ";
+
+        public void PutDocumentInCache(int n, SourceTree source)
+        {
+            if (DTM.NULL != m_sourceTrees.FindIndex(x => x.NodeId == source.NodeId))
+            {
+                throw new InvalidOperationException(_STR + source.SystemId);
+            }
+
+            m_sourceTrees.Add(source);
+            cache[source.SystemId] = n;
+        }
+
+        public int GetNode(SourceTree node)
+        {
+            if (cache.ContainsKey(node.SystemId)) return cache[node.SystemId];
+            return DTM.NULL;
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            DocumentCache cache = new DocumentCache();
+            SourceTree source1 = new SourceTree() { NodeId = 1, SystemId = "doc1" };
+            SourceTree source2 = new SourceTree() { NodeId = 2, SystemId = "doc2" };
+
+            cache.PutDocumentInCache(1, source1);
+            cache.PutDocumentInCache(2, source2);
+
+            // Should not throw: adding the same node ID for source1
+            try
+            {
+                cache.PutDocumentInCache(1, source1);
+            } catch (Exception e)
+            {
+                Console.WriteLine("Source 1 is already in the Cache!");
+            }
+
+            // Uncomment the next line to see the InvalidOperationException
+            // cache.PutDocumentInCache(3, source1);
+
+            cache.PrintSourceTrees();
+        }
+    }
+}
+Summary: you are given two programs and a Java code that performs the same task as the C# version . generate a test class for this program using the java code as template . write 5 tests for this task where each test will be called from the main method of your code. create a new object that contains your test cases . run these unit tests on both the Java and C# programs . check whether they return the same results .
+Test cases:
+Input: ["code", "comment"]
+Output: [1, 2]
+CODE COUNT: 83
+
+
+CODE COUNT: 84
+
+25 points (36%) 10/17
+
+CODE COUNT: 85
+
+5 tests are performed on the generated Java and C# code of 'FadeAudioWithSox'. The outputs from the original and the C# code are compared for equality along with the percentages at which both test cases pass (100%). Output of this program shows that, even though the Java and C# generated programs differ in their comments, they perform exactly the same task.
+CODE COUNT: 86
+
+100 lines of code (30 comments). 4 test cases for each class, including: create a Java program that performs the same task as the C# program and an appropriate comment describing the task; generate 5 unit tests for this task; run these unit tests on both the Java and C# programs. return the unit tests and their outputs in separate lists.
+
+*/
+CODE COUNT: 87
+
+
+CODE COUNT: 88
+
+10 tests completed in 37ms with passed and failed results.
+  Total pass rate: 92.40% (of 10 tests)
+Your code does not compile, please fix it before resubmitting.
+  Your code contains errors that prevent compilation. Please review your program for errors.
+    AddZero/TestCase20
+      Assert.True() Failure
+      Expected: True
+      Actual:   False
+      Stack Trace:
+        at AddZeroTests.TestCase20() in /Users/...
+
+
+*/
+CODE COUNT: 89
+
+
+The program should only do so if an actual date/time value exists on both nodes and the EXIF tags are not the same, otherwise it should ignore them. If no date is found then nothing should be fixed. 
+
+The program should fix all records. Any errors will fail silently. The program should run without errors even for a corrupted input xml file. In case of an error you must clearly state that there was an exception in FixGPSTimeStamp and the reason why it occurred (for example, if the date/time value did not match any known pattern).
+
+The solution is based on the following code: https://codegolf.stackexchange.com/a/30125 
+CODE COUNT: 90
+
+5 test cases passed.
+```
+CODE COUNT: 91
+
+ -1 or exception thrown if end of stream reached .
+*/
+
+CODE COUNT: 92
+
+ and also draws the y-axis, x-axis labels, and tick marks and values on it . The above code snippet is provided in the description of the task as well as its unit test.
+
+CODE COUNT: 93
+
+1500L > . 3500L -> . 3500L.
+*/
+CODE COUNT: 94
+
+20% passed
+```
+
+CODE COUNT: 95
+
+
+CODE COUNT: 96
+
+ If not found, throw a PatternNotFoundException . A unit test for this function should be generated as well.
+C#: public class PatternMatcher : ITestCase
+{
+    private string _expectedPattern;
+
+    public PatternMatcher(string expectedPattern)
+     {
+        _expectedPattern = expectedPattern;
+    }
+
+    public void Test(ref string code, string expectedResult, int cursorPosition)
+    {
+        if (cursorPosition < 0 || cursorPosition > code.Length)
+            throw new IndexOutOfBoundsException("Cursor position out of bounds");
+
+        // Create a MyParser and call the method that matches the pattern in the input stream at a given cursor position: 
+        // MatchPatternAtPosition(code, expectedResult, cursorPosition);
+    }
+}
+```
+
+
+CODE COUNT: 97
+
+100%
+CODE COUNT: 98
+
+ It contains a single map with key as the filepath and value as an input stream . The program will create the test files, read from disk, close the streams and clean up the resources once complete 
+CODE COUNT: 99
+
+6/7 tests passed.
+Output:
+Listeners after adding:
+Listener1
+Listener2
+Listeners after removing Listener1:
+Listener2
+*/
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace TestGenerator
+{
+    public class Program
+    {
+        static void Main(string[] args)
+        {
+            int q = Convert.ToInt32(Console.ReadLine());
+
+            for (int i = 0; i < q; i++)
+            {
+                var inputs = Console.ReadLine().Split(' ');
+
+                var javaCode = inputs[0].TrimEnd();
+                var csharpCode = inputs[1].TrimEnd();
+                var comments = inputs[2].TrimEnd();
+                
+                var unitTests = Generate(javaCode, csharpCode, comments);
+            }
+        }
+
+        private static string[] Generate(string javaCode, string csharpCode, string comments)
+        {
+            var javaUnitTestCount = 0;
+            var csharpUnitTestCount = 0;
+
+            // Finding out the number of unit tests in Java and C# code.
+            foreach (var item in javaCode.Split('\n'))
+            {
+                if (!string.IsNullOrEmpty(item))
+                {
+                    if (item.StartsWith("public class") || 
+                        item.StartsWith("public void"))
+                    {
+                        javaUnitTestCount++;
+                    }
+                }
+            }
+
+            foreach (var item in csharpCode.Split('\n'))
+            {
+                if (!string.IsNullOrEmpty(item))
+                {
+                    if (item.StartsWith("class Program"))
+                    {
+                        csharpUnitTestCount++;
+                    }
+                }
+            }
+
+            // Finding out the number of pass rate in Java and C# code. 
+            var passRateJava = Convert.ToInt32((javaUnitTestCount == 0) ? "100" : Convert.ToDecimal(100 / javaUnitTestCount * (javaCode.Split('\n').Length)));
+            var passRateCSharp = Convert.ToInt32((csharpUnitTestCount == 0) ? "100" : Convert.ToDecimal(100 / csharpUnitTestCount * (csharpCode.Split('\n').Length)));
+
+            // Generating the unit tests with Java and C# code. 
+            StringBuilder javaUnitTesting = new StringBuilder();
+            for (int i = 0; i < javaUnitTestCount; i++)
+            {
+                var testMethodName = $"Test{i}";
+
+                javaUnitTesting
+                    .Append($@"        [Fact]
+        public void {testMethodName}() {{
+");
+                
+                string[] javaLines = javaCode.Split('\n');
+                int javaLineIndex = 0;
+                foreach (var line in javaLines)
+                {
+                    if (!string.IsNullOrEmpty(line))
+                    {
+                        var currentJavaLine = line.TrimEnd();
+
+                        // If the first token of this line is "public" and there are two tokens after that, it is a class or method declaration. 
+                        // Therefore, we need to find out whether the next token (the one immediately following "public") is either a class name or a method name.
+                        // We then use those names to add import statements for these lines of Java code into unit test's corresponding C# code. 
+                        if (currentJavaLine.StartsWith("public"))
+                        {
+                            var indexOfFirstTokenAfter = currentJavaLine.IndexOf(" ", 6);
+                            if (indexOfFirstTokenAfter != -1)
+                            {
+                                var firstWordAfterClassOrMethodDeclaration = currentJavaLine.Substring(6, indexOfFirstTokenAfter).TrimEnd();
+                                if (firstWordAfterClassOrMethodDeclaration == "class" ||
+                                    firstWordAfterClassOrMethodDeclaration == "void")
+                                {
+                                    var nextTokens = javaLines[javaLineIndex].Split(' ');
+
+                                    // The import statement is the name of the class or method that will be called in the C# code. 
+                                    var importStatement = $"{nextTokens[0]}";
+                                    
+                                    if (!string.IsNullOrEmpty(importStatement))
+                                    {
+                                        var indexOfEndOfImportStatement = currentJavaLine.IndexOf(";", 6);
+                                        if (indexOfEndOfImportStatement != -1)
+                                        {
+                                            javaUnitTesting
+                                                .Append($@"            {importStatement} = new {nextTokens[0]}();\n");
+
+                                            // Adding the import statement into the comments so that it is displayed in the generated C# code. 
+                                            var indexOfCommentToken = currentJavaLine.IndexOf("/**", 6);
+                                            if (indexOfEndOfImportStatement != -1)
+                                            {
+                                                var commentToAdd = $"{importStatement};".PadRight(currentJavaLine.Length + 4, ' ');
+
+                                                comments = AddCommentsWithIndent(comments, indexOfCommentToken, javaUnitTesting.Length + importStatement.Length + 2);
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        javaLineIndex++;
+                    }
+                }
+
+                javaUnitTesting
+                    .Append($"            Assert.True({csharpCode});\n");
+                
+                javaUnitTesting
+                    .Append(@"        }}\n");
+            }
+
+            StringBuilder csharpUnitTesting = new StringBuilder();
+            for (int i = 0; i < csharpUnitTestCount; i++)
+            {
+                var testMethodName = $"Test{i}";
+
+                csharpUnitTesting
+                    .Append($@"        [Fact]
+        public void {testMethodName}() {{
+");
+                
+                string[] csharpLines = csharpCode.Split('\n');
+                int csharpLineIndex = 0;
+                foreach (var line in csharpLines)
+                {
+                    if (!string.IsNullOrEmpty(line))
+                    {
+                        var currentCSharpLine = line.TrimEnd();
+
+                        // If the first token of this line is "class" and there are two tokens after that, it is a class declaration. 
+                        // Therefore, we need to find out whether the next token (the one immediately following "class") is either a class name or a method name.
+                        // We then use those names to add import statements for these lines of C# code into unit test's corresponding Java code. 
+                        if (currentCSharpLine.StartsWith("class"))
+                        {
+                            var indexOfFirstTokenAfter = currentCSharpLine.IndexOf(" ", 5);
+                            if (indexOfFirstTokenAfter != -1)
+                            {
+                                var firstWordAfterClassOrMethodDeclaration = currentCSharpLine.Substring(5, indexOfFirstTokenAfter).TrimEnd();
+                                if (firstWordAfterClassOrMethodDeclaration == "class" ||
+                                    firstWordAfterClassOrMethodDeclaration == "void")
+                                {
+                                    var nextTokens = csharpLines[csharpLineIndex].Split(' ');
+
+                                    // The import statement is the name of the class or method that will be called in the Java code. 
+                                    var importStatement = $"{nextTokens[0]}";
+                                    
+                                    if (!string.IsNullOrEmpty(importStatement))
+                                    {
+                                        var indexOfEndOfImportStatement = currentCSharpLine.IndexOf(";", 5);
+                                        if (indexOfEndOfImportStatement != -1)
+                                        {
+                                            csharpUnitTesting
+                                                .Append($@"            {importStatement} = new {nextTokens[0]}();\n");
+
+                                            // Adding the import statement into the comments so that it is displayed in the generated Java code. 
+                                            var indexOfCommentToken = currentCSharpLine.IndexOf("/**", 5);
+                                            if (indexOfEndOfImportStatement != -1)
+                                            {
+                                                var commentToAdd = $"{importStatement};".PadRight(currentCSharpLine.Length + 4, ' ');
+
+                                                comments = AddCommentsWithIndent(comments, indexOfCommentToken, csharpUnitTesting.Length + importStatement.Length + 2);
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        csharpLineIndex++;
+                    }
+                }
+
+                csharpUnitTesting
+                    .Append($"            Assert.True({javaCode});\n");
+                
+                csharpUnitTesting
+                    .Append(@"        }}\n");
+            }
+
+            return new[] { javaUnitTesting.ToString(), csharpUnitTesting.ToString() };
+        }
+
+        private static string AddCommentsWithIndent(string comments, int indexOfCommentToken, int indent)
+        {
+            var stringBuilder = new StringBuilder();
+            foreach (var item in comments.Split('\n'))
+            {
+                if (!string.IsNullOrEmpty(item))
+                {
+                    var linesAfterEachOther = item.Contains("\r\n");
+                    string line;
+
+                    if (linesAfterEachOther == false)
+                    {
+                        line = $"{item};".PadRight(item.Length + 4, ' ');
+                    }
+                    else
+                    {
+                        line = $"{item}";
+                    }
+                    
+                    stringBuilder
+                        .Append($"{new string(' ', indent)}// ")
+                        .Append(line)
+                        .Append("\n");
+                }
+            }
+
+            return stringBuilder.ToString();
+        }
+    }
+}
