@@ -208,7 +208,7 @@ def create_batch(task = "summary", model_1 = 0, model_2 = 1, start=0, end=None, 
         filename = "{task}-batch.jsonl".format(task = task)
     elif task == "unit_test_diff":
         for java, cs, output in zip(java, cs, outputs):
-            model = OllamaLLM(model=llm)
+            model = OllamaLLM(model=llm, num_predict=4096)
             prompt = ChatPromptTemplate.from_template(content_format)
             chain = prompt | model
             output = chain.invoke({"instruction": task_instruction,

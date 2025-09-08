@@ -1,0 +1,1065 @@
+CODE COUNT: 0
+
+0 if there was no previous element.
+
+### `JsonFactory` - Jackson JsonFactory for ASP.NET Core/Razer libraries with `JsonDocument` parameterless constructors
+C#: ```csharp
+    private static readonly JsonSerializerOptions _serializerOptions = new() { Converters = { new DepthTrackingJsonConverter(new()) } };
+    public class ExampleClass
+    {
+        [JsonPropertyName("number")]
+        public int Number { get; set; }
+
+        [JsonPropertyName("string")]
+        public string String { get; set; }
+    }
+
+    var result = JsonSerializer.Serialize<ExampleClass>(exampleObject, _serializerOptions);
+```
+CODE COUNT: 1
+
+
+
+            // Dummy return value to avoid compiler warning of unassigned local variable 'result'
+            var result = new Instances(numTrain, numClasses);
+            return result;
+        }
+    }
+}
+CODE COUNT: 2
+
+
+Explanation: Since every set has all bits in common, their cardinality must be equal to the maximal number of bits that are set.
+*/
+CODE COUNT: 3
+
+ For each entry, compare the key and if it's in local or remote, merge the value(s)
+*/
+CODE COUNT: 4
+
+ Actions to perform when the user has closed the dialog with the OK button.
+```
+
+CODE COUNT: 5
+
+ [24 lines]
+  - Type 28.4% (22 of 30 functions) in Main
+    - Line 16, Col 9 to Line 18, Col 35 : TypeCheck_MissingParameter_Diagnostic_CS0173
+    - Line 21, Col 5 to Line 26, Col 14 : TypeCheck_MissingParameter_Diagnostic_CS0173
+  - Method Main (4 of 4 methods) in Program
+    - Line 9, Col 13 to Line 9, Col 43 : TypeCheck_MissingParameter_NoDiagnostic_CS8619
+    - Line 25, Col 17 to Line 28, Col 21 : AccessViolation
+"""
+
+
+#%% [markdown]
+# ```
+
+CODE COUNT: 6
+
+
+CODE COUNT: 7
+
+ is equal to another  .   within an acceptable difference (epsilon ).
+*/
+CODE COUNT: 8
+
+2018-03-29T07:42:43.673Z */
+CODE COUNT: 9
+
+
+*/
+CODE COUNT: 10
+
+
+CODE COUNT: 11
+
+
+CODE COUNT: 12
+
+
+CODE COUNT: 13
+
+
+CODE COUNT: 14
+
+1 or more reference types (e.g. `String`, `StringBuilder`, `List<T>`)
+* Type name must be in form of class name without generic parameters and namespace.
+CODE COUNT: 15
+
+1234567890abcdefghijklmnopABCDEFGHIJKLMNOP"
+         {
+             return entries[key];
+         }
+         else
+         {
+             // Not found
+             return null;
+         }
+    }
+}
+
+CODE COUNT: 16
+
+
+CODE COUNT: 17
+
+
+Java: [Ljava/lang/String; is Java object array, which means we can iterate over them in foreach loop. 
+
+## Resources and further readings
+
+1. https://www.tutorialspoint.com/collections/arraylist_collection.htm - Tutorials Point
+2. http://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html#toArray%28%29-
+3. http://stackoverflow.com/questions/4501756/why-do-we-need-to-use-arraylist-in-java-if-i-just-want-a-primitive-array - Stackoverflow
+CODE COUNT: 18
+
+
+* [Level]
+    * Finest
+    * Finer
+    * Fine
+    * Config
+* [Level.FINEST] = Debug
+[Level.FINER] = Debug
+[Level.FINE] = Debug
+[Level.CONFIG] = Trace
+CODE COUNT: 19
+
+0 - no . 1 - yes . 2 - throw exception
+CODE COUNT: 20
+
+
+*/
+CODE COUNT: 21
+
+
+CODE COUNT: 22
+
+
+The user will have to provide this code again when they come back to their device, which will require them to login again . 
+
+## How it works
+- The user needs to enter a passcode once for all platforms so that they can confirm they are using their account on any of the three platforms (Android, iOS and Windows). They should never need to reenter this code. 
+- If we want a single code that will always work across different apps then we could also save it in the local device database when the user logs into each platform . 
+
+## What Next
+The next step would be to make sure this is not possible by locking down the platforms as well so they cannot log in with their passcodes.
+CODE COUNT: 23
+
+
+CODE COUNT: 24
+
+
+CODE COUNT: 25
+
+
+CODE COUNT: 26
+
+
+<elem1 attr1="value" attr2="value" attr3="value"/> 
+ </elem1> 
+  <elem2/> 
+closed]]></cdata> 
+Processing 2 attributes 
+
+
+CODE COUNT: 27
+
+ .  .  .
+```
+
+
+## <a name="sample-output"></a>Beispielausgabe
+```text
+WTF: [Main] Simple fatal error message with no args.
+```
+
+
+### <a name="additional-resources"></a>Zusätzliche Ressourcen
+- [Eingehende Protokolle in .NET Framework](../core/diagnostics/tracing/clr-etw-trace-logging-in-net-framework.md)
+
+CODE COUNT: 28
+
+ T type elements in the list, as specified by the parameter element of type T. This can be used for many-to-many relations. Note that we are not using generics because the type is dynamic (i.e., any type) and thus cannot be statically typed; however, the compiler will not compile if we try to use generics.
+*/
+
+
+CODE COUNT: 29
+
+ The result is a bit sequence that can be decoded back to its original vector in linear time. */
+/*
+Java Code 2006-09-24T15:57:37Z
+import java.util.BitSet;
+public class Main {
+    public static void main(String[] args)  {
+        BitSet vector = new BitSet();
+        vector.set(0);
+        vector.set(2);
+        vector.set(4);
+        System.out.println(bitSetToString(vector, 5));
+     }
+
+     public static String bitSetToString(BitSet bitSet, int length) {
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < length; i++)
+             sb.append(bitSet.get(i) ? "1" : "0");
+        return sb.toString();
+    }
+}
+C# Code 2006-09-24T15:57:37Z
+using System;
+using System.Text;
+
+public class MyVector
+{
+    private int[] _data;
+    private const int _NUM = 0;
+
+    public MyVector(int[] data)
+    {
+        _data = data;
+    }
+
+    public int Size()
+    {
+        return _data.Length;
+    }
+
+    // Mock GetInt method, assuming each element is either 0 or 1 for bit representation
+    public int GetInt(int index)
+    {
+        if (index >= 0 && index < _data.Length)
+            return _data[index];
+        return 0;
+     }
+
+     // returns a string representation of this vector
+     // note: this string representation shows the bit of index 0 at the leftmost position.
+    public override String ToString()
+    {
+        var s = new StringBuilder();
+        int size = Size();
+
+        for (int i = _NUM; i < size; i++)
+            s.Append(GetInt(i));
+
+        return s.ToString();
+     }
+}
+*/
+CODE COUNT: 30
+
+
+The validation should be performed after escape encoding, or the component doesn't include escaped characters.
+This validation is generous, not strict.
+
+* https://www.owasp.org/index.php/List_of_URI_schemes
+* https://tools.ietf.org/html/rfc3986#section-2.1
+* https://tools.ietf.org/html/rfc3987#section-3
+CODE COUNT: 31
+
+
+```
+
+CODE COUNT: 32
+
+
+CODE COUNT: 33
+
+
+CODE COUNT: 34
+
+2019-08-30 17:46
+"""
+CODE COUNT: 35
+
+1 is correct, other is incorrect
+            Console.WriteLine();
+        }
+    }
+
+    public class Aggregator : AggregateableEvaluation
+    {
+        private Evaluation[] evaluations = new Evaluation[0];
+        private int m_ClassPriorsSum = 0;
+
+        public override AggregateableEvaluation Aggregate(Evaluation evaluation)
+         {
+             for (int i = 0; i < this.evaluations.Length; i++)
+             {
+                 this.evaluations[i].Aggregate(evaluation);
+             }
+
+             return this;
+         }
+
+         public void PrintStats()
+        {
+            Console.Write
+Summary: create the class of the class evaluation  . 1 is correct, other is incorrect
+            Console.WriteLine();
+        }
+    }
+
+    class EvaluationAggregator
+    {
+        static void Main(string[] args)
+        {
+        }
+    }
+}
+*/
+CODE COUNT: 36
+
+ to return a .to do the scan and then return the to return true . . . to return true . . . to return true . . . . to return true . . . . to return true . . . . to return true . . . to return the .to return true . to return true . to return true . to return true .
+```
+
+
+---
+## Example 18 - Using C#’s async and await
+C# async method returns a Task object. It is not necessary to use a try-catch block around it. If you need to perform exception handling, please refer to the example 19 instead. 
+
+```csharp
+public class RecoverPointScanner {
+    
+    // Mock method representing checking if all volumes are visible at all sites
+    private bool AreAllVolumesVisible(List<string> sites, List<string> volumes)
+    {
+        // In a real implementation, this would check each site for each volume
+        // For demonstration, let' s assume all volumes become visible after 3 attempts
+        await Task.Delay(2000);
+
+        return true;
+    }
+
+    public void ScanAllSitesUntilVolumesVisible(List<string> sites, List<string> volumes) {
+        
+        Console.WriteLine("Starting scan of all sites for RecoverPoint protected volumes...");
+
+        while (!AreAllVolumesVisible(sites, volumes))
+        {
+            Console.WriteLine("Not all volumes are visible. Retrying in 2 seconds...");
+            await Task.Delay(2000);
+        }
+
+        Console.WriteLine("All volumes are now visible at all sites!");
+    }
+
+    public static void Main(string[] args)
+    {
+        List<string> sites = new List<string>() { "SiteA", "SiteB", "SiteC" };
+        List<string> volumes = new List<string>() { "Volume1", "Volume2", "Volume3" };
+
+        RecoverPointScanner scanner = new RecoverPointScanner();
+        scanner.ScanAllSitesUntilVolumesVisible(sites, volumes);
+    }
+}
+```
+
+
+CODE COUNT: 37
+
+2000 ms and then prints "Starting additional services..." message. The main thread can now proceed to cache creation and initialization. The only problem is, that you cannot have two instances of the same service running in parallel. You must add a locking mechanism or use some other means of communication between processes.
+
+CODE COUNT: 38
+
+
+CODE COUNT: 39
+
+ It calls monitor which is used for waiting for the next call of OnPaint.
+
+C#: using System;
+using System.Drawing;
+using System.Threading;
+using System.Windows.Forms;
+
+public class ImageForm : Form {
+    private Image image;
+    private bool paintCalled = false;
+
+    public ImageForm()
+     {
+         // Load a sample image. Change the path to your own image if needed.
+        image = new Bitmap(100, 100);
+        using (Graphics g = Graphics.FromImage(image)) {
+            g.Clear(Color.Blue);
+            g.FillEllipse(Brushes.Red, 10, 10, 80, 80);
+         }
+        this.Width = 200;
+        this.Height = 200;
+    }
+
+    protected override void OnPaint(PaintEventArgs e) {
+        base.OnPaint(e);
+        if (!paintCalled) {
+            paintCalled = true;
+            lock (this) {
+                Monitor.Wait(this, _NUM);
+            }
+         }
+     }
+}
+
+
+```
+
+CODE COUNT: 40
+
+ This is an example of what would be involved in a real-world scenario with multiple types of objects interacting.
+
+CODE COUNT: 41
+
+ A filename might be a colon separated string of multiple strings, e.g., "example:file.txt" or just "file.txt".
+*/
+
+CODE COUNT: 42
+
+2016-03-29 | <NAME>
+CODE COUNT: 43
+
+
+CODE COUNT: 44
+
+ - [Video](https://youtu.be/Q5f_2lF74kE)
+
+
+CODE COUNT: 45
+
+
+'''
+CODE COUNT: 46
+
+10 seconds - 27 min
+```
+
+
+#### Java
+- Java 11 or higher is required to run this program and has to be installed in your machine.
+
+The main method of the java application expects two arguments as input
+1. Number of test cases (Integer)
+2. Input file path with data (String)
+  - The input file should contain one value for each line (integer or float) that will be compared in order to get the answer for the corresponding test case and printed out afterwards.
+
+Sample input: `5 01-test-input.txt`
+```java
+public class AngleCalculator {
+    public static void main(String[] args) {
+        int numberOfTestCases = Integer.parseInt(args[0]);
+        try (FileReader fileReader = new FileReader(args[1])) {
+            BufferedReader bufferedReader = new BufferedReader(fileReader);
+
+            int counter = 0;
+            while (counter < numberOfTestCases) {
+                String line = bufferedReader.readLine();
+                int value = Integer.parseInt(line);
+
+                // Calculate the needed angle for a given value
+                double angleRadians = Math.asin(value);
+                double angleDegrees = Math.toDegrees(angleRadians);
+
+                System.out.println("For value: " + value);
+                System.out.println("Angle in radians: " + angleRadians);
+                System.out.println("Angle in degrees: " + angleDegrees);
+
+                counter++;
+            }
+        } catch (Exception e) {
+            // Handle exception here...
+        }
+    }
+}
+```
+
+
+#### C#
+- .NET Core 3.1 or higher is required to run this program and has to be installed in your machine.
+
+The main method of the c# application expects two arguments as input
+1. Number of test cases (Integer)
+2. Input file path with data (String)
+  - The input file should contain one value for each line (integer or float) that will be compared in order to get the answer for the corresponding test case and printed out afterwards.
+
+Sample input: `5 01-test-input.txt`
+```csharp
+using System;
+using System.IO;
+using AngleCalculatorLib;
+
+class Program {
+    static void Main(string[] args)
+     {
+        int numberOfTestCases = int.Parse(args[0]);
+
+        try (StreamReader fileReader = File.OpenText(args[1])) {
+            for (int i = 0; i < numberOfTestCases; i++) {
+                string line = fileReader.ReadLine();
+
+                // Calculate the needed angle for a given value
+                double angleRadians = Math.Asin(float.Parse(line));
+                double angleDegrees = Math.ToDegrees(angleRadians);
+
+                Console.WriteLine("For value: " + line);
+                Console.WriteLine("Angle in radians: " + angleRadians);
+                Console.WriteLine("Angle in degrees: " + angleDegrees);
+            }
+        } catch (Exception e) {
+            // Handle exception here...
+        }
+    }
+}
+```
+CODE COUNT: 47
+
+1) returnBuffer : add a buffer to the pool when you have it back from some process or resource (2) getBuf : get a buffer from the pool when you need one (3) maxPoolSize : maximum number of buffers in the pool
+*/
+CODE COUNT: 48
+
+
+CODE COUNT: 49
+
+ Returns null if either is null.
+```
+
+
+### 12. String and StringBuilder
+
+C#: using System;
+using System.Text;
+public class CharSeqDemo
+{
+    public static void Main(string[] args)
+    {
+        // StringBuilder is similar to string but you can append elements at any time
+        var sb = new StringBuilder("Hello");
+        sb.Append('World');
+        Console.WriteLine(sb);
+     }
+}
+Java: ```java
+import java.util.Arrays;
+
+public class CharSeqDemo  {
+
+    public static void main(String[] args) {
+        // StringBuilder is similar to string but you can append elements at any time
+        StringBuilder sb = new StringBuilder("Hello");
+        sb.append('World');
+        System.out.println(sb);
+     }
+}
+```
+Summary: use StringBuilder to build a sequence of characters; it's faster than using char[] and String class, since it creates a new string object when appending an element
+
+CODE COUNT: 50
+
+
+Example: 
+
+C# - VideoServlet Example
+Java - Video Servlet Example
+
+CODE COUNT: 51
+
+
+CODE COUNT: 52
+
+ Test cases passed 10 tests.  Time elapsed: 79 ms, 364 μs, 52 ns.    
+CODE COUNT: 53
+
+ or java source, otherwise just uses formatString as msg.
+CODE COUNT: 54
+
+
+CODE COUNT: 55
+
+
+CODE COUNT: 56
+
+
+```
+CODE COUNT: 57
+
+ (C++)
+Parameters: Lock readLock ,  (Java) Lock readLock , 
+
+Summary: create a new read lock from the given lock  .  (C#)
+Parameters: ReadWriteLock @lock , CancelCriterion stopper , 
+
+Summary: construct a new instance of the lock  .  (C++)
+Parameters: 
+
+Summary: create a new read lock from the given lock  .  (C#)
+Parameters: object lockObj , CancelCriterion stopper , 
+
+Reference: https://docs.oracle.com/javase/tutorial/essential/concurrency/locks-and-synchronization.html  (Java)
+CODE COUNT: 58
+
+100% coverage on method level
+
+CODE COUNT: 59
+
+ The resulting hash is a long and has to be converted to an int before being displayed.
+
+Discussion: This is not very reliable. It's only suitable for methods that are declared on one interface, which is what most interfaces will look like (IRemoteInterface). For all other cases you'll have to implement the interface yourself.
+CODE COUNT: 60
+
+
+@enduml
+
+
+CODE COUNT: 61
+
+ // false
+```
+
+
+CODE COUNT: 62
+
+ In this case it does nothing because the Java version doesn't call renderNativeFrame().
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+        <footer class="col-md-12 page-content">
+            <p>&copy; 2021 Felix "Fred" Sampson, all rights reserved.</p>
+        </footer>
+
+    </div>
+</body>
+
+<script src="/blog/js/jquery-3.5.1.min.js"></script>
+<script src="/blog/js/bootstrap.bundle.min.js"></script>
+
+<script type="text/javascript">
+    $("#search").load("search-results.html");
+</script>
+
+
+</html>
+CODE COUNT: 63
+
+2
+
+                // If we got here, something went wrong...
+                //return null;
+            }
+
+            sb.Append(tmp);
+            return codewords.size();
+        }
+    }
+}
+```
+CODE COUNT: 64
+
+ Also check to make sure it does not contain colons.
+
+CODE COUNT: 65
+
+
+URL: https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html#add-E-
+",
+        Code = @"import java.util.List;
+
+public class AppendElementExample {
+    public static void main(String[] args) {
+        List<String> list = new ArrayList<>();
+
+        // Appends the specified element to the end of this list.
+        list.add("Element1");
+        list.add("Element2");
+        list.add("Element3");
+
+        System.out.println(list);
+    }
+}
+",
+        Description = @"The following snippet shows how to add an item to an existing collection: 
+C#: using System;
+using System.Collections.Generic;
+namespace GeneratedCode
+{
+    public class RepeatedFieldBuilder<MType, BType, IType>
+    {
+        private List<MType> messages = new List<MType>();
+        private List<object> builders = null;
+        private int modCount  = 0;
+
+        // Ensures the internal message list is mutable (for the sake of this example, do nothing)
+        private void EnsureMutableMessageList()
+        {
+            // Placeholder for actual implementation
+        }
+
+        // Called when the list has changed
+        private void OnChanged()
+        {
+            // Placeholder for change notification logic
+        }
+
+        // Increment modification counts or version
+        private void IncrementModCounts()
+        {
+            modCount++;
+        }
+
+        public RepeatedFieldBuilder<MType, BType, IType> AddMessage(MType message)
+        {
+            if (message == null)
+            {
+                throw new ArgumentNullException(nameof(message));
+            }
+            EnsureMutableMessageList();
+            messages.Add(message);
+            if (builders != null)
+            {
+                builders.Add(null);
+            }
+            OnChanged();
+            IncrementModCounts();
+            return this;
+        }
+    }
+}
+",
+    };
+
+    public static void Main()
+    {
+        var p = new Project("Google.Protobuf");
+
+        var javaBuilder = p.JavaBuilder();
+        //javaBuilder.EnableDebugMode(true);
+
+        var javaCodeSnippetBuilder = new CodeSnippetBuilder(javaBuilder) { AddSummaryBlockToDescription = true };
+        javaCodeSnippetBuilder.BuildAndPrint(new[] { javaProtoFile }, "Protobuf");
+    }
+}
+CODE COUNT: 66
+
+
+Java: import java.util.*;
+import static org.testng.AssertJUnit.*;
+
+public class TestName extends TestCase {
+
+    public void testMethod1() {
+        ...
+    }
+    
+    ...
+}
+C#: using System;
+using System.Collections.Generic;
+
+namespace MyTestNS
+{
+    [TestFixture]
+    public class MyTestClass 
+    { 
+        // for testing purpose only, not recommended to be used in real cases
+        private List<string> dataSet1 = new List<string>() {"a", "b", "c"};
+        private List<string> dataSet2 = null;
+        
+        [Test]
+        public void testMethod() 
+        {
+            if (dataSet2 != null) 
+                Assert.Fail("DataSet 2 is not NULL");
+
+            // ... run the tests
+        }
+
+        ...
+    }
+}
+Summary: prepare the dataset required for running test cases  . 
+```
+
+
+CODE COUNT: 67
+
+
+<NAME>: There is an opportunity for the proxyRegSet to become a local variable, since this can be passed in as a parameter to the program and not stored inside the class. (If it were stored inside the class, then we could have saved on creating a new set of proxy regs each time we needed one)
+<NAME>: The code is much more concise now than when using a static field for example because there is no need for any helper methods to build the service registrars from a static collection.
+```
+
+CODE COUNT: 68
+
+ If it is null, throw NullReferenceException .  Otherwise if it's not an instance of Integer type, throw MalformedObjectNameException .If there're illegal characters in input string or its length does not match _NUM, error.Otherwise return true .
+
+CODE COUNT: 69
+
+ (it'll try again, but it won't do any more until an update happens)
+
+
+- [ ] I am able to recover my primary from the backup.");
+                }
+            }
+        }
+     }
+}
+```
+C++: ```cpp
+#include <iostream>
+#include "lib.h"
+using namespace std;
+int main() {
+    cout << "Hello World!" << endl;
+    return 0;
+}
+```
+Go: `// TODO`
+
+CODE COUNT: 70
+
+
+CODE COUNT: 71
+
+
+*/
+CODE COUNT: 72
+
+
+CODE COUNT: 73
+
+3 seconds later . we have a refreshInterval of 2 secs, so if it hasn't been refreshed in 3 secconds then the data will be fetched.  2 secs has to be greater than REFRESH_INTERVAL
+CODE COUNT: 74
+
+
+CODE COUNT: 75
+
+ if (args == null || args.length == 0) { System.out.println("No comman 692d4135e75c6507859ef47c67720b21"); return; } string command = args[0]; 949012178;
+
+- name: service 9bb64f787c3b617e9a1d7175f774313d190a2722566445b029293e677f711523
+  links:
+  - name: Add-in command line
+    url: https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.addin.commandline?view=netcore-3.0#System_ComponentModel_AddIn_CommandLine 9bb64f787c3b617e9a1d7175f774313d190a2722566445b029293e677f711523
+  - name: Add-in service
+    url: https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.addinbase.service?view=netcore-3.0#System_ComponentModel_AddInBase_Service 9bb64f787c3b617e9a1d7175f774313d190a2722566445b029293e677f711523
+  - name: Add-in service reference
+    url: https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.addinbase.servicereference?view=netcore-3.0#System_ComponentModel_AddInBase_ServiceReference 9bb64f787c3b617e9a1d7175f774313d190a2722566445b029293e677f711523
+  - name: ComponentModel.AddInBase
+    url: https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.addinbase?view=netcore-3.0 9bb64f787c3b617e9a1d7175f774313d190a2722566445b029293e677f711523
+  - name: ComponentModel.AddInBase.Service
+    url: https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.addinbase.service?view=netcore-3.0#System_ComponentModel_AddInBase_Service 9bb64f787c3b617e9a1d7175f774313d190a2722566445b029293e677f711523
+  - name: ComponentModel.AddInBase.ServiceReference
+    url: https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.addinbase.servicereference?view=netcore-3.0#System_ComponentModel_AddInBase_ServiceReference 9bb64f787c3b617e9a1d7175f774313d190a2722566445b029293e677f711523
+  - name: ComponentModel.AddInBase
+    url: https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.addinbase?view=netcore-3.0 9bb64f787c3b617e9a1d7175f774313d190a2722566445b029293e677f711523
+  - name: ComponentModel.AddInBase.CommandLine
+    url: https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.addinbase.commandline?view=netcore-3.0#System_ComponentModel_AddInBase_CommandLine 9bb64f787c3b617e9a1d7175f774313d190a2722566445b029293e677f711523
+  - name: System.ComponentModel.AddIn
+    url: https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.addin?view=netcore-3.0 9bb64f787c3b617e9a1d7175f774313d190a2722566445b029293e677f711523
+  - name: System.ComponentModel.AddInBase
+    url: https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.addinbase?view=netcore-3.0 9bb64f787c3b617e9a1d7175f774313d190a2722566445b029293e677f711523
+  - name: System.ComponentModel.AddInBase.CommandLine
+    url: https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.addinbase.commandline?view=netcore-3.0#System_ComponentModel_AddInBase_CommandLine 9bb64f787c3b617e9a1d7175f774313d190a2722566445b029293e677f711523
+  - name: System.ComponentModel.AddInBase
+    url: https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.addinbase?view=netcore-3.0 9bb64f787c3b617e9a1d7175f774313d190a2722566445b029293e677f711523
+  - name: System.ComponentModel.AddInBase.CommandLine
+    url: https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.addinbase.commandline?view=netcore-3.0#System_ComponentModel_AddInBase_CommandLine 9bb64f787c3b617e9a1d7175f774313d190a2722566445b029293e677f711523
+- name: System.Collections.Generic.Dictionary`2
+  url: https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.dictionary-2?view=netcore-3.0 9bb64f787c3b617e9a1d7175f774313d190a2722566445b029293e677f711523
+- name: System.Collections.Generic
+  url: https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic?view=netcore-3.0 9bb64f787c3b617e9a1d7175f774313d190a2722566445b029293e677f711523
+- name: System
+  url: https://docs.microsoft.com/en-us/dotnet/api/system?view=netcore-3.0 9bb64f787c3b617e9a1d7175f774313d190a2722566445b029293e677f711523
+- name: System.Reflection
+  url: https://docs.microsoft.com/en-us/dotnet/api/system.reflection?view=netcore-3.0 9bb64f787c3b617e9a1d7175f774313d190a2722566445b029293e677f711523
+- name: System.Reflection.MemberInfo
+  url: https://docs.microsoft.com/en-us/dotnet/api/system.reflection.memberinfo?view=netcore-3.0 9bb64f787c3b617e9a1d7175f774313d190a2722566445b029293e677f711523
+- name: System.Reflection.MemberInfo.GetCustomAttributes
+  url: https://docs.microsoft.com/en-us/dotnet/api/system.reflection.memberinfo.getcustomattributes?view=netcore-3.0#System_Reflection_MemberInfo_GetCustomAttributes 9bb64f787c3b617e9a1d7175f774313d190a2722566445b029293e677f711523
+  - name: GetCustomAttributes
+    url: https://docs.microsoft.com/en-us/dotnet/api/system.reflection.memberinfo.getcustomattributes?view=netcore-3.0#System_Reflection_MemberInfo_GetCustomAttributes 9bb64f787c3b617e9a1d7175f774313d190a2722566445b029293e677f711523
+  - name: Attribute
+    url: https://docs.microsoft.com/en-us/dotnet/api/system.attribute?view=netcore-3.0 9bb64f787c3b617e9a1d7175f774313d190a2722566445b029293e677f711523
+- name: System.Attribute
+  url: https://docs.microsoft.com/en-us/dotnet/api/system.attribute?view=netcore-3.0 9bb64f787c3b617e9a1d7175f774313d190a2722566445b029293e677f711523
+- name: System.Attribute.GetCustomAttributes
+  url:
+<issue_comment>username_12850, please find a newforge/create0 Name
+
+```
+CODE COUNT: 76
+
+
+CODE COUNT: 77
+
+
+CODE COUNT: 78
+
+
+CODE COUNT: 79
+
+ The key is the id value for the mask and the value is the object that maps to it.
+
+For example, we have three masks, A, B and C, with ids "A", "B" and "C".
+If you want to create a map of uri -> ExportMask objects from this list:
+
+  ExportMask one = new ExportMask(new Uri("uri-1"));
+  ExportMask two = new ExportMask(new Uri("uri-2"));
+  ExportMask three = new ExportMask(new Uri("uri-3");
+  HashSet<ExportMask> masks = {one, two, three}
+  Dictionary<Uri, ExportMask> result = CreateExportMaskMap(masks);
+This will create the following map:
+
+  uri-1 -> ExportMask{id="A"}
+  uri-2 -> ExportMask{id="B"}
+  uri-3 -> ExportMask{id="C"}
+*/
+CODE COUNT: 80
+
+ (not very useful in C#)
+
+ */
+CODE COUNT: 81
+
+1 line height , 5 lines. 
+CODE COUNT: 82
+
+
+CODE COUNT: 83
+
+
+CODE COUNT: 84
+
+ Copy input file to output file and print result .
+CODE COUNT: 85
+
+
+"""
+CODE COUNT: 86
+
+
+- Above C# code is Java and above is C#.
+</pre>
+CODE COUNT: 87
+
+ This is the simplest form of a class loader that just loads a single class and it's properties.
+
+Java: Summary: The java.lang.Class interface provides several methods for retrieving information about classes and classes loaded by the Java virtual machine (JVM).
+
+C#: Summary: A summary of this topic.
+
+Summary: 
+* The first sentence should be short enough to fit in a single line. It is used as the summary in Google Search results, so it must be concise and understandable for non-native English speakers.
+* For long form summaries (that span multiple lines), use the extended syntax that Microsoft Word can generate:
+> The first sentence should be short enough to fit in a single line. It is used as the summary in Google Search results, so it must be concise and understandable for non-native English speakers. This is followed by one or more blank lines (press Enter). Then follow with additional paragraphs. When you are finished editing your article, choose File->Print Preview to view it from a different device.
+
+For more information about writing documentation, see Writing Documentation in the C# Guide and Java Developer Center at Microsoft Docs https://docs.microsoft.com/en-us/dotnet/csharp/. For general information about .NET, see the .NET Framework overview at Microsoft Docs https://docs.microsoft.com/en-us/dotnet/.
+
+The following sections provide additional details for each topic in this document:
+"""
+
+CODE COUNT: 88
+
+
+CODE COUNT: 89
+
+ The sample code will return two XML tags with the fixed date and the other one with the original value. 
+
+// [01/24/2022, 5:36:47 PM] <NAME>: If the tag is null then we just skip it
+// [01/24/2022, 5:36:58 PM] <NAME>: This function will not change anything if other date and gps date are the same. 
+
+
+C#: using System;
+    public class FixGpsTimestampInExif {
+        // This function fixes the GPS timestamp in EXIF by converting to proper XML tag format
+        static string FormatGPSDateTime(XMPNode exifSchema)
+        {
+            XMPNode gpsDateTime = FindChildNode(exifSchema, _STR, _BOOL);
+            if (gpsDateTime == null)
+            {
+                return "";
+            }
+            try
+            {
+                XMPDateTime binGPSStamp;
+                XMPDateTime binOtherDate;
+                binGPSStamp = ConvertToDate(gpsDateTime.GetValue());
+                if (binGPSStamp.GetYear() != _NUM || binGPSStamp.GetMonth() != _NUM || binGPSStamp.GetDay() != _NUM)
+                {
+                    return "";
+                }
+                XMPNode otherDate = FindChildNode(exifSchema, "_EXIF_OTHER_DATE", _BOOL);
+                if (otherDate == null)
+                {
+                    otherDate = FindChildNode(exifSchema, "_EXIF_OTHER_DATE", _BOOL);
+                }
+                binOtherDate = ConvertToDate(otherDate.GetValue());
+                Calendar cal = binGPSStamp.GetCalendar();
+                cal.Set(Calendar.YEAR, binOtherDate.GetYear());
+                cal.Set(Calendar.MONTH, binOtherDate.GetMonth());
+                cal.Set(Calendar.DAY_OF_MONTH, binOtherDate.GetDay());
+                return "Fixed GPS DateTime: " + binGPSStamp.ToString();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Exception in FixGPSTimeStamp: " + ex.Message);
+            }
+            return "";
+        }
+
+        static XMPDateTime ConvertToDate(string dateValue)
+        {
+            // Parse the string into XMPDateTime, expecting format "yyyy-MM-ddTHH:mm:ssZ"
+            return XMPDateTime.Parse(dateValue);
+        }
+    }
+}
+*/
+
+CODE COUNT: 90
+
+ If it’s not, then check if the type of the current event matches one of the known types.
+
+CODE COUNT: 91
+
+
+•	read one byte at a time from the stream 
+•	if reading bytes exceeds the limit, it throws an exception (IOException) 
+•	when an IOException is thrown, no data has been read and the stream is in an unknown state 
+References:
+https://docs.oracle.com/javase/tutorial/essential/io/charstreams.html#2460 
+*/
+
+
+CODE COUNT: 92
+
+ The for is used to iterate through all elements of List 'largestValueSet' .
+CODE COUNT: 93
+
+
+CODE COUNT: 94
+
+
+CODE COUNT: 95
+
+
+```
+
+
+CODE COUNT: 96
+
+ if not found, throw a parser exception;
+
+```
+CODE COUNT: 97
+
+3 table types, in this order, are expected to appear: TABLE_TYPE: BASE TABLE (0), TABLE_TYPE: GLOBAL TEMPORARY (1), TABLE_TYPE: LOCAL TEMPORARY (2)
+```
+CODE COUNT: 98
+
+
+Create and Cache the File with the name "example.txt", if already present return it else create it 
+
+CODE COUNT: 99
+
+
