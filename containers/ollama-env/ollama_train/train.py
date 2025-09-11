@@ -79,6 +79,7 @@ def create_batch(task = "summary", model_1 = 0, model_2 = 1, start=0, end=None, 
             end = start + 10
         content_format = unit_test_format
         task_instruction = unit_test_instruction
+        task_instruction_2 = unit_test_instruction_re
         outputs = coms[model_1][start:end]
         java = java[start:end]
         cs = cs[start:end]
@@ -213,19 +214,30 @@ def create_batch(task = "summary", model_1 = 0, model_2 = 1, start=0, end=None, 
                                               java = java,
                                               cs = cs,
                                               output = output)
-            """model = OllamaLLM(model=llm, num_predict=4096)
+            model = OllamaLLM(model=llm, num_predict=4096)
             prompt = ChatPromptTemplate.from_template(content_format)
             chain = prompt | model
-            output = chain.invoke({"instruction": task_instruction,
+            result = chain.invoke({"instruction": task_instruction,
                                     "java": java,
                                     "cs": cs,
-                                    "output": output})"""
+                                    "output": output})
             
-            result = ollama.generate(model=llm, prompt=content_1)
-            output = result['response']
+            """result = ollama.generate(model=llm, prompt=content_1)
+            output = result['response']"""
+            
+            
+            for int i in range(5):
+                result = chain.invoke({"instruction": task_instruction_2,
+                                    "java": java,
+                                    "cs": cs,
+                                    "output": output})
+            
+            
+                
+
                                     
-            output = """ """ + output + """ """
-            task_lines.append(output)
+            result = """ """ + result + """ """
+            task_lines.append(result)
             count += 1
 
         filename = "{task}-batch.jsonl".format(task = task)
@@ -386,8 +398,9 @@ completion_instruction_cs = "You are a code completer. You are given a code snip
 completion_instruction_fixed = "You are a code completer. You are given a faulty code with unit tests, and a compilation error. Generate a fixed Java program that addresses and fixes the compilation error. Your answer should consist ONLY of the resulting Java program. Do not put any descriptions in your answer other than the resulting Java program."
 completion_instruction_cs_fixed = "You are a code completer. You are given a faulty code with unit tests, and a compilation error. Generate a fixed C# program that addresses and fixes the compilation error. Your answer should consist ONLY of the resulting C# program. Do not put any descriptions in your answer other than the resulting C# program."
 
-#unit_test_instruction = "You are a code tester. You are given a Java code, its corresponding C# code that performs the same task and a code comment description of the task. Generate 5 unit tests for the task along with the original code and run these unit tests on both the Java code and C# code. Preserve the import statements, as well as class and function definitions in the original programs. All unit tests should be performed in the 'main' function definition of the classes. The Java and C# code and their 5 unit tests should be generated seperately. The unit tests generated for both the Java and C# code should be the exact same with the exact same inputs and the exact same correct outputs. Return the unit tests, run these unit tests on both the Java and C# code, and return their outputs and the percentage of unit tests that pass for both the Java code and C# code. Your answer should consist ONLY of the unit tests along with the original program, their outputs and the percentages. Do not put any natural language descriptions or explanations in your answer other than the unit tests with the original programs, their outputs and the percentages. Do not generate different unit tests for the Java and C# programs."
-unit_test_instruction = model_prompt
+unit_test_instruction = "You are a code tester. You are given a Java code, its corresponding C# code that performs the same task and a code comment description of the task. Generate 5 unit tests for the task along with the original code and run these unit tests on both the Java code and C# code. Preserve the import statements, as well as class and function definitions in the original programs. All unit tests should be performed in the 'main' function definition of the classes. The Java and C# code and their 5 unit tests should be generated seperately. The unit tests generated for both the Java and C# code should be the exact same with the exact same inputs and the exact same correct outputs. Return the unit tests, run these unit tests on both the Java and C# code, and return their outputs and the percentage of unit tests that pass for both the Java code and C# code. Your answer should consist ONLY of the unit tests along with the original program, their outputs and the percentages. Do not put any natural language descriptions or explanations in your answer other than the unit tests with the original programs, their outputs and the percentages. Do not generate different unit tests for the Java and C# programs."
+#unit_test_instruction = model_prompt
+unit_test_instruction_re = "It appears that you have described the input codes. Using this description, now ONLY generate the Java and C# codes that includes 5 unit tests for the given task."
 
 unit_test_instruction_old = "You are a code tester. You are given a Java code, its corresponding C# code that performs the same task and a code comment description of the task. Generate 5 unit tests for the task along with the original code and run these unit tests on both the Java code and C# code. Preserve the import statements, as well as class and function definitions in the original programs. All unit tests should be performed in the 'main' function definition of the classes. The unit tests generated for both the Java and C# code should be the exact same with the exact same inputs and the exact same correct outputs. Return the unit tests, run these unit tests on both the Java and C# code, and return their outputs and the percentage of unit tests that pass for both the Java code and C# code. Your answer should consist ONLY of the unit tests along with the original program, their outputs and the percentages. Do not put any descriptions in your answer other than the unit tests with the original programs, their outputs and the percentages. Do not generate different unit tests for the Java and C# programs."
 
