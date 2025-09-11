@@ -32,6 +32,7 @@ RUN /opt/python3/venv/base/bin/python3 -m pip install --no-cache-dir -r /opt/pyt
 
 RUN /opt/python3/venv/base/bin/python3 -m pip install openai langchain langchain_openai
 RUN /opt/python3/venv/base/bin/python3 -m pip install -U langchain-ollama
+RUN /opt/python3/venv/base/bin/python3 -m pip install ollama
 
 RUN curl https://ollama.ai/install.sh | sh
 

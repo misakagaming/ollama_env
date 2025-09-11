@@ -11,6 +11,7 @@ from openai import OpenAI
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_ollama import OllamaLLM
 import sys
+import ollama
 
 key = sys.argv[1]
 
@@ -208,13 +209,22 @@ def create_batch(task = "summary", model_1 = 0, model_2 = 1, start=0, end=None, 
         filename = "{task}-batch.jsonl".format(task = task)
     elif task == "unit_test_diff":
         for java, cs, output in zip(java, cs, outputs):
-            model = OllamaLLM(model=llm, num_predict=4096)
+            content_1 = content_format.format(instruction = task_instruction,
+                                              java = java,
+                                              cs = cs,
+                                              output = output)
+            """model = OllamaLLM(model=llm, num_predict=4096)
             prompt = ChatPromptTemplate.from_template(content_format)
             chain = prompt | model
             output = chain.invoke({"instruction": task_instruction,
                                     "java": java,
                                     "cs": cs,
-                                    "output": output})
+                                    "output": output})"""
+            
+            result = ollama.generate(model=llm, prompt=content_1)
+            output = result['response']
+                                    
+            output = """ """ + output + """ """
             task_lines.append(output)
             count += 1
 
