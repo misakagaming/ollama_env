@@ -226,7 +226,7 @@ def create_batch(task = "summary", model_1 = 0, model_2 = 1, start=0, end=None, 
             output = result['response']"""
             
             
-            for i in range(5):
+            for i in range(10):
                 result = chain.invoke({"instruction": task_instruction_2,
                                     "java": java,
                                     "cs": cs,
