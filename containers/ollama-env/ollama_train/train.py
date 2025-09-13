@@ -18,6 +18,7 @@ key = sys.argv[1]
 model_name = sys.argv[2]
 model_num = int(sys.argv[3])
 model_prompt = sys.argv[4]
+iter_count = int(sys.argv[5])
 
 #0 = lamner #1 = lamner_only_codebert #2 = lamner_codebert
 #3 = lam    #4 = ner                  #5 = static
@@ -226,7 +227,7 @@ def create_batch(task = "summary", model_1 = 0, model_2 = 1, start=0, end=None, 
             output = result['response']"""
             
             
-            for i in range(10):
+            for i in range(iter_count):
                 result = chain.invoke({"instruction": task_instruction_2,
                                     "java": java,
                                     "cs": cs,
