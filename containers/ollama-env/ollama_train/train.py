@@ -17,8 +17,18 @@ key = sys.argv[1]
 
 model_name = sys.argv[2]
 model_num = int(sys.argv[3])
-model_prompt = sys.argv[4]
-iter_count = int(sys.argv[5])
+model_prompt = """You are a code tester. You are given a Java code, its corresponding
+C# code that performs the same task and a code comment description of the task.
+I want you to generate 5 unit tests for the task each for Java and C# and
+run these unit tests on the original Java and C# code.
+Your answer should consist of the code snippets written in Java and C# featuring the unit tests
+the original program, and the outputs.
+Do NOT include anything in your answer that is not code snippets and the outputs.
+Do NOT put any descriptions, comments or explanations in your answer.
+All unit tests should be written in the 'main' function definition of the classes.
+The unit tests generated for the Java and C# code should be the exact
+same with the exact same inputs and the exact same correct outputs."""
+iter_count = int(sys.argv[4])
 
 #0 = lamner #1 = lamner_only_codebert #2 = lamner_codebert
 #3 = lam    #4 = ner                  #5 = static
