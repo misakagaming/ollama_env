@@ -506,10 +506,42 @@ predictions = list(df["prediction"])
 cs = get_preds("MTJW27khRdTpG5ZWvC87qS", client)
 java = get_preds("Re6TkGwKaXCmsrjCrRZHiT", client)
 
+unit_test_instruction = """You are a code tester. You are given a Java code, its corresponding
+C# code that performs the same task and a code comment description of the task.
+I want you to generate 5 unit tests for the task written in Java and
+run these unit tests on the original Java code.
+Your answer should consist of the code snippets written in Java featuring the unit tests
+the original program, and the outputs.
+Do NOT include anything in your answer that is not code snippets and the outputs.
+Do NOT put any descriptions, comments or explanations in your answer.
+All unit tests should be written in the 'main' function definition of the classes."""
+
 batch_input_file = create_batch(task = "unit_test_diff", java=java, cs=cs, llm=model_name, start=0, end=100)
 
 
-results_filename = f"unit-tests-{model_num}-0.txt"
+results_filename = f"unit-tests-{model_num}-0-java.txt"
+count = 0
+with open(results_filename, "w", encoding = "utf-8", errors = "ignore") as f:
+    for line in batch_input_file:
+        f.write(f"CODE COUNT: {count}\n\n")
+        count+=1
+        f.write(f"{line}\n")
+        
+        
+unit_test_instruction = """You are a code tester. You are given a Java code, its corresponding
+C# code that performs the same task and a code comment description of the task.
+I want you to generate 5 unit tests for the task written in C# and
+run these unit tests on the original C# code.
+Your answer should consist of the code snippets written in C# featuring the unit tests
+the original program, and the outputs.
+Do NOT include anything in your answer that is not code snippets and the outputs.
+Do NOT put any descriptions, comments or explanations in your answer.
+All unit tests should be written in the 'main' function definition of the classes."""
+
+batch_input_file = create_batch(task = "unit_test_diff", java=java, cs=cs, llm=model_name, start=0, end=100)
+
+
+results_filename = f"unit-tests-{model_num}-0-cs.txt"
 count = 0
 with open(results_filename, "w", encoding = "utf-8", errors = "ignore") as f:
     for line in batch_input_file:
