@@ -569,7 +569,7 @@ def create_batch(task = "summary", model_1 = 0, model_2 = 1, start=0, end=None, 
                 result = chain.invoke({"instruction": task_instruction_2,
                                     "java": java,
                                     "cs": cs,
-                                    "output": output},
+                                    "output": output,
                                     "example_summary": example_summary,
                                     "example_output": example_output})
             
