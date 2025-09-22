@@ -551,8 +551,8 @@ def create_batch(task = "summary", model_1 = 0, model_2 = 1, start=0, end=None, 
                                               java = java,
                                               cs = cs,
                                               output = output,
-                                              example_summary: example_summary,
-                                              example_output: example_output)
+                                              example_summary = example_summary,
+                                              example_output = example_output)
             model = OllamaLLM(model=llm, num_predict=4096)
             prompt = ChatPromptTemplate.from_template(content_format)
             chain = prompt | model
