@@ -30,6 +30,332 @@ The unit tests generated for the Java and C# code should be the exact
 same with the exact same inputs and the exact same correct outputs."""
 iter_count = int(sys.argv[4])
 
+
+example_summary = """checks whether the scheme alters the training dataset during building if the scheme needs to modify the data it should take a copy of the training data currently checks for
+"""
+example_output = """// Java: SchemeDataChecker with unit tests
+import weka.core.Instances;
+import weka.core.Instance;
+
+public class SchemeDataChecker {
+
+    /**
+     * Checks whether the scheme alters the training dataset during building.
+     * If the scheme needs to modify the data it should take a copy of the training data.
+     * This method checks for changes to header structure, number of instances, order of instances, and instance weights.
+     */
+    public static boolean isTrainingDataAltered(Instances originalData, Instances afterSchemeData) {
+        // Check if headers (attributes) are the same
+        if (!originalData.equalHeaders(afterSchemeData)) {
+            return true;
+        }
+
+        // Check number of instances
+        if (originalData.numInstances() != afterSchemeData.numInstances()) {
+            return true;
+        }
+
+        // Check order and content of instances
+        for (int i = 0; i < originalData.numInstances(); i++) {
+            Instance orig = originalData.instance(i);
+            Instance altered = afterSchemeData.instance(i);
+
+            // Check if instance reference is different or if instance is not equal
+            if (!orig.equals(altered)) {
+                return true;
+            }
+
+            // Check if weights are the same
+            if (orig.weight() != altered.weight()) {
+                return true;
+            }
+        }
+
+        return false; // No modifications detected
+    }
+
+    public static void main(String[] args) throws Exception {
+        // Original dataset
+        String arffData =
+                "@relation iris\n" +
+                "@attribute sepallength numeric\n" +
+                "@attribute sepalwidth numeric\n" +
+                "@attribute petallength numeric\n" +
+                "@attribute petalwidth numeric\n" +
+                "@attribute class {Iris-setosa,Iris-versicolor,Iris-virginica}\n" +
+                "@data\n" +
+                "5.1,3.5,1.4,0.2,Iris-setosa\n" +
+                "4.9,3.0,1.4,0.2,Iris-setosa\n";
+
+        java.io.Reader reader1 = new java.io.StringReader(arffData);
+        java.io.Reader reader2 = new java.io.StringReader(arffData);
+
+        Instances originalData = new Instances(reader1);
+        Instances afterSchemeData = new Instances(reader2);
+
+        // Unit Test 1: No change
+        System.out.println("Test 1: No change");
+        boolean test1Result = isTrainingDataAltered(originalData, afterSchemeData);
+        System.out.println("Expected: false");
+        System.out.println("Actual: " + test1Result);
+        System.out.println();
+
+        // Unit Test 2: Different header
+        System.out.println("Test 2: Different header");
+        Instances alteredHeader = new Instances(afterSchemeData);
+        alteredHeader.deleteAttributeAt(0); // Remove attribute to simulate header change
+        boolean test2Result = isTrainingDataAltered(originalData, alteredHeader);
+        System.out.println("Expected: true");
+        System.out.println("Actual: " + test2Result);
+        System.out.println();
+
+        // Unit Test 3: Different number of instances
+        System.out.println("Test 3: Different number of instances");
+        Instances reducedInstances = new Instances(afterSchemeData);
+        reducedInstances.delete(0); // Remove one instance
+        boolean test3Result = isTrainingDataAltered(originalData, reducedInstances);
+        System.out.println("Expected: true");
+        System.out.println("Actual: " + test3Result);
+        System.out.println();
+
+        // Unit Test 4: Changed instance data
+        System.out.println("Test 4: Changed instance data");
+        Instances modifiedInstance = new Instances(afterSchemeData);
+        modifiedInstance.instance(0).setValue(0, 6.0); // Change a value
+        boolean test4Result = isTrainingDataAltered(originalData, modifiedInstance);
+        System.out.println("Expected: true");
+        System.out.println("Actual: " + test4Result);
+        System.out.println();
+
+        // Unit Test 5: Changed instance weight
+        System.out.println("Test 5: Changed instance weight");
+        Instances changedWeight = new Instances(afterSchemeData);
+        changedWeight.instance(0).setWeight(2.0);
+        boolean test5Result = isTrainingDataAltered(originalData, changedWeight);
+        System.out.println("Expected: true");
+        System.out.println("Actual: " + test5Result);
+        System.out.println();
+
+    }
+}
+
+////////////////////////////////////////////////////////////////////////////////
+
+// C#: Program with identical unit tests and core logic
+using System;
+using System.IO;
+
+namespace DatasetIntegrityCheck
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Original dataset data
+            string arffData =
+                "@relation iris\n" +
+                "@attribute sepallength numeric\n" +
+                "@attribute sepalwidth numeric\n" +
+                "@attribute petallength numeric\n" +
+                "@attribute petalwidth numeric\n" +
+                "@attribute class {Iris-setosa,Iris-versicolor,Iris-virginica}\n" +
+                "@data\n" +
+                "5.1,3.5,1.4,0.2,Iris-setosa\n" +
+                "4.9,3.0,1.4,0.2,Iris-setosa\n";
+
+            using (var reader1 = new StringReader(arffData))
+            using (var reader2 = new StringReader(arffData))
+            {
+                Instances originalData = new Instances(reader1);
+                Instances afterSchemeData = new Instances(reader2);
+
+                // Unit Test 1: No change
+                Console.WriteLine("Test 1: No change");
+                bool test1Result = SchemeDataChecker.IsTrainingDataAltered(originalData, afterSchemeData);
+                Console.WriteLine("Expected: False");
+                Console.WriteLine("Actual: " + test1Result);
+                Console.WriteLine();
+
+                // Unit Test 2: Different header
+                Console.WriteLine("Test 2: Different header");
+                Instances alteredHeader = new Instances(afterSchemeData);
+                alteredHeader.DeleteAttributeAt(0); // simulate header change
+                bool test2Result = SchemeDataChecker.IsTrainingDataAltered(originalData, alteredHeader);
+                Console.WriteLine("Expected: True");
+                Console.WriteLine("Actual: " + test2Result);
+                Console.WriteLine();
+
+                // Unit Test 3: Different number of instances
+                Console.WriteLine("Test 3: Different number of instances");
+                Instances reducedInstances = new Instances(afterSchemeData);
+                reducedInstances.DeleteInstanceAt(0);
+                bool test3Result = SchemeDataChecker.IsTrainingDataAltered(originalData, reducedInstances);
+                Console.WriteLine("Expected: True");
+                Console.WriteLine("Actual: " + test3Result);
+                Console.WriteLine();
+
+                // Unit Test 4: Changed instance data
+                Console.WriteLine("Test 4: Changed instance data");
+                Instances modifiedInstance = new Instances(afterSchemeData);
+                modifiedInstance.GetInstance(0).SetValue(0, 6.0);
+                bool test4Result = SchemeDataChecker.IsTrainingDataAltered(originalData, modifiedInstance);
+                Console.WriteLine("Expected: True");
+                Console.WriteLine("Actual: " + test4Result);
+                Console.WriteLine();
+
+                // Unit Test 5: Changed instance weight
+                Console.WriteLine("Test 5: Changed instance weight");
+                Instances changedWeight = new Instances(afterSchemeData);
+                changedWeight.GetInstance(0).SetWeight(2.0);
+                bool test5Result = SchemeDataChecker.IsTrainingDataAltered(originalData, changedWeight);
+                Console.WriteLine("Expected: True");
+                Console.WriteLine("Actual: " + test5Result);
+                Console.WriteLine();
+
+            }
+        }
+    }
+
+    public static class SchemeDataChecker
+    {
+        public static bool IsTrainingDataAltered(Instances originalData, Instances afterSchemeData)
+        {
+            if (!originalData.EqualHeaders(afterSchemeData))
+                return true;
+
+            if (originalData.NumInstances != afterSchemeData.NumInstances)
+                return true;
+
+            for (int i = 0; i < originalData.NumInstances; i++)
+            {
+                var orig = originalData.GetInstance(i);
+                var altered = afterSchemeData.GetInstance(i);
+                if (!orig.Equals(altered))
+                    return true;
+                if (orig.Weight != altered.Weight)
+                    return true;
+            }
+            return false;
+        }
+    }
+
+    public class Instances
+    {
+        // Minimal implementation for testing
+        private readonly System.Collections.Generic.List<Instance> _instances = new System.Collections.Generic.List<Instance>();
+
+        public bool HeaderUnchanged { get; set; } = true;
+        public int NumInstances => _instances.Count;
+
+        public Instances() { }
+
+        public Instances(Instances other)
+        {
+            // Copy constructor
+            foreach (var inst in other._instances)
+            {
+                _instances.Add(new Instance(inst));
+            }
+        }
+
+        public Instances(TextReader reader)
+        {
+            // Dummy implementation: parse lines for test simulation
+            string line;
+            while ((line = reader.ReadLine()) != null)
+            {
+                line = line.Trim();
+                if (line.StartsWith("@") || string.IsNullOrEmpty(line))
+                    continue;
+                var parts = line.Split(',');
+                var values = Array.ConvertAll(parts, s => s.Trim());
+                _instances.Add(new Instance(values));
+            }
+        }
+
+        public bool EqualHeaders(Instances other)
+        {
+            // For simplicity, assume headers are equal unless header flag is false
+            return this.HeaderUnchanged && other.HeaderUnchanged;
+        }
+
+        public int NumInstances => _instances.Count;
+
+        public Instance GetInstance(int index)
+        {
+            return _instances[index];
+        }
+
+        public void DeleteAttributeAt(int index)
+        {
+            // Dummy: simulate header change
+            this.HeaderUnchanged = false;
+        }
+
+        public void DeleteInstanceAt(int index)
+        {
+            _instances.RemoveAt(index);
+        }
+
+        public class Instance
+        {
+            public string[] Values { get; set; }
+            public double Weight { get; set; } = 1.0;
+
+            public Instance(string[] values)
+            {
+                Values = values;
+            }
+
+            public Instance(Instance other)
+            {
+                Values = (string[])other.Values.Clone();
+                Weight = other.Weight;
+            }
+
+            public override bool Equals(object obj)
+            {
+                if (obj is Instance other)
+                {
+                    if (this.Values.Length != other.Values.Length)
+                        return false;
+                    for (int i = 0; i < Values.Length; i++)
+                    {
+                        if (this.Values[i] != other.Values[i])
+                            return false;
+                    }
+                    return true;
+                }
+                return false;
+            }
+
+            public override int GetHashCode()
+            {
+                return HashCode.Combine(Values, Weight);
+            }
+
+            public double getWeight()
+            {
+                return Weight;
+            }
+
+            public void SetWeight(double weight)
+            {
+                this.Weight = weight;
+            }
+
+            public void SetValue(int index, double newValue)
+            {
+                if (index >= 0 && index < Values.Length)
+                {
+                    Values[index] = newValue.ToString();
+                }
+            }
+        }
+    }
+}
+"""
+
 #0 = lamner #1 = lamner_only_codebert #2 = lamner_codebert
 #3 = lam    #4 = ner                  #5 = static
 #6 = tlcodesum #7 = codebert
@@ -231,7 +557,9 @@ def create_batch(task = "summary", model_1 = 0, model_2 = 1, start=0, end=None, 
             result = chain.invoke({"instruction": task_instruction,
                                     "java": java,
                                     "cs": cs,
-                                    "output": output})
+                                    "output": output,
+                                    "example_summary": example_summary,
+                                    "example_output": example_output})
             
             """result = ollama.generate(model=llm, prompt=content_1)
             output = result['response']"""
@@ -241,7 +569,9 @@ def create_batch(task = "summary", model_1 = 0, model_2 = 1, start=0, end=None, 
                 result = chain.invoke({"instruction": task_instruction_2,
                                     "java": java,
                                     "cs": cs,
-                                    "output": output})
+                                    "output": output},
+                                    "example_summary": example_summary,
+                                    "example_output": example_output})
             
             
                 
@@ -411,7 +741,7 @@ completion_instruction_cs_fixed = "You are a code completer. You are given a fau
 
 unit_test_instruction = "You are a code tester. You are given a Java code, its corresponding C# code that performs the same task and a code comment description of the task. Generate 5 unit tests for the task along with the original code and run these unit tests on both the Java code and C# code. Preserve the import statements, as well as class and function definitions in the original programs. All unit tests should be performed in the 'main' function definition of the classes. The Java and C# code and their 5 unit tests should be generated seperately. The unit tests generated for both the Java and C# code should be the exact same with the exact same inputs and the exact same correct outputs. Return the unit tests, run these unit tests on both the Java and C# code, and return their outputs and the percentage of unit tests that pass for both the Java code and C# code. Your answer should consist ONLY of the unit tests along with the original program, their outputs and the percentages. Do not put any natural language descriptions or explanations in your answer other than the unit tests with the original programs, their outputs and the percentages. Do not generate different unit tests for the Java and C# programs."
 #unit_test_instruction = model_prompt
-unit_test_instruction_re = "It appears that you have described the input codes. Using this description, now ONLY generate the Java and C# codes that includes 5 unit tests for the given task."
+unit_test_instruction_re = "It appears that you have described the input codes. Using this description, now ONLY generate the Java and C# codes that includes 5 unit tests for the given task. The example summary and example output is provided again."
 
 unit_test_instruction_old = "You are a code tester. You are given a Java code, its corresponding C# code that performs the same task and a code comment description of the task. Generate 5 unit tests for the task along with the original code and run these unit tests on both the Java code and C# code. Preserve the import statements, as well as class and function definitions in the original programs. All unit tests should be performed in the 'main' function definition of the classes. The unit tests generated for both the Java and C# code should be the exact same with the exact same inputs and the exact same correct outputs. Return the unit tests, run these unit tests on both the Java and C# code, and return their outputs and the percentage of unit tests that pass for both the Java code and C# code. Your answer should consist ONLY of the unit tests along with the original program, their outputs and the percentages. Do not put any descriptions in your answer other than the unit tests with the original programs, their outputs and the percentages. Do not generate different unit tests for the Java and C# programs."
 
@@ -447,7 +777,13 @@ Error: {error}"""
 unit_test_format = """{instruction}
 Java: {java}
 C#: {cs}
-Summary: {output}"""
+Summary: {output}
+Example Summary: {example_summary}
+Example Output: {example_output}
+"""
+
+
+
 
 
 
@@ -514,7 +850,116 @@ Your answer should consist of the code snippets written in Java featuring the un
 the original program, and the outputs.
 Do NOT include anything in your answer that is not code snippets and the outputs.
 Do NOT put any descriptions, comments or explanations in your answer.
-All unit tests should be written in the 'main' function definition of the classes."""
+All unit tests should be written in the 'main' function definition of the classes.
+An example summary and its corresponding example output is provided."""
+
+example_output = """// Java: SchemeDataChecker with unit tests
+import weka.core.Instances;
+import weka.core.Instance;
+
+public class SchemeDataChecker {
+
+    /**
+     * Checks whether the scheme alters the training dataset during building.
+     * If the scheme needs to modify the data it should take a copy of the training data.
+     * This method checks for changes to header structure, number of instances, order of instances, and instance weights.
+     */
+    public static boolean isTrainingDataAltered(Instances originalData, Instances afterSchemeData) {
+        // Check if headers (attributes) are the same
+        if (!originalData.equalHeaders(afterSchemeData)) {
+            return true;
+        }
+
+        // Check number of instances
+        if (originalData.numInstances() != afterSchemeData.numInstances()) {
+            return true;
+        }
+
+        // Check order and content of instances
+        for (int i = 0; i < originalData.numInstances(); i++) {
+            Instance orig = originalData.instance(i);
+            Instance altered = afterSchemeData.instance(i);
+
+            // Check if instance reference is different or if instance is not equal
+            if (!orig.equals(altered)) {
+                return true;
+            }
+
+            // Check if weights are the same
+            if (orig.weight() != altered.weight()) {
+                return true;
+            }
+        }
+
+        return false; // No modifications detected
+    }
+
+    public static void main(String[] args) throws Exception {
+        // Original dataset
+        String arffData =
+                "@relation iris\n" +
+                "@attribute sepallength numeric\n" +
+                "@attribute sepalwidth numeric\n" +
+                "@attribute petallength numeric\n" +
+                "@attribute petalwidth numeric\n" +
+                "@attribute class {Iris-setosa,Iris-versicolor,Iris-virginica}\n" +
+                "@data\n" +
+                "5.1,3.5,1.4,0.2,Iris-setosa\n" +
+                "4.9,3.0,1.4,0.2,Iris-setosa\n";
+
+        java.io.Reader reader1 = new java.io.StringReader(arffData);
+        java.io.Reader reader2 = new java.io.StringReader(arffData);
+
+        Instances originalData = new Instances(reader1);
+        Instances afterSchemeData = new Instances(reader2);
+
+        // Unit Test 1: No change
+        System.out.println("Test 1: No change");
+        boolean test1Result = isTrainingDataAltered(originalData, afterSchemeData);
+        System.out.println("Expected: false");
+        System.out.println("Actual: " + test1Result);
+        System.out.println();
+
+        // Unit Test 2: Different header
+        System.out.println("Test 2: Different header");
+        Instances alteredHeader = new Instances(afterSchemeData);
+        alteredHeader.deleteAttributeAt(0); // Remove attribute to simulate header change
+        boolean test2Result = isTrainingDataAltered(originalData, alteredHeader);
+        System.out.println("Expected: true");
+        System.out.println("Actual: " + test2Result);
+        System.out.println();
+
+        // Unit Test 3: Different number of instances
+        System.out.println("Test 3: Different number of instances");
+        Instances reducedInstances = new Instances(afterSchemeData);
+        reducedInstances.delete(0); // Remove one instance
+        boolean test3Result = isTrainingDataAltered(originalData, reducedInstances);
+        System.out.println("Expected: true");
+        System.out.println("Actual: " + test3Result);
+        System.out.println();
+
+        // Unit Test 4: Changed instance data
+        System.out.println("Test 4: Changed instance data");
+        Instances modifiedInstance = new Instances(afterSchemeData);
+        modifiedInstance.instance(0).setValue(0, 6.0); // Change a value
+        boolean test4Result = isTrainingDataAltered(originalData, modifiedInstance);
+        System.out.println("Expected: true");
+        System.out.println("Actual: " + test4Result);
+        System.out.println();
+
+        // Unit Test 5: Changed instance weight
+        System.out.println("Test 5: Changed instance weight");
+        Instances changedWeight = new Instances(afterSchemeData);
+        changedWeight.instance(0).setWeight(2.0);
+        boolean test5Result = isTrainingDataAltered(originalData, changedWeight);
+        System.out.println("Expected: true");
+        System.out.println("Actual: " + test5Result);
+        System.out.println();
+
+    }
+}
+
+"""
 
 batch_input_file = create_batch(task = "unit_test_diff", java=java, cs=cs, llm=model_name, start=0, end=100)
 
@@ -536,7 +981,223 @@ Your answer should consist of the code snippets written in C# featuring the unit
 the original program, and the outputs.
 Do NOT include anything in your answer that is not code snippets and the outputs.
 Do NOT put any descriptions, comments or explanations in your answer.
-All unit tests should be written in the 'main' function definition of the classes."""
+All unit tests should be written in the 'main' function definition of the classes.
+An example summary and its corresponding example output is provided."""
+
+example_output = """// C#: Program with identical unit tests and core logic
+using System;
+using System.IO;
+
+namespace DatasetIntegrityCheck
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Original dataset data
+            string arffData =
+                "@relation iris\n" +
+                "@attribute sepallength numeric\n" +
+                "@attribute sepalwidth numeric\n" +
+                "@attribute petallength numeric\n" +
+                "@attribute petalwidth numeric\n" +
+                "@attribute class {Iris-setosa,Iris-versicolor,Iris-virginica}\n" +
+                "@data\n" +
+                "5.1,3.5,1.4,0.2,Iris-setosa\n" +
+                "4.9,3.0,1.4,0.2,Iris-setosa\n";
+
+            using (var reader1 = new StringReader(arffData))
+            using (var reader2 = new StringReader(arffData))
+            {
+                Instances originalData = new Instances(reader1);
+                Instances afterSchemeData = new Instances(reader2);
+
+                // Unit Test 1: No change
+                Console.WriteLine("Test 1: No change");
+                bool test1Result = SchemeDataChecker.IsTrainingDataAltered(originalData, afterSchemeData);
+                Console.WriteLine("Expected: False");
+                Console.WriteLine("Actual: " + test1Result);
+                Console.WriteLine();
+
+                // Unit Test 2: Different header
+                Console.WriteLine("Test 2: Different header");
+                Instances alteredHeader = new Instances(afterSchemeData);
+                alteredHeader.DeleteAttributeAt(0); // simulate header change
+                bool test2Result = SchemeDataChecker.IsTrainingDataAltered(originalData, alteredHeader);
+                Console.WriteLine("Expected: True");
+                Console.WriteLine("Actual: " + test2Result);
+                Console.WriteLine();
+
+                // Unit Test 3: Different number of instances
+                Console.WriteLine("Test 3: Different number of instances");
+                Instances reducedInstances = new Instances(afterSchemeData);
+                reducedInstances.DeleteInstanceAt(0);
+                bool test3Result = SchemeDataChecker.IsTrainingDataAltered(originalData, reducedInstances);
+                Console.WriteLine("Expected: True");
+                Console.WriteLine("Actual: " + test3Result);
+                Console.WriteLine();
+
+                // Unit Test 4: Changed instance data
+                Console.WriteLine("Test 4: Changed instance data");
+                Instances modifiedInstance = new Instances(afterSchemeData);
+                modifiedInstance.GetInstance(0).SetValue(0, 6.0);
+                bool test4Result = SchemeDataChecker.IsTrainingDataAltered(originalData, modifiedInstance);
+                Console.WriteLine("Expected: True");
+                Console.WriteLine("Actual: " + test4Result);
+                Console.WriteLine();
+
+                // Unit Test 5: Changed instance weight
+                Console.WriteLine("Test 5: Changed instance weight");
+                Instances changedWeight = new Instances(afterSchemeData);
+                changedWeight.GetInstance(0).SetWeight(2.0);
+                bool test5Result = SchemeDataChecker.IsTrainingDataAltered(originalData, changedWeight);
+                Console.WriteLine("Expected: True");
+                Console.WriteLine("Actual: " + test5Result);
+                Console.WriteLine();
+
+            }
+        }
+    }
+
+    public static class SchemeDataChecker
+    {
+        public static bool IsTrainingDataAltered(Instances originalData, Instances afterSchemeData)
+        {
+            if (!originalData.EqualHeaders(afterSchemeData))
+                return true;
+
+            if (originalData.NumInstances != afterSchemeData.NumInstances)
+                return true;
+
+            for (int i = 0; i < originalData.NumInstances; i++)
+            {
+                var orig = originalData.GetInstance(i);
+                var altered = afterSchemeData.GetInstance(i);
+                if (!orig.Equals(altered))
+                    return true;
+                if (orig.Weight != altered.Weight)
+                    return true;
+            }
+            return false;
+        }
+    }
+
+    public class Instances
+    {
+        // Minimal implementation for testing
+        private readonly System.Collections.Generic.List<Instance> _instances = new System.Collections.Generic.List<Instance>();
+
+        public bool HeaderUnchanged { get; set; } = true;
+        public int NumInstances => _instances.Count;
+
+        public Instances() { }
+
+        public Instances(Instances other)
+        {
+            // Copy constructor
+            foreach (var inst in other._instances)
+            {
+                _instances.Add(new Instance(inst));
+            }
+        }
+
+        public Instances(TextReader reader)
+        {
+            // Dummy implementation: parse lines for test simulation
+            string line;
+            while ((line = reader.ReadLine()) != null)
+            {
+                line = line.Trim();
+                if (line.StartsWith("@") || string.IsNullOrEmpty(line))
+                    continue;
+                var parts = line.Split(',');
+                var values = Array.ConvertAll(parts, s => s.Trim());
+                _instances.Add(new Instance(values));
+            }
+        }
+
+        public bool EqualHeaders(Instances other)
+        {
+            // For simplicity, assume headers are equal unless header flag is false
+            return this.HeaderUnchanged && other.HeaderUnchanged;
+        }
+
+        public int NumInstances => _instances.Count;
+
+        public Instance GetInstance(int index)
+        {
+            return _instances[index];
+        }
+
+        public void DeleteAttributeAt(int index)
+        {
+            // Dummy: simulate header change
+            this.HeaderUnchanged = false;
+        }
+
+        public void DeleteInstanceAt(int index)
+        {
+            _instances.RemoveAt(index);
+        }
+
+        public class Instance
+        {
+            public string[] Values { get; set; }
+            public double Weight { get; set; } = 1.0;
+
+            public Instance(string[] values)
+            {
+                Values = values;
+            }
+
+            public Instance(Instance other)
+            {
+                Values = (string[])other.Values.Clone();
+                Weight = other.Weight;
+            }
+
+            public override bool Equals(object obj)
+            {
+                if (obj is Instance other)
+                {
+                    if (this.Values.Length != other.Values.Length)
+                        return false;
+                    for (int i = 0; i < Values.Length; i++)
+                    {
+                        if (this.Values[i] != other.Values[i])
+                            return false;
+                    }
+                    return true;
+                }
+                return false;
+            }
+
+            public override int GetHashCode()
+            {
+                return HashCode.Combine(Values, Weight);
+            }
+
+            public double getWeight()
+            {
+                return Weight;
+            }
+
+            public void SetWeight(double weight)
+            {
+                this.Weight = weight;
+            }
+
+            public void SetValue(int index, double newValue)
+            {
+                if (index >= 0 && index < Values.Length)
+                {
+                    Values[index] = newValue.ToString();
+                }
+            }
+        }
+    }
+}
+"""
 
 batch_input_file = create_batch(task = "unit_test_diff", java=java, cs=cs, llm=model_name, start=0, end=100)
 
