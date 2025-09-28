@@ -961,7 +961,7 @@ def create_batch(task = "summary", model_1 = 0, model_2 = 1, start=0, end=None, 
                                               output = output,
                                               example_summary = example_summary,
                                               example_output = example_output)
-            model = OllamaLLM(model=llm, num_predict=4096)
+            """model = OllamaLLM(model=llm, num_predict=4096)
             prompt = ChatPromptTemplate.from_template(content_format)
             chain = prompt | model
             result = chain.invoke({"instruction": task_instruction,
@@ -969,10 +969,10 @@ def create_batch(task = "summary", model_1 = 0, model_2 = 1, start=0, end=None, 
                                     "cs": cs,
                                     "output": output,
                                     "example_summary": example_summary,
-                                    "example_output": example_output})
+                                    "example_output": example_output})"""
             
-            """result = ollama.generate(model=llm, prompt=content_1)
-            output = result['response']"""
+            output = ollama.generate(model=llm, prompt=content_1)
+            result = output['response']
             
             
             for i in range(iter_count):
@@ -1258,10 +1258,12 @@ I want you to generate 5 unit tests for the task written in Java and
 run these unit tests on the original Java code.
 Your answer should consist of the code snippets written in Java featuring the unit tests
 the original program, and the outputs.
+An example summary and its corresponding example output is provided.
+Generate the unit tests in the same format in the example.
 Do NOT include anything in your answer that is not code snippets and the outputs.
 Do NOT put any descriptions, comments or explanations in your answer.
 All unit tests should be written in the 'main' function definition of the classes.
-An example summary and its corresponding example output is provided."""
+"""
 
 example_output = """// Java: SchemeDataChecker with unit tests
 import weka.core.Instances;
@@ -1389,10 +1391,12 @@ I want you to generate 5 unit tests for the task written in C# and
 run these unit tests on the original C# code.
 Your answer should consist of the code snippets written in C# featuring the unit tests
 the original program, and the outputs.
+An example summary and its corresponding example output is provided.
+Generate the unit tests in the same format in the example.
 Do NOT include anything in your answer that is not code snippets and the outputs.
 Do NOT put any descriptions, comments or explanations in your answer.
 All unit tests should be written in the 'main' function definition of the classes.
-An example summary and its corresponding example output is provided."""
+"""
 
 example_output = """// C#: Program with identical unit tests and core logic
 using System;
