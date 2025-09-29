@@ -1147,8 +1147,6 @@ with open("competition/instruction.txt", "r", encoding = "utf-8-sig" ) as f:
     instruction_list = instruction_list.split("\n")
     instruction_list = [x for x in instruction_list if x != ""]
 
-print(len(instruction_list))
-print(instruction_list)
 
 translation_instruction = instruction_list[0]
 summary_instruction = instruction_list[1]
