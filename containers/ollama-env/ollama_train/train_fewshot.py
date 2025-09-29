@@ -982,7 +982,7 @@ def create_batch(task = "summary", model_1 = 0, model_2 = 1, start=0, end=None, 
             output = ollama.generate(model=llm, prompt=content_1)
             result = output['response']
             
-            
+            """
             for i in range(iter_count):
                 result = chain.invoke({"instruction": task_instruction_2,
                                     "java": java,
@@ -993,7 +993,7 @@ def create_batch(task = "summary", model_1 = 0, model_2 = 1, start=0, end=None, 
                                     "example_summary_2": example_summary_2,
                                     "example_output_2": example_output_2,
                                     "example_summary_3": example_summary_3,
-                                    "example_output_3": example_output_3})
+                                    "example_output_3": example_output_3})"""
             
             
                 
