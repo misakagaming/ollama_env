@@ -1261,7 +1261,7 @@ Your answer should consist of the code snippets written in Java featuring the un
 the original program, and the outputs.
 An example summary and its corresponding example output is provided.
 An explanation for the unit tests in the example output is also provided.
-Generate the unit tests in the same format in the example.
+Generate the unit tests in the same format in the example, and apply a similar logic with the explanation.
 Do NOT include anything in your answer that is not code snippets and the outputs.
 Do NOT put any descriptions, comments or explanations in your answer.
 All unit tests should be written in the 'main' function definition of the classes.
@@ -1400,7 +1400,8 @@ run these unit tests on the original C# code.
 Your answer should consist of the code snippets written in C# featuring the unit tests
 the original program, and the outputs.
 An example summary and its corresponding example output is provided.
-Generate the unit tests in the same format in the example.
+An explanation for the unit tests in the example output is also provided.
+Generate the unit tests in the same format in the example, and apply a similar logic with the explanation.
 Do NOT include anything in your answer that is not code snippets and the outputs.
 Do NOT put any descriptions, comments or explanations in your answer.
 All unit tests should be written in the 'main' function definition of the classes.
