@@ -1375,11 +1375,14 @@ public class SchemeDataChecker {
 
 """
 
-explanation = """The first unit test makes no changes to the data, therefore the output should be false.
-The second unit test features an altered header, therefore the output should be true.
-The third unit test has different numbers of instances on one of the data, therefore the output should be true.
-The fourth unit test changes the instances in the data, therefore the output should be true.
-The fifth unit test changes the weights of instances, therefore the output should be true."""
+#explanation = """The first unit test makes no changes to the data, therefore the output should be false.
+#The second unit test features an altered header, therefore the output should be true.
+#The third unit test has different numbers of instances on one of the data, therefore the output should be true.
+#The fourth unit test changes the instances in the data, therefore the output should be true.
+#The fifth unit test changes the weights of instances, therefore the output should be true."""
+
+explanation = """This code is supposed to check if the scheme alters the dataset and copies the training data if so. 
+Therefore, different unit tests are generated in different ways the data could be altered."""
 
 batch_input_file = create_batch(task = "unit_test_diff", java=java, cs=cs, llm=model_name, start=0, end=100)
 
