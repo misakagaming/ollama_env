@@ -825,7 +825,8 @@ def create_batch(task = "summary", model_1 = 0, model_2 = 1, start=0, end=None, 
         content_format = unit_test_format
         task_instruction = unit_test_instruction
         task_instruction_2 = unit_test_instruction_re
-        outputs = coms[model_1][start:end]
+        #outputs = coms[model_1][start:end]
+        outputs = summaries[start:end]
         java = java[start:end]
         cs = cs[start:end]
     elif task == "error_fix":
@@ -1138,6 +1139,13 @@ for i in range(len(lamner_com_predictions[:1500])):
 print(lamner_predictions[:10])
 print(lamner_com_predictions[:10])
 
+with open("translation_results/codetransocean/sources.txt", "r", encoding = "utf-8-sig" ) as f:
+  sources = f.readlines()
+with open("translation_results/codetransocean/targets.txt", "r", encoding = "utf-8-sig" ) as f:
+  targets = f.readlines()
+with open("translation_results/codetransocean/summary.txt", "r", encoding = "utf-8-sig" ) as f:
+  summaries = f.readlines()
+
 mlsum_predictions=[lamner_predictions, lamner_only_codebert_predictions, lamner_codebert_predictions, lam_predictions, ner_predictions, static_predictions, tl_codesum_predictions, codebert_predictions, rencos_predictions, rencos_lamner_predictions]
 trnews_predictions=[lamner_predictions, lamner_only_codebert_predictions, lamner_codebert_predictions, lam_predictions, ner_predictions, static_predictions, tl_codesum_predictions, codebert_predictions, rencos_predictions, rencos_lamner_predictions]
 coms=[lamner_com_predictions, lamner_only_codebert_com_predictions, lamner_codebert_com_predictions, lam_com_predictions, ner_com_predictions, static_com_predictions, tl_codesum_com_predictions, codebert_com_predictions, rencos_com_predictions, rencos_lamner_com_predictions]
@@ -1263,8 +1271,11 @@ df.head()
 df["prediction"] = df["response"].apply(lambda x: x["body"]["choices"][0]["message"]["content"])
 predictions = list(df["prediction"])
 
-cs = get_preds("MTJW27khRdTpG5ZWvC87qS", client)
-java = get_preds("Re6TkGwKaXCmsrjCrRZHiT", client)
+#cs = get_preds("MTJW27khRdTpG5ZWvC87qS", client)
+#java = get_preds("Re6TkGwKaXCmsrjCrRZHiT", client)
+
+cs = get_preds("KiB6usJGQAavqEJSU1HS5F", client)
+java = get_preds("7BGzw5XquYyE4CoxPdCfeV", client)
 
 unit_test_instruction = """You are a code tester. You are given a Java code, its corresponding
 C# code that performs the same task and a code comment description of the task.
