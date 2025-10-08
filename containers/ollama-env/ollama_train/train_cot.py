@@ -769,10 +769,10 @@ public class Sector
 #6 = tlcodesum #7 = codebert
 #8 = rencos #9 = rencos_lamner
 
-def get_preds(file_name, client):
+def get_preds(file_name, client, lang="java"):
     file_response = client.files.content('file-' + file_name)
     #print(file_response.text)
-    results_filename = "gpt4-o-mini-results-with-ties-translate-9-9.jsonl"
+    results_filename = f"gpt4-o-mini-results-{lang}.jsonl"
     with open(results_filename, "w", encoding = "utf-8", errors = "ignore") as f:
         f.write(file_response.text)
         
@@ -1246,7 +1246,7 @@ Explanation for Unit Tests: {explanation}
 #9 batch_id: "" output_file file-
 
 
-file_response = client.files.content('file-MTJW27khRdTpG5ZWvC87qS')
+file_response = client.files.content('file-KiB6usJGQAavqEJSU1HS5F')
 #print(file_response.text)
 results_filename = "gpt4-o-mini-results-with-ties-translate-9-9.jsonl"
 with open(results_filename, "w", encoding = "utf-8", errors = "ignore") as f:
@@ -1261,7 +1261,7 @@ predictions = list(df["prediction"])
 #cs = get_preds("MTJW27khRdTpG5ZWvC87qS", client)
 #java = get_preds("Re6TkGwKaXCmsrjCrRZHiT", client)
 
-cs = get_preds("KiB6usJGQAavqEJSU1HS5F", client)
+cs = get_preds("KiB6usJGQAavqEJSU1HS5F", client, "cs")
 java = get_preds("7BGzw5XquYyE4CoxPdCfeV", client)
 
 unit_test_instruction = """You are a code tester. You are given a Java code, its corresponding
