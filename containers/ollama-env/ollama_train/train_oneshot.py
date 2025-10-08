@@ -1136,12 +1136,11 @@ with open("competition/instruction.txt", "r", encoding = "utf-8-sig" ) as f:
     instruction_list = instruction_list.split("\n")
     instruction_list = [x for x in instruction_list if x != ""]
 
-
-with open("translation_results/codetransocean/sources.txt", "r", encoding = "utf-8-sig" ) as f:
+with open("sources.txt", "r", encoding = "utf-8-sig" ) as f:
   sources = f.readlines()
-with open("translation_results/codetransocean/targets.txt", "r", encoding = "utf-8-sig" ) as f:
+with open("targets.txt", "r", encoding = "utf-8-sig" ) as f:
   targets = f.readlines()
-with open("translation_results/codetransocean/summary.txt", "r", encoding = "utf-8-sig" ) as f:
+with open("summary.txt", "r", encoding = "utf-8-sig" ) as f:
   summaries = f.readlines()
 
 

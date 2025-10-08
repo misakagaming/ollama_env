@@ -1139,11 +1139,11 @@ for i in range(len(lamner_com_predictions[:1500])):
 print(lamner_predictions[:10])
 print(lamner_com_predictions[:10])
 
-with open("translation_results/codetransocean/sources.txt", "r", encoding = "utf-8-sig" ) as f:
+with open("sources.txt", "r", encoding = "utf-8-sig" ) as f:
   sources = f.readlines()
-with open("translation_results/codetransocean/targets.txt", "r", encoding = "utf-8-sig" ) as f:
+with open("targets.txt", "r", encoding = "utf-8-sig" ) as f:
   targets = f.readlines()
-with open("translation_results/codetransocean/summary.txt", "r", encoding = "utf-8-sig" ) as f:
+with open("summary.txt", "r", encoding = "utf-8-sig" ) as f:
   summaries = f.readlines()
 
 mlsum_predictions=[lamner_predictions, lamner_only_codebert_predictions, lamner_codebert_predictions, lam_predictions, ner_predictions, static_predictions, tl_codesum_predictions, codebert_predictions, rencos_predictions, rencos_lamner_predictions]
