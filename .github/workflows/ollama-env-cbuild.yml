@@ -5,9 +5,12 @@ on:
     paths:
       - containers/ollama-env/Dockerfile
       - containers/ollama-env/requirements.txt
-      - containers/ollama-env/ollama_train/train_fewshot.py
-      - containers/ollama-env/ollama_train/train_oneshot.py
-      - containers/ollama-env/ollama_train/train_cot.py
+      - containers/ollama-env/ollama_train/easy/train_fewshot.py
+      - containers/ollama-env/ollama_train/easy/train_oneshot.py
+      - containers/ollama-env/ollama_train/easy/train_cot.py
+      - containers/ollama-env/ollama_train/normal/train_fewshot.py
+      - containers/ollama-env/ollama_train/normal/train_oneshot.py
+      - containers/ollama-env/ollama_train/normal/train_cot.py
       - .github/workflows/ollama-env-cbuild.yml # Self-trigger
 
 env:
