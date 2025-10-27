@@ -957,7 +957,7 @@ def create_batch(task = "summary", model_1 = 0, model_2 = 1, start=0, end=None, 
                                                                     {"role": "user", "content": content_1}],"max_tokens": 4096}}
             task_lines.append(line_1)
             count += 1
-        filename = "{task}-batch-{lang}-fewshot-cot.jsonl".format(task = task, lang=lang)
+        filename = "{task}-batch-{lang}-cot-normal.jsonl".format(task = task, lang=lang)
     elif task == "unit_test_diff":
         for java, cs, output in zip(java, cs, outputs):
             content_1 = content_format.format(instruction = task_instruction,
