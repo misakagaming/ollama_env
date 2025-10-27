@@ -1,0 +1,12 @@
+nltk==3.4.5
+protobuf==3.19.6
+tensorflow
+pyyaml>=5.1
+keras
+tree_sitter==0.20.1
+pandas
+datasets
+evaluate
+huggingface_hub
+numpy
+regex
