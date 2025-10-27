@@ -11,6 +11,7 @@ on:
       - containers/ollama-env/ollama_train/normal/train_fewshot.py
       - containers/ollama-env/ollama_train/normal/train_oneshot.py
       - containers/ollama-env/ollama_train/normal/train_cot.py
+      - containers/ollama-env/ollama_train/*
       - .github/workflows/ollama-env-cbuild.yml # Self-trigger
 
 env:
