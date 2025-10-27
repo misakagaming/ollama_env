@@ -947,7 +947,9 @@ def create_batch(task = "summary", model_1 = 0, model_2 = 1, start=0, end=None, 
             content_1 = content_format.format(instruction = task_instruction,
                                               java = java,
                                               cs = cs,
-                                              output = output)
+                                              output = output,
+                                              example_summary = example_summary,
+                                              example_output = example_output)
             line_1 = {"custom_id": "{task}-{count}".format(task = task, count = count),
                       "method": "POST", "url": "/v1/chat/completions",
                       "body": {"model": llm, "messages": [{"role": "system", "content": "You are a helpful assistant."},
