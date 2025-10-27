@@ -1384,7 +1384,7 @@ public class SchemeDataChecker {
 
 """
 
-batch_input_file = create_batch(task = "unit_test", java=java, cs=cs, lang="java" start=0, end=100)
+batch_input_file = create_batch(task = "unit_test", java=java, cs=cs, lang="java", start=0, end=100)
 
 """
 results_filename = f"unit-tests-{model_num}-0-java.txt"
@@ -1625,7 +1625,7 @@ namespace DatasetIntegrityCheck
 """
 
 
-batch_input_file = create_batch(task = "unit_test", java=java, cs=cs, lang="cs" start=0, end=100)
+batch_input_file = create_batch(task = "unit_test", java=java, cs=cs, lang="cs", start=0, end=100)
 
 """
 results_filename = f"unit-tests-{model_num}-0-cs.txt"

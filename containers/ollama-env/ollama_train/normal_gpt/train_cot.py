@@ -1396,7 +1396,7 @@ public class SchemeDataChecker {
 explanation = """This code is supposed to check if the scheme alters the dataset and copies the training data if so. 
 Therefore, different unit tests are generated in different ways the data could be altered."""
 
-batch_input_file = create_batch(task = "unit_test", java=java, cs=cs, lang="java" start=0, end=100)
+batch_input_file = create_batch(task = "unit_test", java=java, cs=cs, lang="java", start=0, end=100)
 
 """
 results_filename = f"unit-tests-{model_num}-0-java.txt"
@@ -1638,7 +1638,7 @@ namespace DatasetIntegrityCheck
 """
 
 
-batch_input_file = create_batch(task = "unit_test", java=java, cs=cs, lang="cs" start=0, end=100)
+batch_input_file = create_batch(task = "unit_test", java=java, cs=cs, lang="cs", start=0, end=100)
 
 """
 results_filename = f"unit-tests-{model_num}-0-cs.txt"
