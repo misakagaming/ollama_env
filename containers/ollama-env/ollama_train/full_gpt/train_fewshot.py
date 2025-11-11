@@ -817,9 +817,9 @@ def create_batch(task = "summary", model_1 = 0, model_2 = 1, start=0, end=None, 
         content_format = unit_test_format
         task_instruction = unit_test_instruction
         #outputs = coms[model_1][start:end]
-        outputs = summaries[start:end]
-        java = java[:100]
-        cs = cs[:100]
+        outputs = summaries
+        java = java
+        cs = cs
     elif task == "unit_test_diff":
         if not end:
             end = start + 10
@@ -1146,11 +1146,11 @@ for i in range(len(lamner_com_predictions[:1500])):
 print(lamner_predictions[:10])
 print(lamner_com_predictions[:10])
 
-with open("sources.txt", "r", encoding = "utf-8-sig" ) as f:
+with open("full_gpt/sources.txt", "r", encoding = "utf-8-sig" ) as f:
   sources = f.readlines()
-with open("targets.txt", "r", encoding = "utf-8-sig" ) as f:
+with open("full_gpt/targets.txt", "r", encoding = "utf-8-sig" ) as f:
   targets = f.readlines()
-with open("summary.txt", "r", encoding = "utf-8-sig" ) as f:
+with open("full_gpt/summary.txt", "r", encoding = "utf-8-sig" ) as f:
   summaries = f.readlines()
 
 mlsum_predictions=[lamner_predictions, lamner_only_codebert_predictions, lamner_codebert_predictions, lam_predictions, ner_predictions, static_predictions, tl_codesum_predictions, codebert_predictions, rencos_predictions, rencos_lamner_predictions]
@@ -1562,7 +1562,7 @@ example_output_3 = """public class Sector {
 }
 """
 
-batch_input_file = create_batch(task = "unit_test", java=java, cs=cs, lang="java", start=0, end=100)
+batch_input_file = create_batch(task = "unit_test", java=java, cs=cs, lang="java")
 
 """
 results_filename = f"unit-tests-{model_num}-0-java.txt"
@@ -2051,7 +2051,7 @@ public class Sector
 }
 """
 
-batch_input_file = create_batch(task = "unit_test", java=java, cs=cs, lang="cs", start=0, end=100)
+batch_input_file = create_batch(task = "unit_test", java=java, cs=cs, lang="cs")
 
 """
 results_filename = f"unit-tests-{model_num}-0-cs.txt"

@@ -1139,11 +1139,11 @@ with open("competition/instruction.txt", "r", encoding = "utf-8-sig" ) as f:
     instruction_list = instruction_list.split("\n")
     instruction_list = [x for x in instruction_list if x != ""]
 
-with open("sources.txt", "r", encoding = "utf-8-sig" ) as f:
+with open("full_gpt/sources.txt", "r", encoding = "utf-8-sig" ) as f:
   sources = f.readlines()
-with open("targets.txt", "r", encoding = "utf-8-sig" ) as f:
+with open("full_gpt/targets.txt", "r", encoding = "utf-8-sig" ) as f:
   targets = f.readlines()
-with open("summary.txt", "r", encoding = "utf-8-sig" ) as f:
+with open("full_gpt/summary.txt", "r", encoding = "utf-8-sig" ) as f:
   summaries = f.readlines()
 
 
@@ -1386,7 +1386,7 @@ public class SchemeDataChecker {
 
 """
 
-batch_input_file = create_batch(task = "unit_test", java=java, cs=cs, lang="java", start=0, end=100)
+batch_input_file = create_batch(task = "unit_test", java=java, cs=cs, lang="java")
 
 """
 results_filename = f"unit-tests-{model_num}-0-java.txt"
@@ -1627,7 +1627,7 @@ namespace DatasetIntegrityCheck
 """
 
 
-batch_input_file = create_batch(task = "unit_test", java=java, cs=cs, lang="cs", start=0, end=100)
+batch_input_file = create_batch(task = "unit_test", java=java, cs=cs, lang="cs")
 
 """
 results_filename = f"unit-tests-{model_num}-0-cs.txt"
