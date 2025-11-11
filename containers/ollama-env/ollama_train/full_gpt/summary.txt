@@ -1,174 +1,1010 @@
-Chinese remainder theorem
-Chinese remainder theorem
-Pi
-Y combinator
-Van Eck sequence
-Van Eck sequence
-Van Eck sequence
-Loops_Continue
-General FizzBuzz
-General FizzBuzz
-Checkpoint synchronization
-Checkpoint synchronization
-Variable-length quantity
-String case
-MD5
-Date manipulation
-Sorting algorithms_Sleep sort
-Loops_Nested
-Remove duplicate elements
-Look-and-say sequence
-Stack
-Totient function
-Conditional structures
-Sort using a custom comparator
-Animation
-Sorting algorithms_Radix sort
-List comprehensions
-Sorting algorithms_Selection sort
-Apply a callback to an array
-Singleton
-Safe addition
-Loops_Downward for
-Write entire file
-Loops_For
-Non-continuous subsequences
-Twin primes
-Twin primes
-Roots of unity
-Long multiplication
-Pell's equation
-Bulls and cows
-Sorting algorithms_Bubble sort
-File input_output
-Arithmetic_Integer
-Matrix transposition
-Man or boy test
-Short-circuit evaluation
-Find limit of recursion
-Find limit of recursion
-Image noise
-Perfect numbers
-Arbitrary-precision integers (included)
-Inverted index
-Least common multiple
-Least common multiple
-Loops_Break
-Water collected between towers
-Sum and product puzzle
-Parsing_Shunting-yard algorithm
-Parsing_Shunting-yard algorithm
-Middle three digits
-Stern-Brocot sequence
-Documentation
-Documentation
-Problem of Apollonius
-Chat server
-FASTA format
-Find palindromic numbers in both binary and ternary bases
-Find palindromic numbers in both binary and ternary bases
-Cipolla's algorithm
-Cipolla's algorithm
-Literals_String
-GUI_Maximum window dimensions
-Enumerations
-Knapsack problem_Unbounded
-Range extraction
-Range extraction
-Type detection
-Maximum triangle path sum
-Four bit adder
-Four bit adder
-Unix_ls
-UTF-8 encode and decode
-Magic squares of doubly even order
-Same fringe
-Peaceful chess queen armies
-Move-to-front algorithm
-Execute a system command
-XML validation
-Longest increasing subsequence
-Scope modifiers
-Brace expansion
-GUI component interaction
-One of n lines in a file
-Addition chains
-Repeat
-Modular inverse
-Hello world_Web server
-Hello world_Web server
-Terminal control_Clear the screen
-Active Directory_Connect
-Pythagorean quadruples
-Sokoban
-Practical numbers
-Literals_Floating point
-Erdős-primes
-Erdős-primes
-Erdős-primes
-Solve a Numbrix puzzle
-Solve a Numbrix puzzle
-Solve a Numbrix puzzle
-Church numerals
-Church numerals
-Solve a Hopido puzzle
-Solve a Hopido puzzle
-Nonogram solver
-Nonogram solver
-Word search
-Break OO privacy
-Break OO privacy
-Object serialization
-Eertree
-Eertree
-Long year
-Zumkeller numbers
-Zumkeller numbers
-Associative array_Merging
-Associative array_Merging
-Metallic ratios
-Metallic ratios
-Metallic ratios
-Markov chain text generator
-Dijkstra's algorithm
-Geometric algebra
-Suffix tree
-Suffix tree
-Associative array_Iteration
-Define a primitive data type
-Define a primitive data type
-Solve a Holy Knight's tour
-Solve a Holy Knight's tour
-Hash join
-Polynomial synthetic division
-Polynomial synthetic division
-Polynomial synthetic division
-Latin Squares in reduced form
-Closest-pair problem
-Inheritance_Single
-Associative array_Creation
-Associative array_Creation
-Color wheel
-Polymorphism
-Square root by hand
-Square root by hand
-Reflection_List properties
-Minimal steps down to 1
-Align columns
-URL parser
-URL parser
-URL parser
-Base58Check encoding
-Base58Check encoding
-Dynamic variable names
-Data Encryption Standard
-Fibonacci matrix-exponentiation
-Fibonacci matrix-exponentiation
-Commatizing numbers
-Arithmetic coding_As a generalized change of radix
-Empty program
-Kosaraju
-Reflection_List methods
-Send an unknown method call
-Twelve statements
-Transportation problem
+0	translates the cloned computes the code that computes the result from the java source .
+1	translates the cloned computes the code that computes the result from the java source .
+2	translate all symbols to their canonical form .
+3	this is the main method which maps the given function into a regular expression .
+4	this is the main method for the class which maps to canonical names .
+5	this is the main method for the class which maps to canonical names .
+6	this is the main method for the class which maps to canonical names .
+7	translate each line in chinese code to a human readable string .
+8	this is the main method which triggers a regular expression .
+9	this is the main method which triggers a regular expression .
+10	this is the main thread which executes tasks in the same thread .
+11	this is the main thread which executes tasks in the same thread .
+12	converts the given byte array into a string that can be encoded this code assumes that the array is encoded in utf 8 .
+13	translate the mbeans which you want to use the default china .
+14	translate the java class name into a hash code .
+15	this is the main method which is used to compile a javadoc in the java lang string .
+16	this is the main thread call this when you want to run a clazz .
+17	call this code inlining each other thread inlining each thread .
+18	call this when you want to synchronize classes .
+19	translate each line in chinese form into a human readable string .
+20	this is the main entry point for testing .
+21	this is the main method which runs the optimizer thread it computes the result from calling this method .
+22	translates the javamail code to the china .
+23	translates a list of strings into two strings .
+24	this is the main entry point .
+25	transforms an arraylist into ascending order .
+26	translates all codenames in this class and registers them together .
+27	transforms the specified array into a sorted list with natural ordering .
+28	this is the main method which executes the java runtime according to optimizer .
+29	retrieves the cloned class for the given thread .
+30	translate two strings into a single double array .
+31	translates the javadoc code in each line .
+32	this code is used to compile the javacamail class which is used to compile code .
+33	translates the stack trace lines in a javadoc code .
+34	this is the main method which executes the code in each class it executes the code in a separate thread so that other calls to this class .
+35	convenience method that builds the regular expression .
+36	convenience method that builds the regular expression .
+37	this is the main thread call this when you want to call this .
+38	translate pairs with three decimal digits into a human readable string .
+39	this is the main class for testing .
+40	translate java classes into memory .
+41	performs a stack according to the comparator .
+42	this is the main method which reads the code in the jar file and loads it into the java source .
+43	this code computes the clique from two arrays .
+44	this method is called via reflection from the java class .
+45	translates the java code into two strings .
+46	renders the code source code in a readable form .
+47	executes the code recursion loop .
+48	executes the code recursion loop .
+49	this method is called when the jcombobox changes .
+50	translates the count of each object in a mean i e it distacts to each other .
+51	this is the main class for code java lang .
+52	translates the source code into java lang object .
+53	translates the code line into java arrays .
+54	translates the code line into java arrays .
+55	transliterate code to code one line .
+56	this is the main method which can be overridden by subclasses to run a java class .
+57	this method is called via reflection from the java class .
+58	this is the main method which executes the java code inlining each character in the regular expression .
+59	this is the main method which executes the java code inlining each character in the regular expression .
+60	this is the main method which is the fastest way to run a regular expression with the same name as the separator which breaks into two strings .
+61	this method is called via reflection from the javadocode .
+62	translates code to clazz .
+63	translates code to clazz .
+64	translates the circle with the given parameters .
+65	initiate a client this is not thread safe .
+66	description of the method .
+67	this code is clamped to compile i e it might be in a separate thread so that we don t have to rely on this class in the code
+68	this code is clamped to compile i e it might be in a separate thread so that we don t have to rely on this class in the code
+69	convert from chinese string to regular expression .
+70	convert from chinese string to regular expression .
+71	translates the class name that maps to the given string .
+72	shuts down the java code .
+73	use this when you want to rely on the compiler you can override this to use .
+74	translates all items into the java heap .
+75	this is the main method which runs in a javadoc class it turns the code into an array of strings which might be in other classes .
+76	this is the main method which runs in a javadoc class it turns the code into an array of strings which might be in other classes .
+77	this code is the main class for testing .
+78	translates the source code into java arrays .
+79	translates input into an array of input operators .
+80	translates input into an array of input operators .
+81	this code is used to compile the java class .
+82	translates code into java util class .
+83	call this from code to compile this class .
+84	combines two matchers into another one .
+85	returns true if this object is in the same order with its matching mappings .
+86	translate strings to java classpath .
+87	this method is called via reflection from the javadocode .
+88	this is the main method which loads the javadocode and enables us to run this method .
+89	translates the source code into two matchers .
+90	translate the coeffunction of code arrays into a given function .
+91	this is the main method which runs in a regular expression .
+92	subclasses might override this if you want to override this .
+93	call this from code to compile this class .
+94	translate the array of chinese strings into a single character array with the same codepoint .
+95	this is the main method which is called by the java interpreter thread .
+96	translates the cloned jre inlined code .
+97	this is the main thread to run the code in a jar .
+98	this is the main thread to run the code in a jar .
+99	this code is called via reflection from the classloader .
+100	instantiates a new thread .
+101	this is the main method that executes each search result in a separate list .
+102	translate the icons from the java class .
+103	this is the main method which can be used for testing purposes .
+104	creates a clshaver which can be used to tight memory .
+105	this is the main thread call .
+106	this is the main thread call .
+107	this is the main thread call .
+108	main entry point for java lang object .
+109	main entry point for java lang object .
+110	main entry point for java lang object .
+111	translates the stack according to java operators .
+112	translates the stack according to java operators .
+113	this is the main method which executes the java code in each thread .
+114	this is the main method which executes the java code in each thread .
+115	translates the stack trace to the java source code .
+116	translates the stack trace to the java source code .
+117	this method is used to compile java classes .
+118	translate the given chinese string into a regular expression .
+119	translate the given chinese string into a regular expression .
+120	this method is called via reflection from the database .
+121	instantiates a code source code .
+122	instantiates a code source code .
+123	this is used to compile a single thread .
+124	translate each character in the list .
+125	translate each character in the list .
+126	this is the main method which loads the java lang code in a separate thread which can be used to compile code lines .
+127	this is the main method which loads the java lang code in a separate thread which can be used to compile code lines .
+128	translates all codepoint objects into a single string .
+129	translates all codepoint objects into a single string .
+130	translates all codepoint objects into a single string .
+131	translates output into a set of java files .
+132	instantiates a new graph .
+133	translates the jcombines in two matchers into a single array with the same codepoint .
+134	translate the given tree into one tree .
+135	translate the given tree into one tree .
+136	translate a map of strings into a single hashtable .
+137	assign the given value to this one with the given bounding box this merges the given bounds into the given byte buffer with the given interval as long as it
+138	assign the given value to this one with the given bounding box this merges the given bounds into the given byte buffer with the given interval as long as it
+139	translates the source code into java arrays .
+140	translates the source code into java arrays .
+141	this is the main entry point for testing .
+142	this is the main method which runs in a human readable form .
+143	this is the main method which runs in a human readable form .
+144	this is the main method which runs in a human readable form .
+145	combines two matchers into a set of strings .
+146	translates the anchor points into the stack trace .
+147	attempt to change this class .
+148	translate all jars in a jcombobox .
+149	translate all jars in a jcombobox .
+150	this is the main thread call this method .
+151	translates the points in y z into a newline .
+152	translate all codenames into a regular expression .
+153	translate all codenames into a regular expression .
+154	translates all class members into code .
+155	call this when you want to call this from a jcombobox .
+156	translates the source code into java classes .
+157	this is the main to parse the java lang string .
+158	this is the main to parse the java lang string .
+159	this is the main to parse the java lang string .
+160	translates the given string into its canonical form .
+161	translates the given string into its canonical form .
+162	this code is called via reflection from the java code main thread to call this .
+163	this code is the main entry point for debugging .
+164	this is the main method which executes the java animator which has to be in a human readable form .
+165	this is the main method which executes the java animator which has to be in a human readable form .
+166	translate java source code into java classpath .
+167	translate each character in a single line .
+168	transliterate code to classe .
+169	translates the source code into a list of java interpreter objects .
+170	this method is called via reflection from the classloader .
+171	this code is called via reflection from the java classloader .
+172	checks to see if this class has been detected and checks it s possible to optimize the stack trace .
+173	translates the source code into memory .
+174	translates the jcombobox with the current colors .
+175	translates the jcombobox with the current colors .
+176	description of the method .
+177	description of the method .
+178	description of the method .
+179	translates code that runs in a java source code each time the code inlining each other .
+180	instantiates a new java class .
+181	convenience method that transforms java to decimal form .
+182	convenience method that transforms java to decimal form .
+183	inserts the given array into ascending order by the comparator .
+184	instantiates a new java lang object .
+185	translate the jcombines in a single string into a single array which contains the same codepoint elements .
+186	this code is used to compile the javacommit library this is used when code is being compiled from a javacamole .
+187	this code is clamped to run the code in a human readable form .
+188	this is the main thread call this method in your own class .
+189	this is the main method which runs in a jvm class it s slightly faster .
+190	this is the main method which runs in a jvm class it s slightly faster .
+191	this method is called via reflection from the database .
+192	this method is called via reflection from the database .
+193	convenience method for testing tests that clazz returns true even if it s possible .
+194	convenience method for testing tests that clazz returns true even if it s possible .
+195	translates the source code into two strings .
+196	translate all codenames in this class .
+197	translate all codenames in this class .
+198	this method is called by the decorator .
+199	this is used to load the code that can be used to compile code .
+200	this is the main class for testing it computes the clustering in a hashtable with some other classes .
+201	this is the main class for testing it computes the clustering in a hashtable with some other classes .
+202	translate code into java classpath .
+203	translate code into java classpath .
+204	this method is called via reflection from the javadoc library this is called when the class is called .
+205	translates all codenames in the java class names .
+206	calculate the median value of the list .
+207	this is the main method where you want to run this one .
+208	this is the main method where you want to run this one .
+209	translates the cloned loop to code loop .
+210	translates the cloned loop to code loop .
+211	translates the cloned loop to code loop .
+212	this is the main method which runs in a javadoc class .
+213	this is the main method which runs in a javadoc class .
+214	this is the main method which runs in a javadoc class .
+215	this is the main method which executes each class in a separate thread .
+216	this is the main method which executes each class in a separate thread .
+217	this method is used to sort the class with default values .
+218	translate the jcombines in two strings .
+219	translates the matlab list into the java lang object .
+220	translates the matlab list into the java lang object .
+221	this is the main thread call this when you want to run a regular expression when you don t have to call this .
+222	helper method that maps one row into another one .
+223	translate all mbeans that have been cloned .
+224	translate all mbeans that have been cloned .
+225	this method is called via reflection from the database .
+226	this method is called via reflection from the database .
+227	translates the given data into codewords in a single thread .
+228	this method is called via reflection from the java classloader .
+229	call this from the main thread .
+230	call this from the main thread .
+231	this is the main method which can be called by multiple threads concurrently from the same class .
+232	convenience method for testing purposes only .
+233	translate the source code string into a regular expression .
+234	this is the main thread call this method .
+235	description of the method .
+236	description of the method .
+237	this code is clamped to run the code in a separate thread .
+238	translates this class to a line with the given anchor points .
+239	translates this class to a line with the given anchor points .
+240	translate each key value pairs into a regular expression .
+241	translate each character in the input string to a regular expression .
+242	translate each character in the input string to a regular expression .
+243	this is the main method which can be overridden by subclasses .
+244	this is the main method which can be overridden by subclasses .
+245	translate each token into a regular expression .
+246	translate a list of strings into a regular expression .
+247	translate a list of strings into a regular expression .
+248	this is the main thread call this method .
+249	this is the main thread call this method .
+250	this is the main thread call this method .
+251	this is the main thread call this method .
+252	combines this class with the given string as a separator string .
+253	combines this class with the given string as a separator string .
+254	translate the java lang string into a list of java languages .
+255	translates a list of strings into codepoints .
+256	translates a list of strings into codepoints .
+257	computes the chaining code according to the java lang object .
+258	this is the main entry point for testing .
+259	this is the main entry point for testing .
+260	this is the main entry point for testing .
+261	this is the main entry point for testing .
+262	instantiates a new java lang object .
+263	this is the main thread call .
+264	this method is called via reflection from the classpath .
+265	this method is called via reflection from the java lang object .
+266	this method is called via reflection from the java lang object .
+267	call this when you want to synchronize the china .
+268	call this when you want to synchronize the china .
+269	this is the main method which shows the time that we have to run each time .
+270	this is the main class which maps to strings .
+271	this is the main entry point for debugging purposes .
+272	this is the main entry point for debugging purposes .
+273	translate a bigdecimal string into an array of strings .
+274	translates code into chinese string .
+275	translates the code that contains the java code inlining each thread in the code .
+276	this code is called via reflection from the classloader .
+277	this code is called via reflection from the classloader .
+278	this is the main method which runs the same javadoc compiler it tries to compile them .
+279	this is the main method which runs the same javadoc compiler it tries to compile them .
+280	move from one line to another .
+281	this code is called via reflection from the java classloader .
+282	translates this vector into a new one .
+283	this method is called by java compilecalendarutils java lang string java lang string java lang string .
+284	this method is called by java compilecalendarutils java lang string java lang string java lang string .
+285	translate a list of symbols to a single line .
+286	translate a clique according to the optimizer .
+287	concatenates the list of strings to a sorted list .
+288	translate java lang string that should be used by java .
+289	send the message to the user .
+290	translates all codepoint objects in the javamail tree .
+291	call this when you want to call this in your code .
+292	call this when you want to call this in your code .
+293	translates the jcombines in two arrays .
+294	translates the jcombines in two arrays .
+295	convenience method that tries to decode input tokens from a human readable form .
+296	this method is called via reflection from the javadocode .
+297	this method is called via reflection from the javadocode .
+298	executes the code source .
+299	description of the method .
+300	description of the method .
+301	this is the main class which is the same as the java code with java lang string .
+302	translates two arrays into order .
+303	translates two arrays into order .
+304	translates the jcombines in two strings .
+305	translates the clashing code to the java code .
+306	translates the shell code to run the chaining thread .
+307	translates the shell code to run the chaining thread .
+308	instantiates a new java lang string .
+309	this is the main thread to execute this class .
+310	translate the histogram from each line in the array of strings .
+311	calculates the ordered list of integers and shows it in the same order .
+312	this is the main class for the java lang .
+313	this is the main method which runs in a jvm class it breaks it into the canonical form .
+314	this is the main method which runs in a jvm class it breaks it into the canonical form .
+315	this method opens a file and saves its contents to a file .
+316	this method opens a file and saves its contents to a file .
+317	this method opens a file and saves its contents to a file .
+318	translates the jcombobox with the given code .
+319	this is the main thread call this .
+320	convenience function that computes one line of c separated strings .
+321	convenience function that computes one line of c separated strings .
+322	convenience function that computes one line of c separated strings .
+323	this method is called via reflection from the jvm .
+324	concatenates the source code into two strings .
+325	translates the javadoc lines to the regular expression .
+326	translates the java code into java files .
+327	translates the java code into java files .
+328	this is used to ease of code in the javadoc .
+329	this is used to ease of code in the javadoc .
+330	this method is called via reflection from the classloader .
+331	this method is called via reflection from the classloader .
+332	instantiates a new javadocode .
+333	instantiates a new javadocode .
+334	call this from code to compile this class .
+335	translate the matlab with the two matrices .
+336	translate the matlab with the two matrices .
+337	this method is called by the main thread .
+338	translates the claded javamiles with default values .
+339	this is the main class which is the fastest way to compile .
+340	this is the main class which is the fastest way to compile .
+341	this is the main class which is the fastest way to compile .
+342	this is the main class which is the fastest way to compile .
+343	this is the main method which reads the code in the jar file as a regular expression .
+344	converts the current thread to a map .
+345	converts the current thread to a map .
+346	translates the javadoc lines in a javacoda file .
+347	translate the chinese code into a human readable string .
+348	synthesize this class in a separate thread .
+349	synthesize this class in a separate thread .
+350	this method is called via reflection from the java classloader .
+351	this method is called via reflection from the java classloader .
+352	translate the java class name into a regular expression .
+353	translate the java class name into a regular expression .
+354	translates the imageto objects into matlab .
+355	this is the main method which defines concatenation of the java code in this class it uses a separate thread that contains the codename one of the code points in
+356	this is the main method which defines concatenation of the java code in this class it uses a separate thread that contains the codename one of the code points in
+357	concatenates a list of strings into one list of strings .
+358	concatenates a list of strings into one list of strings .
+359	instantiates a new java lang object .
+360	instantiates a new java lang object .
+361	instantiates a new java lang object .
+362	this method is called via reflection from the java runtime code .
+363	this method is called via reflection from the java runtime code .
+364	this method is called via reflection from the java runtime code .
+365	this is the main method which executes the code compilation in a separate thread .
+366	this is the main method which executes each class in a separate thread so that it is in the same order .
+367	this is the main method which executes each class in a separate thread so that it is in the same order .
+368	translates the factorial of a clazz .
+369	translates the factorial of a clazz .
+370	this code is called via reflection from the classloader .
+371	translates the cl timestamps from the given pruning .
+372	executes the list of strings matched by the caller .
+373	translates all codepoint in this class to codepoint .
+374	this is used to compile the javamail file .
+375	call this when you want to synchronize the chaining factor which do not change the real time .
+376	call this when you want to synchronize the chaining factor which do not change the real time .
+377	generate password for the main thread .
+378	generate password for the main thread .
+379	this code is the main thread that runs the ui thread .
+380	convert the stack symbols to regular expression .
+381	convert the stack symbols to regular expression .
+382	convert the stack symbols to regular expression .
+383	this is the main to run the test case .
+384	this is the main to run the test case .
+385	this is the main to run the test case .
+386	description of the method .
+387	translates the stylesheet into a single map .
+388	this is the main thread call this method .
+389	translates the jcombobox with the current thread .
+390	this is the main method which executes in each other class in a separate thread .
+391	this code is used to compile the javadocode .
+392	translates the code that is tightly spaced .
+393	convert from chinese values to strings .
+394	convert from chinese values to strings .
+395	this method is called via reflection from javadoc .
+396	this method is called via reflection from javadoc .
+397	translates code that belongs to java class .
+398	translate the javadoc in the javadoc layout this is to be used in the javadoc .
+399	translate the source code into java classpath .
+400	translate the source code into java classpath .
+401	translate the source code into java classpath .
+402	translates the source code into regular expression .
+403	translate the stack traces into a regular expression .
+404	translate the stack traces into a regular expression .
+405	this method is called via reflection from the javadoc library this is to encrypt the contents of the code with other keys and values in the cache .
+406	this code is called via reflection from the java class .
+407	translates the jcombines in two strings .
+408	translates the jcombines in two strings .
+409	this method is called via reflection from the java runtime environment .
+410	this method is called via reflection from the java runtime environment .
+411	call this when you want to re call this in your code .
+412	this code is the main thread to call this .
+413	filters the array with a single double splitter .
+414	filters the array with a single double splitter .
+415	this is the main method which executes the java lang .
+416	this is the main method which executes the java lang .
+417	translates the jcombines in two strings .
+418	disconnect from the webapp .
+419	this is the main run method .
+420	this is the main run method .
+421	this is the main method which loads the javamail classes from the java lang object .
+422	this is the main method which loads the javamail classes from the java lang object .
+423	this is the main thread call this when you want to run a clazz .
+424	this is the main thread call this when you want to run a clazz .
+425	this code is the main entry point for testing .
+426	translates the chinese javadoc code into code .
+427	instantiates a new hook .
+428	this code is used to compile java class .
+429	this is the main thread that executes code in the javadoc in the code .
+430	translates the clock ticks to a javadile object .
+431	this is the main thread call this method .
+432	this is the main thread call this method .
+433	translates the source code into two arrays .
+434	translates the stack traces .
+435	translates the stack traces .
+436	this code is called via reflection from the classloader .
+437	this code is called via reflection from the classloader .
+438	this is the fastest way to compile a thread that has to re acquire a regular expression with the same mappings for each other class we re running an extra
+439	this is the main thread that executes in each line in a separate thread .
+440	this is the main thread that executes in each line in a separate thread .
+441	translates this automaton to a biginteger with no precision .
+442	translates this automaton to a biginteger with no precision .
+443	combines this class with the same name as a single string .
+444	combines this class with the same name as a single string .
+445	translate all the strings in java lang object into a sorted list of strings .
+446	translates the chaining code to the java code highlighting .
+447	translates the chaining code to the java code highlighting .
+448	flatten the list of objects to a single comma separated list .
+449	flatten the list of objects to a single comma separated list .
+450	translate all tables into java sql object .
+451	this method is called from the jdbc compiler thread it tries to compile this class .
+452	shuffles the words in a regular expression .
+453	shuffles the words in a regular expression .
+454	this is the main method which runs the code in a separate thread which can be overridden in other classes .
+455	call this when you want to synchronize classes .
+456	this is the main entry point for testing .
+457	this is the main entry point for testing .
+458	this is the main thread for testing .
+459	translates the chaining code to the main white space .
+460	this is the main thread call this method .
+461	this is the main thread call this method .
+462	this is the main thread call this method .
+463	this method is called via reflection from the main thread .
+464	this is the fastest way to compile the optimizer .
+465	this is the fastest way to compile the optimizer .
+466	translates code into java classes .
+467	this code is clamped to run the code in a separate thread .
+468	this is the main routine which you want to run the same time we want to run this in a javamail .
+469	translates a hashcode into its canonical form .
+470	use this to allow you to change a class in your code .
+471	this method is clamped to test it might throw an exception in a thread that might be running in a separate thread so that we don t want to go
+472	this method is called via reflection from the test classpath .
+473	translate the stack together with the java class names .
+474	translates the websocket with the current thread .
+475	translates code from cli to target code .
+476	this is the main thread call this when you want to call this in your code .
+477	this is the main thread call this when you want to call this in your code .
+478	translate all tuples in the default locale .
+479	translate all tuples in the default locale .
+480	translates the source code into java lang object .
+481	translates the source code into java lang object .
+482	translates code into one object .
+483	translates code into one object .
+484	this is the main method which runs in a human readablecombines each item in a separate thread .
+485	this is the main method which runs in a human readablecombines each item in a separate thread .
+486	this is the main method which executes the java code in a separate thread .
+487	translate all whitespace from a string .
+488	translate all whitespace from a string .
+489	concatenates a list of strings to strings .
+490	concatenates a list of strings to strings .
+491	translates the stylesheet to java .
+492	converts the given strings into a list of strings .
+493	compute one complex histogram from another .
+494	create a hashtable from all strings that are already in this class .
+495	translates the chaining colors to a swt mode .
+496	translate all codenames in the code commas .
+497	this code is clamped to run the regular expression .
+498	description of the method .
+499	description of the method .
+500	this is the main thread call this in your own thread .
+501	this is the main thread call this in your own thread .
+502	this code is clamped to run together with some tests .
+503	this code is clamped to run together with some tests .
+504	this method is used to compile the javamail file with some other files .
+505	translates this estimator into a single line containing the translation from the origin to another .
+506	translates the stylesheet to java .
+507	translates the stylesheet to java .
+508	translate an array of strings into a hashmap that has the same name as the source this is the same as the source code with java class names e g
+509	this is the main method which defines java lang object as a regular expression .
+510	this is the main method which defines java lang object as a regular expression .
+511	this code is clamped to run the tests in a separate thread .
+512	this code is clamped to run the tests in a separate thread .
+513	returns true if this range is inside the given range .
+514	returns true if this range is inside the given range .
+515	this is the main thread call .
+516	translate each line in the jvm to an arraylist .
+517	this method is called via reflection from the compiler thread .
+518	this code is called via reflection from the java scriptengine .
+519	this is the main thread which sends the java code to the javadoc call this .
+520	translates the stack trace to a list of strings .
+521	this is the main method which defines the class i e the code that maps in the stack .
+522	this is the main thread call this .
+523	translates the chinese time changers to a javadoc session .
+524	this is the main entry point for testing .
+525	translate the current token into java strings .
+526	this is the main thread call this .
+527	this is the main thread call this .
+528	translate all tuples in the java class .
+529	translate all tuples in the java class .
+530	translate all tuples in the java class .
+531	this method is called via reflection from the jdk class it tries to compile each line from the last line in the jdk .
+532	this method is called via reflection from the jdk class it tries to compile each line from the last line in the jdk .
+533	call this from the java lang code with the java lang string .
+534	translates the mouselist to the current mouse location .
+535	this method is called via reflection from the application code .
+536	translates code from matrices .
+537	translates code from matrices .
+538	displays the java lang object in a human readable form .
+539	translate java lang string to java .
+540	calculates the poisson distribution .
+541	calculates the poisson distribution .
+542	calculates the clamped lines .
+543	calculates the clamped lines .
+544	translate a list of java classes in canonical form .
+545	translate the chinese strings into a regular expression .
+546	translate the stack traces .
+547	returns a list of strings in the current thread .
+548	returns a list of strings in the current thread .
+549	translates code from java lang string .
+550	this code is clamped to run each other thread .
+551	convenience method that compiles a list of strings .
+552	convenience method that compiles a list of strings .
+553	translates code from java arrays .
+554	translates code from java arrays .
+555	translates code from java arrays .
+556	translates the count of n times into a counter concatenated by a given number .
+557	this is used to compile the code that can be compiled inside .
+558	translates the source code into a matlab string .
+559	this is the main thread call this class .
+560	translates the source code into java lang object .
+561	sort the array using a given comparator .
+562	translates this class into a coords object .
+563	translates this class into a coords object .
+564	transliterate the class name to a hashcode .
+565	this method is called via reflection from the java classloader .
+566	this method is called via reflection from the java classloader .
+567	calculates the coords of this interpolation from a given result set .
+568	translates the chinese items into a hashtable string that matches the given regular expression .
+569	translates the chinese items into a hashtable string that matches the given regular expression .
+570	translates the chinese items into a hashtable string that matches the given regular expression .
+571	this code is called via reflection from the java classloader .
+572	calculates the intervall of the given result in a sorted array with the given parameters the result will be in the same order as the result from calling this function
+573	translates code that runs in a mix of javac co ordinate pairs .
+574	translates code that runs in a mix of javac co ordinate pairs .
+575	translates code that runs in a mix of javac co ordinate pairs .
+576	translates the jcombobox with the current colors .
+577	translates the jcombobox with the current colors .
+578	translates the jcombobox with the current colors .
+579	this code is clamped to run the code in a separate thread .
+580	this code is clamped to run the code in a separate thread .
+581	translate an array of integers into a single array with a single array i e it breaks the result into a single array which is turned off .
+582	convert from java style to regular expression .
+583	convert from java style to regular expression .
+584	translates the source code to a file in memory .
+585	this is the main thread which executes the java code in the main thread .
+586	this is the main method which runs in a regular expression .
+587	this is the main method which runs in a regular expression .
+588	this is the main class which maps the code points to one line .
+589	this is the main class which maps the code points to one line .
+590	iterates through the source code each line in the source code .
+591	iterates through the source code each line in the source code .
+592	translates the stack trace into this one .
+593	gcd the value of a given loop .
+594	translates all files in chinese .
+595	call this from code to compile this class .
+596	tells the shell code that you want to call this in your code .
+597	this is the main method which runs in a sorted array of strings .
+598	this is the main method which runs in a sorted array of strings .
+599	this is the main entry point .
+600	translates the source list into regular expression .
+601	translates this class into an iterable .
+602	translates two images and sets their same width as they re in the same order .
+603	this is the main method which is the fastest way to run in a javadocode .
+604	this is the main method which is the fastest way to run in a javadocode .
+605	translates a chinese string into an array of strings .
+606	this method is called via reflection from the javamail class it tries to parse the codename one each line in the code with the extra whitespace .
+607	this method is called via reflection from the javamail class it tries to parse the codename one each line in the code with the extra whitespace .
+608	translates the clamped arrays into one dimensional array of strings .
+609	translates the clamped arrays into one dimensional array of strings .
+610	translates the clamped arrays into one dimensional array of strings .
+611	this is the main method which is either a regular expression or a list of java lang string e g it returns true otherwise .
+612	this is the main method which is either a regular expression or a list of java lang string e g it returns true otherwise .
+613	this is the main method which is either a regular expression or a list of java lang string e g it returns true otherwise .
+614	executes a bunch of java strings .
+615	executes a bunch of java strings .
+616	executes a bunch of java strings .
+617	compile the two arrays .
+618	compile the two arrays .
+619	compile the two arrays .
+620	this method is called via reflection from the java runtime environment .
+621	translate each separator character in a single string .
+622	this code is called via reflection from the java classloader .
+623	this is the main thread test .
+624	concatenates the code strings in the given list of strings .
+625	concatenates the code strings in the given list of strings .
+626	translates the jcombobox with the current colors .
+627	translates the jcombobox with the current colors .
+628	converts the stack trace into a regular expression .
+629	this is the main thread call .
+630	this is the main thread call .
+631	this is the main method which runs in a javadocode with the same ordering as the source this code has to be deterministic .
+632	translates a matlab string into a regular expression .
+633	translates a matlab string into a regular expression .
+634	call this when you want to iterate from the current thread this function iterates over the result of calling this method .
+635	this is the main method which executes the tests with respect to javadoc rules it might throw an exception since it might have some assumptions that we do this
+636	this is the main method which executes the tests with respect to javadoc rules it might throw an exception since it might have some assumptions that we do this
+637	translates the cli stack trace to the target class .
+638	this method is called via reflection from the jvm class it tries to compile each line in the source code .
+639	translates the source code into java strings .
+640	translates the source code into java strings .
+641	translates the javadoc in a javadoc library this is useful for testing .
+642	translates the stack trace to a list of strings .
+643	translates the stack trace to a list of strings .
+644	translates the stack trace to a list of strings .
+645	this code is the main to run this code in a separate thread .
+646	this is the main class for code java lang string .
+647	this method is called via reflection from the java code each time the code in the compilation of this class is finally clamped to run the same java interpreter
+648	this method is called via reflection from the java code each time the code in the compilation of this class is finally clamped to run the same java interpreter
+649	this is the main method which executes each sample in a matlab list .
+650	this is the main method which executes in the java class it parses as a string .
+651	this is the main method which executes in the java class it parses as a string .
+652	this is the main method which executes in the java class it parses as a string .
+653	translate the javamail code to the china .
+654	translate the java code into chinese symbols .
+655	translate all whitespace from a java class name .
+656	this is the main method which executes the pruning function it computes the regular expression that tries to find the max value of each character in which case it tries
+657	decodes the given base58 string into its canonical form .
+658	decodes the given base58 string into its canonical form .
+659	transliterate code to each line .
+660	this is the main thread call this when you want to run a hashcode which is running in a separate thread .
+661	this is the main thread call this when you want to run a hashcode which is running in a separate thread .
+662	this is the main class which is the same as the arraylistener interface this is useful for testing .
+663	this is the main class which is the same as the arraylistener interface this is useful for testing .
+664	convenience method that returns true if the other points in this class can be transformed from within other bounds .
+665	convenience method that returns true if the other points in this class can be transformed from within other bounds .
+666	this method is called via reflection from the java classloader .
+667	translates code from java lang object into java lang object .
+668	translates code from java lang object into java lang object .
+669	this method is called via reflection from the java runtime environment .
+670	this is the main to run the java lang code in which you want to run this one .
+671	performs a sort of the given array in canonical order .
+672	translates this quaternion into a normalized quaternion using quaternion .
+673	translates this quaternion into a normalized quaternion using quaternion .
+674	translates this quaternion into a normalized quaternion using quaternion .
+675	this code is clamped to run the clique thread .
+676	translate an array of polynomial coefficients into a polynomial with coords .
+677	translate an array of polynomial coefficients into a polynomial with coords .
+678	translate an array of polynomial coefficients into a polynomial with coords .
+679	translate an array of polynomial coefficients into a polynomial with coords .
+680	performs a linear search on the given array .
+681	translates the polynomial with the given parameters .
+682	translates the code to chinese strings .
+683	translates the code to chinese strings .
+684	this is the main class which is the fastest way to compile .
+685	translates the clazz to normal java lang object .
+686	translates all items into java lang object .
+687	translates all items into java lang object .
+688	this code is called via reflection from the classloader .
+689	this is the main thread call this method in your own code .
+690	this is the main thread call this method in your own code .
+691	this is the main thread call this method in your own code .
+692	calculates the nth root mean of the last nth root br this is a power of two more than one more than one root which is the same
+693	translate all files in the jar .
+694	translate all files in the jar .
+695	this code is used to compile the javacamole library this is used when code is running .
+696	translate the stack traces .
+697	translate the stack traces .
+698	unit test with our own class loader .
+699	concatenates the code lines in the regular expression .
+700	concatenates the code lines in the regular expression .
+701	concatenates the code lines in the regular expression .
+702	this method is used to compile javadoc .
+703	instantiates a new java lang object .
+704	this is the main method which uses euclideanel cased to iterate through each other .
+705	this is the main method which uses euclideanel cased to iterate through each other .
+706	this method is called by the main thread .
+707	translate the source code into chinese symbols .
+708	translate the source code into chinese symbols .
+709	this code is called via reflection from the java classloader .
+710	this code is called via reflection from the java classloader .
+711	this is the main method which runs the regular expression .
+712	this is the main thread call this .
+713	shortcut for the java class .
+714	shortcut for the java class .
+715	the code that is being compiled in the javadocode .
+716	the code that is being compiled in the javadocode .
+717	this is the main thread call this when you want to run the code .
+718	helper function that interprets the heap according to the optimizer .
+719	translates the cladec buffer to each thread .
+720	calculates the chaining count of each other .
+721	this is the main method which maps into two strings .
+722	performs some sort on the given input array .
+723	translate the jvm class name to a javafx file .
+724	translates all colors in the java awt color space .
+725	this is the main entry point for parsing the comments .
+726	this code compiles the java code in a given array of strings .
+727	combines two strings according to the comparator .
+728	this method is called via reflection from the compiler thread .
+729	combines the matlab with the same layout as the query string .
+730	combines the matlab with the same layout as the query string .
+731	this code is called via reflection from the java class .
+732	this code is called via reflection from the java class .
+733	translate all unicode characters in the given string .
+734	translate all unicode characters in the given string .
+735	translates a cloned lc recursion stack trace to a constant pool .
+736	translate all words inside a single block .
+737	translate all words inside a single block .
+738	translates the jcombines in two arrays .
+739	translates the jcombines in two arrays .
+740	combines this class with the same name as the regular expression .
+741	combines this class with the same name as the regular expression .
+742	convenience method that compiles all strings in java classes .
+743	this is the main method which executes the regular expression .
+744	this is the main method which executes the regular expression .
+745	translate the stack traces .
+746	this method is called via reflection from the java interpreter thread .
+747	performs a binary search looking for the elements in a given array this is useful for testing .
+748	performs a binary search looking for the elements in a given array this is useful for testing .
+749	translate the stack trace elements into a canonical form .
+750	this is the main method which runs in a regular expression .
+751	this is the main method which runs in a regular expression .
+752	concatenates a list of strings to decimal points .
+753	concatenates a list of strings to decimal points .
+754	translates the java lang string into a single line that contains both whitespace and files .
+755	this is the main thread call this method .
+756	translates the javadoc code to look in the javac .
+757	translates the same mappings as per java lang string .
+758	translates the same mappings as per java lang string .
+759	calculates the coords of a given lat lon pair note this is a slow for use in some other tests .
+760	calculates the coords of a given lat lon pair note this is a slow for use in some other tests .
+761	helper function to run the regular expression .
+762	this method is used to compile test .
+763	translates the clamped interpolation into a single array with the same codewords as the source code points in the same order .
+764	translate the stack traces .
+765	translate the stack traces .
+766	this is the fastest way to make it easier to use it in a different thread .
+767	translate colors to css .
+768	this method is used to compile java lang object .
+769	this method is used to compile java lang object .
+770	adds the given node to the clique list .
+771	adds the given node to the clique list .
+772	this is the main function which executes the optimizer functions it calls this code from the mapper .
+773	this is the main function which executes the optimizer functions it calls this code from the mapper .
+774	this is the main method .
+775	this is the main method .
+776	renders the chaining code in a human readable form .
+777	translate this class to a regular expression .
+778	this method is called via reflection from the javadoc compiler it is overridden to run the clazz .
+779	this method is called via reflection from the javadoc compiler it is overridden to run the clazz .
+780	converts the given string to a regular expression .
+781	this is the main entry point for testing .
+782	description of the method .
+783	transliterate code in cloned java lang string .
+784	this code is called via reflection from the java environment .
+785	iterates through all values in the specified array with the given max value .
+786	iterates through all values in the specified array with the given max value .
+787	dispatches the code line to the console .
+788	translates the list of java classes into ascending order .
+789	this code is clamped to the code compiler .
+790	translate an array of clima objects into a regular array with regular expressions .
+791	instantiates a new java lang object .
+792	this method is called via reflection from the java classloader .
+793	this method is called via reflection from the java classloader .
+794	translates the jcombobox with the current colors .
+795	translates the jcombobox with the current colors .
+796	translate this chinese object into a regular expression .
+797	renders a chinese array of code points this might be useful for testing .
+798	translates the source code into two java arrays .
+799	this code is cloned so we don t want to run this class .
+800	this code is called via reflection from the java classloader .
+801	this code is called via reflection from the java classloader .
+802	this code is called via reflection from the java class .
+803	this code is called via reflection from the java class .
+804	translates a fibonacci array with a given number of fibonacci coords .
+805	translates a fibonacci array with a given number of fibonacci coords .
+806	this method is called via reflection from the javadoc compiler this is overridden to run this method to run a bias .
+807	this method is called via reflection from the javadoc compiler this is overridden to run this method to run a bias .
+808	return the codepoint of this class .
+809	return the codepoint of this class .
+810	translate two arrays into matrices .
+811	translate two arrays into matrices .
+812	translates the cliu to the mercator .
+813	this is the main method which executes in a list of unicode strings .
+814	this is the main thread call this when you want to call this in your class .
+815	this method is called via reflection from the main classloader .
+816	finds true if this composite has the same java compiler as its source this is done in a separate thread so that it can return false .
+817	translates the javacoda class names in the current thread .
+818	translate this class to a bigdecimal .
+819	this code is called via reflection from the java classloader .
+820	this is the main thread call .
+821	this is used to compile the javamail class from a javadocommit .
+822	this is used to compile the javamail class from a javadocommit .
+823	this is used to compile the javamail class from a javadocommit .
+824	this is the main class which can be overridden in subclasses to do a regular expression in a way that you don t have to call this in a closure
+825	instantiates a new java lang object .
+826	instantiates a new java lang object .
+827	creates a matlab with the same mappings and rows .
+828	translates a list of java classes into codewords .
+829	translates a list of java classes into codewords .
+830	this is the main entry point for testing .
+831	translate the stack traces .
+832	translate strings to java class file .
+833	converts the stack trace into a regular expression .
+834	converts the stack trace into a regular expression .
+835	instantiates a new java class .
+836	instantiates a new java class .
+837	shuffles the java arrays in random order .
+838	this is the main thread call this method .
+839	this function is called via reflection from the database .
+840	translate two arrays into separate strings .
+841	translate the line with the given key into a hashtable .
+842	translate the line with the given key into a hashtable .
+843	description of the method .
+844	description of the method .
+845	this is the main method which computes the hashtable of all classes that have been computed from the hashtable .
+846	translates code into chinese symbols .
+847	transliterate code with two threads .
+848	transliterate code with two threads .
+849	this is the main routine .
+850	creates a queue with the current thread .
+851	executes the java code of the java class .
+852	translate all javacommit objects into a javadoc .
+853	this is the main thread call this in your own thread .
+854	this is the fastest way to combine with two strings .
+855	this is the fastest way to combine with two strings .
+856	this method is overridden by subclasses to build a dense array with arrays .
+857	this method is overridden by subclasses to build a dense array with arrays .
+858	this method is called via reflection from the java classloader .
+859	this is the main thread to call this in your code .
+860	this is the main thread to call this in your code .
+861	translate the shared class into our internal form .
+862	translate the shared class into our internal form .
+863	use this to change the compiler environment .
+864	merge two arrays in same order .
+865	this method is called via reflection from the java awt point javadoc for this class .
+866	this is the main method which executes the java code in a separate list of java interpreter traces .
+867	translates the chinese colors into a buffered image .
+868	translates the chinese colors into a buffered image .
+869	translates the chinese colors into a buffered image .
+870	instantiates a new java hashtable .
+871	this method is called via reflection from the executor thread .
+872	call this when you want to change the clazz .
+873	translate all codenames in the java class names .
+874	translate all codenames in the java class names .
+875	translates the matlab into a new one .
+876	translates the matlab into a new one .
+877	translates the jcombobox with the current colors .
+878	translates the matlab list into linear arrays .
+879	transliterate chinese items into code .
+880	transliterate chinese items into code .
+881	translates this class with the given optimizer .
+882	translates this class with the given optimizer .
+883	this is the fastest way to compile a javadoc in which you want to run this one .
+884	this method is called via reflection from the database .
+885	this method is called via reflection from the database .
+886	translate each separator of this class to a regular expression .
+887	this code is called via reflection from the java class .
+888	translates this cliquest with the given source code .
+889	this method is called via reflection from the javadoc this is used to optimize this .
+890	combines two matchers into a new one .
+891	call this with the compile code .
+892	call this with the compile code .
+893	translates the javacode code tostring inlining each character in a separate thread .
+894	translate the mbeans to the java class .
+895	converts the given string into a hashmap containing the same name as the base class names e g java lang string .
+896	call this from a clamped interpolation pattern .
+897	hook to be used in tests .
+898	hook to be used in tests .
+899	this is the main method which executes each character in a separate thread .
+900	translates the jcombines in two strings .
+901	translates the jcombines in two strings .
+902	creates test file with given name .
+903	creates test file with given name .
+904	translates this class into a regular expression .
+905	the code that compiles all the strings in this class it breaks into commas .
+906	this is the main method which runs a test case .
+907	this is the main method which runs a test case .
+908	this is the main method which runs a test case .
+909	translates code from java class .
+910	translates the stack trace to a new one .
+911	translates this class to a sorted array of strings .
+912	translates this class to a sorted array of strings .
+913	convenience method that takes in a file and encrypting it to be extracted from encrypted data .
+914	convenience method that takes in a file and encrypting it to be extracted from encrypted data .
+915	translates the source code line into java strings .
+916	this is the main thread call this method .
+917	this is the main thread call this method .
+918	this code is called via reflection from the java classloader .
+919	translates the chinese string into a regular expression .
+920	translates the chinese string into a regular expression .
+921	translates code to java clazz .
+922	this is the main method which runs in a separate thread .
+923	this is used to compile the java code in the javadoc library this is used to allow the code to compile a websocket thread .
+924	translates the stack trace to a java class .
+925	this method is called by the gui thread .
+926	translates the source code line to the java interpreter .
+927	translate a list of strings into a regular expression .
+928	translates the ordered list into natural combobox .
+929	translates back to mercator that has been transitive .
+930	translates the source code to code files .
+931	this code is called via reflection from the java classloader .
+932	transliterate code to clazz .
+933	this code is clamped to run the code in a separate thread .
+934	this code is clamped to run the code in a separate thread .
+935	translates the list of java classes into regular expression .
+936	translates the list of java classes into regular expression .
+937	translates the given number of decimal digits into a corresponding javadoc .
+938	creates the code source code and jar files .
+939	translates code from java object .
+940	translate all codenames in the class files to their canonical form .
+941	translate all codenames in the class files to their canonical form .
+942	this method is called via reflection from the java interpreter thread .
+943	translates two mercator objects into hash codes .
+944	this code is called via reflection from the java classloader .
+945	this code is called via reflection from the java classloader .
+946	translates the cloned code to the javadoc .
+947	this code is called via reflection from the java classloader .
+948	translate all javacommit objects into a javadoc library this is useful when you want to change our code .
+949	returns a list containing the concatenated by the two arrays .
+950	returns a list containing the concatenated by the two arrays .
+951	this is the main method which maps the given parameters into one .
+952	this is the main method which runs in a separate thread .
+953	this method is called via reflection from the javadocode .
+954	translate the chinese string into a chinese string .
+955	description of the method .
+956	this is the main method which is called by java interpreter thread .
+957	iterates over the class files in the buffer .
+958	iterates over the class files in the buffer .
+959	this method is called from the main thread .
+960	sorts the specified array into ascending numerical order .
+961	translates the stylesheet to a hashtable .
+962	translates the chinese switches in a java class to code .
+963	this ctor interprets the stack according to css in rfc 2616 .
+964	this method is called via reflection from the java classloader .
+965	this method is called via reflection from the java classloader .
+966	note this is the fastest way to optimize the ui thread .
+967	call this when you re running a jvm with i e it compiles the code to run this code when you want to call this this .
+968	translate a string into a chinese string .
+969	translate a string into a chinese string .
+970	this code is clamped to run the code in a javadoc .
+971	translates to clazz .
+972	translates the list of java classes into regular expression .
+973	translate all modules and their default values .
+974	translate strings into a list of strings .
+975	translate the java source and jar files .
+976	transliterate chinese code to clashes .
+977	translate all chinese strings into a regular expression .
+978	computes the average value from each source into a bayes z values where the average is greater than the total value .
+979	linearly interpolation this is the same as the java source code with java lang .
+980	iterates through all the strings and compile them .
+981	translates the java code in chinese code .
+982	executes one dimensional array of strings .
+983	calculates the hash value for a given integer .
+984	returns a binomial based on combinations of integers with n 1 n where n 1 n 1 n 1 n where n 1 n 1 n 1 n 1 .
+985	translates a list of java arrays into code strings .
+986	translates all styles in this class .
+987	translates the source code to java output files .
+988	this test does nothing .
+989	this test does nothing .
+990	translate the javacoda time to the default locale .
+991	translates the monotonically clustering with all constants in this class .
+992	translates the monotonically clustering with all constants in this class .
+993	translates the javadoc code that has been renamed e g code java class name e g code foo bar codepro .
+994	this is the main method which executes in each iteration in a separate thread .
+995	helper function to compile a hashcode which runs in a human readable form .
+996	helper function to compile a hashcode which runs in a human readable form .
+997	this is the main thread call this .
+998	this is the main thread call this .
+999	this method is called via reflection from the java classloader .
+1000	translates all cloned directories to the classpath .
+1001	this method is called by the main parser thread .
+1002	this method is called by the main parser thread .
+1003	translates all java objects into code .
+1004	this code is called via reflection from the java class .
+1005	this code is called via reflection from the java class .
+1006	translates the java code in the jar .
+1007	translates code to java random java class .
+1008	this is the main method which executes each character in a separate list .
+1009	this code is called via reflection from the java classloader .
