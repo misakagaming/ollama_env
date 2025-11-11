@@ -827,9 +827,9 @@ def create_batch(task = "summary", model_1 = 0, model_2 = 1, start=0, end=None, 
         task_instruction = unit_test_instruction
         task_instruction_2 = unit_test_instruction_re
         #outputs = coms[model_1][start:end]
-        outputs = summaries[start:end]
-        java = java[start:end]
-        cs = cs[start:end]
+        outputs = summaries
+        java = java
+        cs = cs
     elif task == "error_fix":
         content_format = completion_fix_format
         if lang == "java":
