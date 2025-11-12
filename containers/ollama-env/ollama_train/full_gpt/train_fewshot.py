@@ -1294,7 +1294,8 @@ Three example summaries and their corresponding example outputs are provided.
 Generate the unit tests in the same format in the examples.
 Do NOT include anything in your answer that is not code snippets and the outputs.
 Do NOT put any descriptions, comments or explanations in your answer.
-All unit tests should be written in the 'main' function definition of the classes.
+All unit tests should be written inside the 'Main' method of the classes.
+All output should be valid, complete, and directly runnable Java code.
 """
 
 example_output = """// Java: SchemeDataChecker with unit tests
@@ -1584,7 +1585,8 @@ Three example summaries and their corresponding example outputs are provided.
 Generate the unit tests in the same format in the examples.
 Do NOT include anything in your answer that is not code snippets and the outputs.
 Do NOT put any descriptions, comments or explanations in your answer.
-All unit tests should be written in the 'main' function definition of the classes.
+All unit tests should be written inside the 'Main' method of the classes.
+All output should be valid, complete, and directly runnable C# code.
 """
 
 example_output = """// C#: Program with identical unit tests and core logic
