@@ -1268,19 +1268,10 @@ predictions = list(df["prediction"])
 cs = get_preds("RLFrW9wm8FdHd3Wvx6J2Zr", client, "cs")
 java = get_preds("SJVx1ew3EptpY3Y4xpNv9r", client)
 
-unit_test_instruction = """You are a code tester. You are given a Java code, its corresponding
-C# code that performs the same task and a code comment description of the task.
-I want you to generate 5 unit tests for the task written in Java and
-run these unit tests on the original Java code.
-Your answer should consist of the code snippets written in Java featuring the unit tests
-the original program, and the outputs.
-An example summary and its corresponding example output is provided.
-An explanation for the unit tests in the example output is also provided.
-Generate the unit tests in the same format in the example, and apply a similar logic with the explanation.
-Do NOT include anything in your answer that is not code snippets and the outputs.
-Do NOT put any descriptions, comments or explanations in your answer.
-All unit tests should be written inside the 'Main' method of the classes.
-All output should be valid, complete, and directly runnable Java code.
+unit_test_instruction = unit_test_instruction = """You are a code tester. Given a C# program, its equivalent Java version, and a task description, generate 5 Java unit tests for the task and run them on the Java code.
+Output only the full runnable Java code (including the original program, tests in Main, and outputs).
+Follow the exact example format and reasoning from the description.
+No explanations or comments.
 """
 
 example_output = """// Java: SchemeDataChecker with unit tests
@@ -1412,19 +1403,10 @@ with open(results_filename, "w", encoding = "utf-8", errors = "ignore") as f:
         f.write(f"{line}\n")"""
         
         
-unit_test_instruction = """You are a code tester. You are given a Java code, its corresponding
-C# code that performs the same task and a code comment description of the task.
-I want you to generate 5 unit tests for the task written in C# and
-run these unit tests on the original C# code.
-Your answer should consist of the code snippets written in C# featuring the unit tests
-the original program, and the outputs.
-An example summary and its corresponding example output is provided.
-An explanation for the unit tests in the example output is also provided.
-Generate the unit tests in the same format in the example, and apply a similar logic with the explanation.
-Do NOT include anything in your answer that is not code snippets and the outputs.
-Do NOT put any descriptions, comments or explanations in your answer.
-All unit tests should be written inside the 'Main' method of the classes.
-All output should be valid, complete, and directly runnable C# code.
+unit_test_instruction = """You are a code tester. Given a C# program, its equivalent Java version, and a task description, generate 5 C# unit tests for the task and run them on the C# code.
+Output only the full runnable C# code (including the original program, tests in Main, and outputs).
+Follow the exact example format and reasoning from the description.
+No explanations or comments.
 """
 
 example_output = """// C#: Program with identical unit tests and core logic
