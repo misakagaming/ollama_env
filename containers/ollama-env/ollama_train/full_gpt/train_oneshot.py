@@ -1247,7 +1247,7 @@ Example Output: {example_output}
 #9 batch_id: "" output_file file-
 
 
-file_response = client.files.content('file-SJVx1ew3EptpY3Y4xpNv9r')
+file_response = client.files.content('file-A8W3BcqB4QVywWpw85en7J')
 #print(file_response.text)
 results_filename = "gpt4-o-mini-results-with-ties-translate-9-9.jsonl"
 with open(results_filename, "w", encoding = "utf-8", errors = "ignore") as f:
@@ -1262,8 +1262,8 @@ predictions = list(df["prediction"])
 #cs = get_preds("MTJW27khRdTpG5ZWvC87qS", client)
 #java = get_preds("Re6TkGwKaXCmsrjCrRZHiT", client)
 
-cs = get_preds("RLFrW9wm8FdHd3Wvx6J2Zr", client, "cs")
-java = get_preds("SJVx1ew3EptpY3Y4xpNv9r", client)
+cs = get_preds("MFGad2kWs8jyVgYZVRTo7u", client, "cs")
+java = get_preds("A8W3BcqB4QVywWpw85en7J", client)
 
 unit_test_instruction = """You are a code tester. Given a C# program, its equivalent Java version, and a task description, generate 5 Java unit tests for the task and run them on the Java code.
 Output only the full runnable Java code (including the original program, tests in Main, and outputs).
