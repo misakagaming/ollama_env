@@ -1265,8 +1265,8 @@ predictions = list(df["prediction"])
 #cs = get_preds("MTJW27khRdTpG5ZWvC87qS", client)
 #java = get_preds("Re6TkGwKaXCmsrjCrRZHiT", client)
 
-cs = get_preds("BR5NHEcoZXP12yJQERniDo", client, "cs")
-java = get_preds("BbXteMD9Ngo3gcxCiyqBH4", client)
+cs = get_preds("6ENs6YKmjz925X4DgPaXGJ", client, "cs")
+java = get_preds("BvW9aQFobjka6XmAQcf3Dn", client)
 
 unit_test_instruction = """You are a code tester. You are given a Java code, its corresponding
 C# code that performs the same task and a code comment description of the task.
