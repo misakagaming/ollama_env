@@ -1259,7 +1259,7 @@ Example Output 3: {example_output_3}
 #9 batch_id: "" output_file file-
 
 
-file_response = client.files.content('file-KiB6usJGQAavqEJSU1HS5F')
+file_response = client.files.content('file-Jef9vcgwU28r9F1RKvvTnW')
 #print(file_response.text)
 results_filename = "gpt4-o-mini-results-with-ties-translate-9-9.jsonl"
 with open(results_filename, "w", encoding = "utf-8", errors = "ignore") as f:
@@ -1274,8 +1274,8 @@ predictions = list(df["prediction"])
 #cs = get_preds("MTJW27khRdTpG5ZWvC87qS", client)
 #java = get_preds("Re6TkGwKaXCmsrjCrRZHiT", client)
 
-cs = get_preds("PcvsLMd6f3J6agQvQ94Xd3", client, "cs")
-java = get_preds("RDdMcfJWwXLiSvcXB5ug3e", client)
+cs = get_preds("Jef9vcgwU28r9F1RKvvTnW", client, "cs")
+java = get_preds("MRcqGwmehV5VF8EyYPTgRx", client)
 
 unit_test_instruction = """You are a code tester. You are given a Java code, its corresponding
 C# code that performs the same task and a code comment description of the task.
