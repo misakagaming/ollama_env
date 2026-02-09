@@ -980,7 +980,7 @@ def create_batch(task = "summary", model_1 = 0, model_2 = 1, start=0, end=None, 
                                     "example_summary_3": example_summary_3,
                                     "example_output_3": example_output_3})"""
             
-            output = ollama.generate(model=llm, prompt=content_1)
+            output = ollama.generate(model=llm, prompt=content_1, options={"temperature": 0.3, "num_ctx": 32768})
             result = output['response']
             
             """
